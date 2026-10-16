@@ -1,0 +1,77 @@
+---
+title: "Getting Started with TensorFlow 2.0"
+date: "2023-03-28"
+category: "Tutorial"
+description: "A beginner-friendly guide to building your first neural network with TensorFlow 2.0."
+---
+
+TensorFlow 2.0 transformed the way developers build and train machine learning models. Gone is the verbose, graph-based API of TF 1.x — in its place is an intuitive, Keras-native interface that lets you focus on the problem rather than the plumbing. If you've been curious about deep learning but felt intimidated by the tooling, this guide is for you. By the end, you'll have trained your first neural network and understand the core building blocks used in real-world ML projects.
+
+## Setting Up Your Environment
+
+Before writing any code, you'll need a Python environment with TensorFlow installed. The recommended approach is to use a virtual environment:
+
+```bash
+python -m venv tf-env
+source tf-env/bin/activate  # On Windows: tf-env\Scripts\activate
+pip install tensorflow numpy matplotlib
+```
+
+Once installed, verify your setup by importing TensorFlow and checking the version:
+
+```python
+import tensorflow as tf
+print(tf.__version__)  # Should print 2.x.x
+```
+
+## Understanding the Keras API
+
+TensorFlow 2.0 integrates Keras directly, making model building feel natural. The `Sequential` API is perfect for straightforward architectures where layers stack one after another:
+
+```python
+import tensorflow as tf
+from tensorflow import keras
+
+model = keras.Sequential([
+    keras.layers.Dense(128, activation='relu', input_shape=(784,)),
+    keras.layers.Dropout(0.2),
+    keras.layers.Dense(64, activation='relu'),
+    keras.layers.Dense(10, activation='softmax')
+])
+```
+
+Each `Dense` layer performs a matrix multiplication followed by an optional activation function. `relu` (Rectified Linear Unit) introduces non-linearity, allowing the network to learn complex patterns. The final layer uses `softmax` to output a probability distribution across 10 classes — perfect for multi-class classification.
+
+## Training Your First Model
+
+Let's train on the MNIST dataset — handwritten digit recognition — a classic first project. TensorFlow makes loading standard datasets effortless:
+
+```python
+(x_train, y_train), (x_test, y_test) = keras.datasets.mnist.load_data()
+
+# Normalize pixel values to [0, 1]
+x_train = x_train.reshape(-1, 784) / 255.0
+x_test = x_test.reshape(-1, 784) / 255.0
+
+# Compile and train
+model.compile(
+    optimizer='adam',
+    loss='sparse_categorical_crossentropy',
+    metrics=['accuracy']
+)
+
+history = model.fit(x_train, y_train, epochs=10, validation_split=0.1, batch_size=32)
+```
+
+The `adam` optimizer adapts the learning rate during training, making it a reliable choice for most tasks. `sparse_categorical_crossentropy` is ideal when your labels are integers rather than one-hot encoded vectors.
+
+## Next Steps
+
+After achieving ~98% accuracy on MNIST, explore these directions to deepen your skills:
+
+- **Convolutional Neural Networks (CNNs)**: Use `keras.layers.Conv2D` to process images more efficiently by learning spatial features.
+- **Transfer Learning**: Start from a pre-trained model like MobileNetV2 or ResNet and fine-tune it for your dataset.
+- **TensorFlow Datasets (tfds)**: Access hundreds of ready-to-use datasets for NLP, vision, audio, and more.
+- **Model Deployment**: Use TensorFlow Serving or TensorFlow.js to bring your model to production.
+
+The ML Bhopal community runs regular workshops on each of these topics. Join us on Commudle to stay updated on upcoming sessions and connect with fellow learners who are on the same journey.

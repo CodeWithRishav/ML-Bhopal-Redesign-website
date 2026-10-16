@@ -1,0 +1,345 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Backgrounds & Surfaces */
+    --background: #FAFAFA; /* Off White */
+    --foreground: #0F172A; /* Deep Navy */
+    --surface: #FFFFFF;    /* Pure White Cards */
+    --surface-elevated: #FFFFFF;
+    --surface-secondary: #E5E7EB; /* Soft Gray */
+    --border: #D1D5DB;     /* Border Gray */
+    --border-light: #E5E7EB;
+
+    /* Primary: #FF7A00 (Buttons, CTAs, highlights, active states) */
+    --primary: #FF7A00;
+    --primary-hover: #FF9A3D;
+    --primary-active: #E66E00;
+    --primary-light: #FFF1E6; /* Light Orange */
+
+    /* Secondary: #4285F4 (Links, secondary buttons, interactive) */
+    --secondary: #4285F4;
+    --secondary-hover: #2B72E5;
+
+    /* Typography */
+    --text-primary: #0F172A;   /* Headings and primary text */
+    --text-secondary: #334155; /* Descriptions, subtitles, supporting text */
+    --text-tertiary: #64748B;
+
+    /* Google Brand Palette */
+    --google-blue: #4285F4;
+    --google-green: #34A853;
+    --google-yellow: #FBBC05;
+    --google-red: #EA4335;
+
+    /* Light Sections & Accents */
+    --light-orange: #FFF1E6;
+    --pale-blue: #E8F0FE;
+    --soft-gray: #E5E7EB;
+  }
+
+  .dark {
+    /* Dark Colors */
+    --background: #0F172A; /* Deep Navy */
+    --foreground: #F8FAFC;
+    --surface: #1E293B;    /* Elevated surface */
+    --surface-elevated: #334155; /* Slate */
+    --surface-secondary: #1E293B;
+    --border: #334155;     /* Slate Border */
+    --border-light: #475569;
+
+    /* Primary Orange */
+    --primary: #FF7A00;
+    --primary-hover: #FF9A3D;
+    --primary-active: #E66E00;
+    --primary-light: rgba(255, 122, 0, 0.15);
+
+    /* Secondary */
+    --secondary: #60A5FA;
+    --secondary-hover: #93C5FD;
+
+    /* Typography */
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+    --text-tertiary: #64748B;
+
+    /* Google Brand Palette */
+    --google-blue: #4285F4;
+    --google-green: #34A853;
+    --google-yellow: #FBBC05;
+    --google-red: #EA4335;
+
+    /* Dark Accent Sections */
+    --light-orange: rgba(255, 122, 0, 0.12);
+    --pale-blue: rgba(66, 133, 244, 0.12);
+    --soft-gray: #1E293B;
+  }
+
+  * {
+    border-color: #D1D5DB;
+  }
+
+  .dark * {
+    border-color: #334155;
+  }
+
+  html {
+    background-color: #FAFAFA;
+    color: #0F172A;
+    scroll-behavior: smooth;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html.dark {
+    background-color: #0F172A;
+    color: #F8FAFC;
+  }
+
+  body {
+    background-color: #FAFAFA;
+    color: #0F172A;
+    overflow-x: clip;
+    min-height: 100vh;
+  }
+
+  html.dark body {
+    background-color: #0F172A;
+    color: #F8FAFC;
+  }
+
+  ::selection {
+    background: #FFF1E6;
+    color: #FF7A00;
+  }
+
+  .dark ::selection {
+    background: rgba(255, 122, 0, 0.25);
+    color: #FF9A3D;
+  }
+
+  :focus-visible {
+    outline: 2px solid #FF7A00;
+    outline-offset: 2px;
+  }
+
+  .dark :focus-visible {
+    outline: 2px solid #FF7A00;
+    outline-offset: 2px;
+  }
+}
+
+/* Material Design Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAFAFA;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #0F172A;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D1D5DB;
+  border-radius: 4px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9CA3AF;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Card & Surface Classes */
+.material-card {
+  background-color: #FFFFFF;
+  border: 1px solid #D1D5DB;
+  border-radius: 16px;
+  box-shadow: 0 1px 2px 0 rgba(15, 23, 42, 0.05), 0 1px 3px 0 rgba(15, 23, 42, 0.08);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .material-card {
+  background-color: #1E293B;
+  border-color: #334155;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4);
+}
+
+.material-card:hover {
+  box-shadow: 0 4px 12px 0 rgba(15, 23, 42, 0.08), 0 1px 3px 0 rgba(15, 23, 42, 0.06);
+  border-color: #9CA3AF;
+}
+
+.dark .material-card:hover {
+  border-color: #475569;
+  box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.6);
+}
+
+.material-surface-flat {
+  background-color: #FFFFFF;
+  border: 1px solid #D1D5DB;
+  border-radius: 16px;
+}
+
+.dark .material-surface-flat {
+  background-color: #1E293B;
+  border-color: #334155;
+}
+
+/* Explicit Gradient Utilities (Website Color Palette) */
+.gradient-primary {
+  background: linear-gradient(135deg, #FF7A00 0%, #FF9A3D 100%);
+}
+
+.gradient-google {
+  background: linear-gradient(90deg, #4285F4 0%, #34A853 33%, #FBBC05 66%, #EA4335 100%);
+}
+
+.gradient-hero {
+  background: linear-gradient(135deg, #FFF1E6 0%, #FAFAFA 50%, #E8F0FE 100%);
+}
+
+.gradient-dark-premium {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #334155 100%);
+}
+
+/* 1. Google Connected Dot Grid */
+.google-dot-grid {
+  background-size: 24px 24px;
+  background-image: radial-gradient(circle, #D1D5DB 1px, transparent 1px);
+}
+
+.dark .google-dot-grid {
+  background-image: radial-gradient(circle, #334155 1px, transparent 1px);
+}
+
+/* 2. Google Technical Line Grid */
+.google-line-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(209, 213, 219, 0.6) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(209, 213, 219, 0.6) 1px, transparent 1px);
+}
+
+.dark .google-line-grid {
+  background-image: 
+    linear-gradient(to right, rgba(51, 65, 85, 0.5) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(51, 65, 85, 0.5) 1px, transparent 1px);
+}
+
+/* 2b. Blueprint Graph Grid */
+.blueprint-grid {
+  background-size: 36px 36px;
+  background-image: 
+    linear-gradient(to right, rgba(66, 133, 244, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(66, 133, 244, 0.08) 1px, transparent 1px);
+}
+
+.dark .blueprint-grid {
+  background-image: 
+    linear-gradient(to right, rgba(96, 165, 250, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(96, 165, 250, 0.08) 1px, transparent 1px);
+}
+
+/* 3. Google Architectural Cross Grid */
+.google-cross-grid {
+  background-size: 40px 40px;
+  background-image:
+    radial-gradient(circle, #D1D5DB 1.5px, transparent 1.5px),
+    linear-gradient(to right, rgba(209, 213, 219, 0.3) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(209, 213, 219, 0.3) 1px, transparent 1px);
+}
+
+.dark .google-cross-grid {
+  background-image:
+    radial-gradient(circle, #334155 1.5px, transparent 1.5px),
+    linear-gradient(to right, rgba(51, 65, 85, 0.4) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(51, 65, 85, 0.4) 1px, transparent 1px);
+}
+
+/* 4. Google Developer Code Matrix Grid */
+.google-code-grid {
+  background-size: 20px 20px;
+  background-image:
+    linear-gradient(to right, rgba(66, 133, 244, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(66, 133, 244, 0.04) 1px, transparent 1px);
+}
+
+.dark .google-code-grid {
+  background-image:
+    linear-gradient(to right, rgba(96, 165, 250, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(96, 165, 250, 0.05) 1px, transparent 1px);
+}
+
+/* Google Semantic Dots */
+.google-dot-blue {
+  background-color: #4285F4;
+}
+.dark .google-dot-blue {
+  background-color: #60A5FA;
+}
+.google-dot-green {
+  background-color: #34A853;
+}
+.dark .google-dot-green {
+  background-color: #4ADE80;
+}
+.google-dot-yellow {
+  background-color: #FBBC05;
+}
+.dark .google-dot-yellow {
+  background-color: #FDE047;
+}
+.google-dot-red {
+  background-color: #EA4335;
+}
+.dark .google-dot-red {
+  background-color: #F87171;
+}
+
+/* Hardware-Accelerated Awwwards Marquee Ribbon */
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Accessibility: Prefers Reduced Motion Safety */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-marquee {
+    animation: none !important;
+  }
+}

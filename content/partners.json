@@ -1,0 +1,269 @@
+{
+  "academic": [
+    {
+      "name": "LNCT Group of Colleges",
+      "type": "Academic Alliance",
+      "role": "Flagship Venue Host & MoU Partner",
+      "url": "https://lnct.ac.in",
+      "logo": "/logos/partners/lnct.svg",
+      "photo": "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=800&auto=format&fit=crop",
+      "note": "Hosted AI Day 2.0 (500+ builders, Central India's premier AI summit)."
+    },
+    {
+      "name": "Oriental Group of Institutes",
+      "type": "Academic Alliance",
+      "role": "Summit Venue Partner",
+      "url": "https://oistbpl.ac.in",
+      "logo": "/logos/partners/oriental.svg",
+      "photo": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800&auto=format&fit=crop",
+      "note": "Hosted AI Day 2025 (739 registered participants across Central India)."
+    },
+    {
+      "name": "MANIT Bhopal",
+      "type": "National Institute",
+      "role": "Student Builder Chapter & Research",
+      "url": "https://www.manit.ac.in",
+      "logo": "/logos/partners/manit.svg",
+      "photo": "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=800&auto=format&fit=crop",
+      "note": "Key campus collaborator for AI research, algorithms, and national hackathons."
+    },
+    {
+      "name": "IIIT Bhopal",
+      "type": "National Institute",
+      "role": "Academic Network Partner",
+      "url": "https://www.iiitbhopal.ac.in",
+      "logo": "/logos/partners/iiit-bhopal.svg",
+      "photo": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800&auto=format&fit=crop",
+      "note": "Hackathon, algorithms, and deep learning research participant."
+    },
+    {
+      "name": "UIT-RGPV",
+      "type": "State University",
+      "role": "State Technical University Chapter",
+      "url": "https://www.rgpv.ac.in",
+      "logo": "/logos/partners/rgpv.svg",
+      "photo": "https://images.unsplash.com/photo-1592280771190-3e2e4d571952?q=80&w=800&auto=format&fit=crop",
+      "note": "Core student volunteer network and regional developer outreach."
+    },
+    {
+      "name": "TIT Technocrats",
+      "type": "Academic Alliance",
+      "role": "Academic Network Partner",
+      "url": "https://technocratsgroup.edu.in",
+      "logo": "/logos/partners/tit.svg",
+      "photo": "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?q=80&w=800&auto=format&fit=crop",
+      "note": "Campus workshop collaborator and developer community incubator."
+    }
+  ],
+  "community": [
+    {
+      "name": "Google for Developers",
+      "type": "Ecosystem",
+      "role": "Foundational Ecosystem Supporter",
+      "url": "https://developers.google.com",
+      "logo": "/logos/google-developers-light.png",
+      "photo": "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?q=80&w=800&auto=format&fit=crop",
+      "note": "Global developer relations providing speaker support, cloud credits, and workshop tracks."
+    },
+    {
+      "name": "GDG Cloud Bhopal",
+      "type": "Community",
+      "role": "Regional Cloud & GDE Collaborator",
+      "url": "https://gdg.community.dev/gdg-cloud-bhopal/",
+      "logo": "/logos/partners/gdg-cloud.svg",
+      "photo": "https://images.unsplash.com/photo-1572021335469-31706a17aaef?q=80&w=800&auto=format&fit=crop",
+      "note": "Google Developer Group Cloud chapter fostering cloud architectures and GDE sessions."
+    },
+    {
+      "name": "Commudle",
+      "type": "Platform",
+      "role": "Official Community & Ticketing Platform",
+      "url": "https://www.commudle.com/communities/ml-bhopal",
+      "logo": "/logos/partners/commudle.svg",
+      "photo": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop",
+      "note": "The official community engagement, badge verification, and ticketing engine powering ML Bhopal."
+    },
+    {
+      "name": "Scalive",
+      "type": "Venue Partner",
+      "role": "Official Venue & Developer Academy Partner",
+      "url": "https://scalive.in",
+      "logo": "/logos/scalive.png",
+      "photo": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop",
+      "note": "Venue partner co-hosting Project to Product with AI and technical workshops."
+    },
+    {
+      "name": "Knowvy Technologies",
+      "type": "Industry Partner",
+      "role": "Technology & Talent Partner",
+      "url": "https://knowvy.com",
+      "logo": "/logos/knowvy.png",
+      "photo": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop",
+      "note": "Technology partner supporting applied AI project incubation and developer hiring pipelines."
+    },
+    {
+      "name": "OWASP Bhopal",
+      "type": "Security",
+      "role": "Cybersecurity & AI Safety Partner",
+      "url": "https://owasp.org/www-chapter-bhopal/",
+      "logo": "/logos/partners/owasp.svg",
+      "photo": "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=800&auto=format&fit=crop",
+      "note": "Security community chapter co-hosting NetShield workshops, CTF, and AI safety labs."
+    },
+    {
+      "name": "Searce",
+      "type": "Sponsor",
+      "role": "Cloud & Applied AI Partner",
+      "url": "https://searce.com",
+      "logo": "/logos/partners/searce.svg",
+      "photo": "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop",
+      "note": "Modern technology consulting firm specializing in Cloud and Applied AI solutions."
+    },
+    {
+      "name": "AnantreX",
+      "type": "Ecosystem",
+      "role": "Community Sponsor & Hackathon Judge",
+      "url": null,
+      "logo": "/logos/partners/anantrex.svg",
+      "photo": "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop",
+      "note": "Mentoring hackathon participants and supporting student innovation in Central India."
+    },
+    {
+      "name": "Klariqo",
+      "type": "Sponsor",
+      "role": "Event Sponsor & Career Partner",
+      "url": null,
+      "logo": "/logos/partners/klariqo.svg",
+      "photo": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop",
+      "note": "Providing career guidance, resume reviews, and sponsorship for developer summits."
+    }
+  ],
+  "current": [
+    {
+      "name": "Google for Developers",
+      "type": "Ecosystem Supporter",
+      "url": "https://developers.google.com",
+      "logo": "/logos/google-developers-light.png",
+      "photo": "https://images.unsplash.com/photo-1573804633927-bfcbcd909acd?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "name": "GDG Cloud Bhopal",
+      "type": "Community Partner",
+      "url": "https://gdg.community.dev/gdg-cloud-bhopal/",
+      "logo": "/logos/partners/gdg-cloud.svg",
+      "photo": "https://images.unsplash.com/photo-1572021335469-31706a17aaef?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "name": "Commudle",
+      "type": "Platform Partner",
+      "url": "https://www.commudle.com/communities/ml-bhopal",
+      "logo": "/logos/partners/commudle.svg",
+      "photo": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "name": "Scalive",
+      "type": "Venue Partner",
+      "url": "https://scalive.in",
+      "logo": "/logos/scalive.png",
+      "photo": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "name": "Knowvy Technologies",
+      "type": "Industry Partner",
+      "url": "https://knowvy.com",
+      "logo": "/logos/knowvy.png",
+      "photo": "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "name": "LNCT Group of Colleges",
+      "type": "Venue Partner",
+      "url": "https://lnct.ac.in",
+      "logo": "/logos/partners/lnct.svg",
+      "photo": "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "name": "Oriental Group of Institutes",
+      "type": "Venue Partner",
+      "url": "https://oistbpl.ac.in",
+      "logo": "/logos/partners/oriental.svg",
+      "photo": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "name": "OWASP Bhopal",
+      "type": "Community Partner",
+      "url": "https://owasp.org/www-chapter-bhopal/",
+      "logo": "/logos/partners/owasp.svg",
+      "photo": "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "name": "MANIT Bhopal",
+      "type": "National Institute",
+      "url": "https://www.manit.ac.in",
+      "logo": "/logos/partners/manit.svg",
+      "photo": "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "name": "IIIT Bhopal",
+      "type": "National Institute",
+      "url": "https://www.iiitbhopal.ac.in",
+      "logo": "/logos/partners/iiit-bhopal.svg",
+      "photo": "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "name": "UIT-RGPV",
+      "type": "State University",
+      "url": "https://www.rgpv.ac.in",
+      "logo": "/logos/partners/rgpv.svg",
+      "photo": "https://images.unsplash.com/photo-1592280771190-3e2e4d571952?q=80&w=800&auto=format&fit=crop"
+    },
+    {
+      "name": "TIT Technocrats",
+      "type": "Institute",
+      "url": "https://technocratsgroup.edu.in",
+      "logo": "/logos/partners/tit.svg",
+      "photo": "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?q=80&w=800&auto=format&fit=crop"
+    }
+  ],
+  "past": [
+    { "name": "MANIT Bhopal", "type": "Institute" },
+    { "name": "IIIT Bhopal", "type": "Institute" },
+    { "name": "UIT-RGPV", "type": "Institute" },
+    { "name": "TIT Technocrats", "type": "Institute" },
+    { "name": "AnantreX", "type": "Community" },
+    { "name": "Klariqo", "type": "Sponsor" }
+  ],
+  "sponsorshipTiers": [
+    {
+      "name": "Silver",
+      "price": "₹25,000",
+      "benefits": [
+        "Logo on event materials",
+        "Social media mention",
+        "2 free event tickets",
+        "Exhibition space"
+      ]
+    },
+    {
+      "name": "Gold",
+      "price": "₹50,000",
+      "benefits": [
+        "All Silver benefits",
+        "Keynote speaking opportunity",
+        "5 free event tickets",
+        "Dedicated exhibition booth",
+        "Branding in press releases"
+      ]
+    },
+    {
+      "name": "Platinum",
+      "price": "₹1,00,000",
+      "benefits": [
+        "All Gold benefits",
+        "Title sponsorship recognition",
+        "10 free event tickets",
+        "Keynote presentation slot",
+        "Dedicated workshop session"
+      ]
+    }
+  ]
+}

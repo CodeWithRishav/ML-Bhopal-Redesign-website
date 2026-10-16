@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 60" fill="none">
+  <!-- RGPV Emblem -->
+  <g transform="translate(10, 6)">
+    <circle cx="22" cy="23" r="20" fill="#EA580C"/>
+    <circle cx="22" cy="23" r="16" stroke="#FFFFFF" stroke-width="1.5" stroke-dasharray="3 2" fill="none"/>
+    <path d="M22 12 L22 34 M12 23 L32 23" stroke="#FFFFFF" stroke-width="1.8"/>
+    <circle cx="22" cy="23" r="4" fill="#FFFFFF"/>
+  </g>
+  <!-- UIT-RGPV Typography -->
+  <text x="60" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="900" fill="#EA580C" letter-spacing="0.5">UIT-RGPV</text>
+  <text x="60" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#5F6368" letter-spacing="0.3">STATE TECH UNIVERSITY</text>
+</svg>

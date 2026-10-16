@@ -1,0 +1,221 @@
+{
+  "organization": {
+    "name": "ML Bhopal",
+    "legalName": "Machine Learning Bhopal",
+    "formerName": "TFUG Bhopal",
+    "email": "contact@mlbhopal.tech",
+    "location": "Bhopal, Madhya Pradesh, India",
+    "commudleUrl": "https://www.commudle.com/communities/ml-bhopal",
+    "linktree": "https://linktr.ee/mlbhopal"
+  },
+  "hero": {
+    "socialProof": "Backed by Google for Developers · 3,500+ members across Central India",
+    "description": "Central India's largest AI/ML community — workshops, hackathons, AI Day, and monthly meetups for students and builders. No gatekeeping, just learn and ship.",
+    "primaryCta": "Join on Commudle",
+    "secondaryCta": "Browse Events"
+  },
+  "about": {
+    "preview": "From TFUG Bhopal to ML Bhopal — we've grown into Central India's most active AI community. We run hands-on sessions on TensorFlow, GenAI, Vertex AI, and real-world ML with Google Developer Experts and industry mentors.",
+    "mission": "Foster collaboration, knowledge sharing, and innovation in machine learning, data science, and artificial intelligence.",
+    "skillTags": [
+      "TensorFlow",
+      "GenAI",
+      "LLMs",
+      "Vertex AI",
+      "Hackathons",
+      "AI Day",
+      "Workshops",
+      "MLOps",
+      "RAG",
+      "Agentic AI",
+      "Meetups",
+      "Open Source"
+    ]
+  },
+  "stats": [
+    { "value": "22+", "label": "Events hosted" },
+    { "value": "98%", "label": "Positive feedback" },
+    { "value": "3,500+", "label": "Community members" }
+  ],
+  "impactStats": [
+    { "value": "3,500+", "label": "Members on Commudle" },
+    { "value": "22+", "label": "Events since 2023" },
+    { "value": "500+", "label": "AI Day 2.0 attendees" },
+    { "value": "9+", "label": "Institutes reached" }
+  ],
+  "milestones": [
+    {
+      "title": "AI Day Bhopal 2.0",
+      "detail": "500+ builders at LNCT — flagship edition",
+      "year": "2026"
+    },
+    {
+      "title": "GenAI Hackathon",
+      "detail": "739 registrations with GDE judges",
+      "year": "2025"
+    },
+    {
+      "title": "AI Day Bhopal 2023",
+      "detail": "300+ attendees — community founded",
+      "year": "2023"
+    },
+    {
+      "title": "Radius platform",
+      "detail": "AI networking tool for the community",
+      "year": "2026"
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "AI Day 2.0 was incredible — hands-on workshops, GDE speakers, and the AI-Thon pushed us to ship in 12 hours. Got internship leads from the event itself.",
+      "name": "Aditya Patel",
+      "role": "Student, LNCT Bhopal"
+    },
+    {
+      "quote": "The GenAI Hackathon mentors helped us build our first RAG pipeline. ML Bhopal is where Bhopal's AI builders actually meet and collaborate.",
+      "name": "Sneha Rajput",
+      "role": "ML Engineer, Bhopal"
+    },
+    {
+      "quote": "Joined as a beginner at a TensorFlow workshop. Six months later I was volunteering at AI Day. The community genuinely lifts people up.",
+      "name": "Karan Joshi",
+      "role": "Developer, MANIT Bhopal"
+    }
+  ],
+  "faqs": [
+    {
+      "q": "Who can join ML Bhopal?",
+      "a": "Anyone curious about AI and machine learning — students, developers, researchers, or hobbyists. Most events welcome beginners; flagship events like AI Day cater to all skill levels."
+    },
+    {
+      "q": "How do I register for events?",
+      "a": "All event registrations are on Commudle. Join our community at commudle.com/communities/ml-bhopal to get notified when new events open."
+    },
+    {
+      "q": "Are events free?",
+      "a": "Most workshops and meetups are free. Flagship events like AI Day may have a nominal fee (typically ₹299–₹599) to cover venue and logistics."
+    },
+    {
+      "q": "Can I speak, sponsor, or volunteer?",
+      "a": "Yes! Email contact@mlbhopal.tech for speaking slots, sponsorship packages, or visit mlbhopal.tech/join to volunteer with the core team."
+    },
+    {
+      "q": "What is ML Bhopal's relationship with Google?",
+      "a": "ML Bhopal started as TensorFlow User Group Bhopal (TFUG) and is backed by Google for Developers. We regularly host GDEs and run sessions on Google AI tools."
+    },
+    {
+      "q": "Is ML Bhopal only for Bhopal students?",
+      "a": "While most events are in Bhopal, we welcome attendees from across Madhya Pradesh and Central India. Many participants travel from nearby cities for AI Day."
+    }
+  ],
+  "services": {
+    "tabs": [
+      {
+        "id": "workshops",
+        "label": "Workshops",
+        "title": "Hands-on Workshops & Talks",
+        "description": "Practical sessions on TensorFlow, Keras, GenAI, Vertex AI, and LLM application development — led by Google Developer Experts, industry engineers, and community practitioners.",
+        "tags": ["TensorFlow", "Vertex AI", "GenAI", "Live coding"]
+      },
+      {
+        "id": "hackathons",
+        "label": "Hackathons",
+        "title": "Hackathons & AI-Thons",
+        "description": "12-hour build sprints on HealthTech, FinTech, EduTech, and open innovation themes. Teams get mentorship from GDEs, pitch to judges, and compete for prizes and internship referrals.",
+        "tags": ["12-hour builds", "GDE mentors", "Prizes", "Internships"]
+      },
+      {
+        "id": "ai-day",
+        "label": "AI Day",
+        "title": "AI Day Bhopal — Flagship Event",
+        "description": "Central India's biggest AI builder conference: expert keynotes, parallel workshops, AI-Thon competition, expo partners, and guaranteed internship opportunities for top performers.",
+        "tags": ["500+ attendees", "Keynotes", "AI-Thon", "LNCT venue"]
+      },
+      {
+        "id": "meetups",
+        "label": "Meetups",
+        "title": "Monthly Builder Meetups",
+        "description": "Regular community gatherings for project demos, paper discussions, career networking, and peer learning. Low-pressure environment to practice presenting your work.",
+        "tags": ["Project demos", "Networking", "Open floor", "Free entry"]
+      }
+    ]
+  },
+  "marquee": {
+    "row1": [
+      { "label": "Workshops" },
+      { "label": "Hackathons" },
+      { "label": "AI Day Bhopal" },
+      { "label": "Monthly Meetups" },
+      { "label": "GenAI" },
+      { "label": "TensorFlow" }
+    ],
+    "row2": [
+      { "label": "3,500+ Members" },
+      { "label": "22+ Events" },
+      { "label": "Google for Developers" },
+      { "label": "GDE Speakers" },
+      { "label": "9+ Institutes" }
+    ]
+  },
+  "founder": {
+    "label": "Community Leads",
+    "title": "Meet the people behind ML Bhopal",
+    "bio": "ML Bhopal is led by volunteers who organize events, run workshops, and grow the community across colleges in Bhopal. Together with Google for Developers and partner institutes, they host Central India's most active AI builder programs.",
+    "featured": [
+      {
+        "name": "Rishabh Gupta",
+        "role": "Community Lead",
+        "org": "Technical Consultant @ Salesforce"
+      },
+      {
+        "name": "Anurag Mishra",
+        "role": "Community Lead",
+        "org": "Software Engineer @ PayU"
+      }
+    ],
+    "timeline": [
+      { "role": "ML Bhopal (formerly TFUG Bhopal)", "period": "2023–Present" },
+      { "role": "AI Day Bhopal — annual flagship", "period": "Since 2023" },
+      { "role": "Backed by Google for Developers", "period": "Ongoing" },
+      { "role": "3,500+ members on Commudle", "period": "2026" }
+    ]
+  },
+  "sections": {
+    "works": {
+      "label": "(Our Events)",
+      "title": "Flagship Events & Highlights",
+      "description": "From AI Day to GenAI hackathons — events that brought hundreds of builders together across Bhopal and Central India."
+    },
+    "testimonials": {
+      "label": "(Community voices)",
+      "title": "What builders say"
+    },
+    "services": {
+      "label": "(What we run)",
+      "title": "Programs for every builder"
+    },
+    "impact": {
+      "label": "(Community impact)",
+      "title": "Milestones & numbers"
+    },
+    "faq": {
+      "label": "(FAQs)",
+      "title": "Your questions, answered",
+      "description": "Everything you need to know about joining, attending events, and contributing to ML Bhopal."
+    },
+    "contact": {
+      "label": "Let's connect",
+      "title": "Want to collaborate?",
+      "description": "Sponsorships, speaking slots, venue partnerships, media inquiries, or volunteering — we'd love to hear from you."
+    }
+  },
+  "cta": {
+    "title": "Join Central India's AI builder community",
+    "subtitle": "3,500+ members, 22+ events, and the biggest AI conference in the region. Register on Commudle or volunteer with us.",
+    "primaryLabel": "Join on Commudle",
+    "secondaryLabel": "Volunteer with us"
+  },
+  "header": {
+    "notch": "Join 3,500+ builders on Commudle"
+  }
+}

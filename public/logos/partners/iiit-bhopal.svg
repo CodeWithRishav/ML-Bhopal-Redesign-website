@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 60" fill="none">
+  <!-- IIIT Bhopal Emblem -->
+  <g transform="translate(10, 6)">
+    <rect x="2" y="3" width="40" height="40" rx="8" fill="#0284C7"/>
+    <!-- Circuit lines & I-mark -->
+    <path d="M12 14 L32 14 M22 14 L22 32 M14 32 L30 32" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="12" cy="14" r="2" fill="#38BDF8"/>
+    <circle cx="32" cy="14" r="2" fill="#38BDF8"/>
+  </g>
+  <!-- IIIT Bhopal Typography -->
+  <text x="60" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="900" fill="#0284C7" letter-spacing="1">IIIT</text>
+  <text x="60" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#5F6368" letter-spacing="0.3">BHOPAL</text>
+</svg>

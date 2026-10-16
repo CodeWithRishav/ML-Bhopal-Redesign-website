@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 60" fill="none">
+  <!-- TIT Technocrats Crest -->
+  <g transform="translate(10, 6)">
+    <path d="M22 2 L40 8 C40 28 22 42 22 44 C22 42 4 28 4 8 Z" fill="#1E293B"/>
+    <path d="M22 6 L36 11 C36 25 22 37 22 39 C22 37 8 25 8 11 Z" fill="#334155"/>
+    <text x="22" y="27" font-family="'Inter', sans-serif" font-size="14" font-weight="900" fill="#38BDF8" text-anchor="middle">TIT</text>
+  </g>
+  <!-- TIT Technocrats Typography -->
+  <text x="60" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="800" fill="#1E293B" letter-spacing="0.5">TECHNOCRATS</text>
+  <text x="60" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#64748B" letter-spacing="0.3">GROUP OF INSTITUTIONS</text>
+</svg>

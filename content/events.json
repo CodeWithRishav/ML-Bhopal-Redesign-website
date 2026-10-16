@@ -1,0 +1,476 @@
+[
+  {
+    "id": "build-with-ai-agents-2026",
+    "slug": "build-with-ai-agents-2026",
+    "title": "Build with AI: Agentic AI & Gemini 2.5 Summit",
+    "status": "upcoming",
+    "featured": true,
+    "type": "flagship",
+    "date": "2026-10-24",
+    "time": "10:00 AM - 05:00 PM IST",
+    "venue": "Auditorium Hall, LNCT Campus, Bhopal",
+    "city": "Bhopal",
+    "tagline": "Master Agentic Workflows, Google Gemini 2.5, Multimodal AI, and Vertex AI Studio in hands-on code labs.",
+    "description": "Join Central India's biggest developer summit exploring Agentic Workflows, Google Gemini 2.5, Multimodal AI, and Vertex AI Studio in hands-on code labs. Designed for builders, researchers, and engineers ready to deploy production AI systems.",
+    "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1200&auto=format&fit=crop",
+    "bannerImage": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1200&auto=format&fit=crop",
+    "registrations": 450,
+    "capacity": 500,
+    "commudleUrl": "https://www.commudle.com/communities/ml-bhopal/events",
+    "lumaUrl": "https://luma.com/user/mlbhopal",
+    "topics": [
+      "Agentic AI",
+      "Gemini 2.5",
+      "Vertex AI",
+      "Function Calling",
+      "Multimodal Systems"
+    ],
+    "speakers": [
+      {
+        "name": "Anurag Mishra",
+        "role": "Google Developer Expert / Community Lead",
+        "topic": "Architecting Autonomous Agentic Pipelines with Gemini 2.5"
+      },
+      {
+        "name": "Rishabh Gupta",
+        "role": "Applied AI Researcher & Systems Lead",
+        "topic": "Vertex AI Studio & Multi-Agent Orchestration"
+      }
+    ],
+    "agenda": [
+      {
+        "time": "10:00 AM - 10:30 AM",
+        "title": "Keynote & Community Welcome",
+        "description": "Opening remarks on Central India AI landscape"
+      },
+      {
+        "time": "10:30 AM - 12:30 PM",
+        "title": "Hands-on Lab: Agentic Workflows with Gemini 2.5",
+        "description": "Building tool-use and autonomous task execution systems"
+      },
+      {
+        "time": "12:30 PM - 01:30 PM",
+        "title": "Networking Lunch & Community Demos",
+        "description": "Live showcases from local AI student builders"
+      },
+      {
+        "time": "01:30 PM - 03:30 PM",
+        "title": "Deep Dive: Production RAG & Vertex AI Studio",
+        "description": "Vector indexing, reranking, and evaluation"
+      },
+      {
+        "time": "03:30 PM - 05:00 PM",
+        "title": "AI Project Showcase & Swag Handout",
+        "description": "Awarding top prototype submissions"
+      }
+    ],
+    "prerequisites": [
+      "Laptop with modern browser and Python 3.10+ installed",
+      "Basic familiarity with Python and REST APIs",
+      "Google Cloud or Google AI Studio free tier account"
+    ],
+    "collaborators": [
+      "Google for Developers",
+      "Commudle",
+      "LNCT Group of Colleges"
+    ]
+  },
+  {
+    "id": "project-to-product-2026",
+    "title": "Project to Product with AI",
+    "slug": "project-to-product-2026",
+    "date": "2026-06-21",
+    "type": "meetup",
+    "status": "past",
+    "venue": "Bhopal",
+    "registrations": 219,
+    "commudleUrl": "https://www.commudle.com/communities/ml-bhopal/events",
+    "description": "A hands-on meetup helping developers transform AI project ideas into real products.",
+    "speakers": [],
+    "collaborators": [],
+    "featured": false,
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
+    "bannerImage": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "ai-day-bhopal-2-0",
+    "title": "AI Day Bhopal 2.0 | Build with AI",
+    "slug": "ai-day-bhopal-2-0",
+    "date": "2026-05-16",
+    "type": "flagship",
+    "status": "past",
+    "venue": "LNCT Group of Colleges, Bhopal",
+    "registrations": 363,
+    "commudleUrl": "https://www.commudle.com/communities/ml-bhopal/events/ai-day-bhopal-2-0",
+    "description": "Central India's biggest AI builder event. 500+ builders, expert talks, hands-on workshops, AI-Thon, and guaranteed internship opportunities.",
+    "speakers": [
+      "Dr. Anukriti Bansal",
+      "Rishiraj Acharya",
+      "Ansh Deb",
+      "Niral Verma"
+    ],
+    "collaborators": [
+      "LNCT Group of Colleges",
+      "Google for Developers"
+    ],
+    "featured": true,
+    "image": "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200&auto=format&fit=crop",
+    "bannerImage": "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "netshield-2026",
+    "title": "NetShield - Ethical Hacking & Web Security Workshop",
+    "slug": "netshield-2026",
+    "date": "2026-04-12",
+    "type": "workshop",
+    "status": "past",
+    "venue": "Bhopal",
+    "registrations": 199,
+    "commudleUrl": "https://www.commudle.com/communities/ml-bhopal/events",
+    "description": "Hands-on ethical hacking and web security workshop for developers.",
+    "speakers": [],
+    "collaborators": [
+      "OWASP Bhopal"
+    ],
+    "featured": false,
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1200&auto=format&fit=crop",
+    "bannerImage": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "nextgen-apps-2026",
+    "title": "NextGen Apps: Build With AI",
+    "slug": "nextgen-apps-2026",
+    "date": "2026-03-28",
+    "type": "workshop",
+    "status": "past",
+    "venue": "Bhopal",
+    "registrations": 307,
+    "commudleUrl": "https://www.commudle.com/communities/ml-bhopal/events",
+    "description": "Workshop on building next-generation apps powered by AI and modern cloud tools.",
+    "speakers": [],
+    "collaborators": [],
+    "featured": false,
+    "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop",
+    "bannerImage": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "promptzilla-2026",
+    "title": "Promptzilla: Unleash the Beast of Intelligence",
+    "slug": "promptzilla-2026",
+    "date": "2026-02-20",
+    "type": "workshop",
+    "status": "past",
+    "venue": "Bhopal",
+    "registrations": 304,
+    "commudleUrl": "https://www.commudle.com/communities/ml-bhopal/events",
+    "description": "A competitive Build with AI event focused on prompt engineering and AI product building.",
+    "speakers": [],
+    "collaborators": [],
+    "featured": false,
+    "image": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop",
+    "bannerImage": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "builders-meetup-jan-2026",
+    "title": "ML Bhopal Builders Meetup – January 2026",
+    "slug": "builders-meetup-jan-2026",
+    "date": "2026-01-18",
+    "type": "meetup",
+    "status": "past",
+    "venue": "TechSimPlus Learnings, Indrapuri, Bhopal",
+    "registrations": 200,
+    "commudleUrl": "https://www.commudle.com/communities/ml-bhopal/events/ml-bhopal-kickoff-2026-hands-on-ai-project-sprint",
+    "description": "Kickoff 2026 hands-on meetup with GenAI workshops, Flutter + AI session, and project showcase.",
+    "speakers": [],
+    "collaborators": [],
+    "featured": false,
+    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop",
+    "bannerImage": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "genai-hackathon-2025",
+    "title": "GenAI Hackathon - Bhopal",
+    "slug": "genai-hackathon-2025",
+    "date": "2025-12-14",
+    "type": "hackathon",
+    "status": "past",
+    "venue": "SCALIVE, Indrapuri, Bhopal",
+    "registrations": 238,
+    "commudleUrl": "https://www.commudle.com/communities/ml-bhopal/hackathons/genai-hackathon-bhopal",
+    "description": "12-hour GenAI hackathon across 5 domains: HealthTech, FinTech, CyberSecurity, EduTech, AgriTech. Powered by ML Bhopal & Google for Developers.",
+    "speakers": [
+      "Abhishek Sharma",
+      "Ashish Kumar Verma",
+      "Sarika Purohit",
+      "Niral Verma"
+    ],
+    "collaborators": [
+      "Google for Developers"
+    ],
+    "featured": true,
+    "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop",
+    "bannerImage": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "genai-pre-hackathon-2025",
+    "title": "GenAI Pre-Hackathon Workshop",
+    "slug": "genai-pre-hackathon-2025",
+    "date": "2025-12-07",
+    "type": "workshop",
+    "status": "past",
+    "venue": "Bhopal",
+    "registrations": 459,
+    "commudleUrl": "https://www.commudle.com/communities/ml-bhopal/events",
+    "description": "Pre-hackathon preparation workshop covering GenAI tools and team formation.",
+    "speakers": [],
+    "collaborators": [],
+    "featured": false,
+    "image": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=1200&auto=format&fit=crop",
+    "bannerImage": "https://images.unsplash.com/photo-1531403009284-440f080d1e12?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "ai-connect-sati-2025",
+    "title": "AI Connect: Build to Deploy",
+    "slug": "ai-connect-sati-2025",
+    "date": "2025-09-13",
+    "type": "conference",
+    "status": "past",
+    "venue": "SATI Campus, Bhopal",
+    "registrations": 566,
+    "commudleUrl": "https://www.commudle.com/communities/ml-bhopal/events",
+    "description": "Full-day AI connect conference covering building and deploying AI applications, hosted at SATI campus.",
+    "speakers": [],
+    "collaborators": [],
+    "featured": false,
+    "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop",
+    "bannerImage": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "build-with-ai-edition-2",
+    "title": "Build with AI: Bhopal Edition II",
+    "slug": "build-with-ai-edition-2",
+    "date": "2025-06-01",
+    "type": "conference",
+    "status": "past",
+    "venue": "Hotel La Pearl, Bhopal",
+    "registrations": 926,
+    "commudleUrl": "https://www.commudle.com/communities/ml-bhopal/events/build-with-ai-bhopal-edition",
+    "description": "Second edition of Build with AI Bhopal — deeper dives into Gemini, Vertex AI, and Firebase Studio with Google Developer Experts.",
+    "speakers": [
+      "Ashish Kumar Verma",
+      "Balvinder Singh",
+      "Viraj Sharma",
+      "Raghu Pandey",
+      "Vrijraj Singh"
+    ],
+    "collaborators": [
+      "GDG Cloud Bhopal"
+    ],
+    "featured": true,
+    "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop",
+    "bannerImage": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "ai-day-bhopal-2025",
+    "title": "AI Day Bhopal - Build with AI",
+    "slug": "ai-day-bhopal-2025",
+    "date": "2025-03-30",
+    "type": "flagship",
+    "status": "past",
+    "venue": "Oriental Institute of Science & Technology, Bhopal",
+    "registrations": 739,
+    "commudleUrl": "https://www.commudle.com/communities/ml-bhopal/events/ai-day-bhopal-build-with-ai",
+    "description": "Central India's biggest AI fest — 500+ attendees, Google Developer Experts, hands-on Vertex AI workshop, AI-Thon.",
+    "speakers": [
+      "Anubhav Singh",
+      "Shubhi Dubey",
+      "Jitendra Gupta",
+      "Balvinder Singh"
+    ],
+    "collaborators": [
+      "GDG Cloud Bhopal",
+      "AnantreX"
+    ],
+    "featured": true,
+    "image": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?q=80&w=1200&auto=format&fit=crop",
+    "bannerImage": "https://images.unsplash.com/photo-1475721027785-f74eccf877e2?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "customizing-llms-2025",
+    "title": "Customizing LLMs: Google AI Studio in Action With CTF",
+    "slug": "customizing-llms-2025",
+    "date": "2025-01-31",
+    "type": "workshop",
+    "status": "past",
+    "venue": "Bhopal",
+    "registrations": 8,
+    "commudleUrl": "https://www.commudle.com/communities/ml-bhopal/events/customizing-llms-google-ai-studio-in-action-with-ctf",
+    "description": "LLM fine-tuning with Google AI Studio + CTF cybersecurity challenge. Keynote by Rishabh Gupta & Ankur Gupta.",
+    "speakers": [
+      "Rishabh Gupta",
+      "Ankur Gupta",
+      "Jay Thakkar"
+    ],
+    "collaborators": [
+      "OWASP Bhopal"
+    ],
+    "featured": false,
+    "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
+    "bannerImage": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "ml-nexus-ctf-2024",
+    "title": "Machine Learning Nexus With CTF",
+    "slug": "ml-nexus-ctf-2024",
+    "date": "2024-10-05",
+    "type": "workshop",
+    "status": "past",
+    "venue": "Bhopal",
+    "registrations": null,
+    "commudleUrl": "https://www.commudle.com/communities/ml-bhopal/events",
+    "description": "The ultimate ML + Cybersecurity crossover event with hands-on workshops and a Capture The Flag competition.",
+    "speakers": [],
+    "collaborators": [
+      "OWASP Bhopal"
+    ],
+    "featured": false,
+    "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop",
+    "bannerImage": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "ml-huddle-2024",
+    "title": "ML Huddle: Cracking The Cyber Security Puzzle",
+    "slug": "ml-huddle-2024",
+    "date": "2024-09-01",
+    "type": "workshop",
+    "status": "past",
+    "venue": "Bhopal",
+    "registrations": null,
+    "commudleUrl": "https://www.commudle.com/communities/ml-bhopal/events",
+    "description": "Workshop exploring the intersection of machine learning and cybersecurity.",
+    "speakers": [],
+    "collaborators": [],
+    "featured": false,
+    "image": "https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=1200&auto=format&fit=crop",
+    "bannerImage": "https://images.unsplash.com/photo-1515187029135-18ee286d815b?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "ai-day-bhopal-2023",
+    "title": "AI Day Bhopal 2023",
+    "slug": "ai-day-bhopal-2023",
+    "date": "2023-04-15",
+    "type": "flagship",
+    "status": "past",
+    "venue": "Bhopal",
+    "registrations": 300,
+    "commudleUrl": "https://www.commudle.com/communities/ml-bhopal/events",
+    "description": "The first AI Day Bhopal — 300+ ML enthusiasts, researchers, and industry experts for a day of learning, networking, and innovation.",
+    "speakers": [],
+    "collaborators": [],
+    "featured": false,
+    "image": "https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1200&auto=format&fit=crop",
+    "bannerImage": "https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "ai-conference-2023",
+    "title": "AI Conference",
+    "slug": "ai-conference-2023",
+    "date": "2023-06-12",
+    "type": "conference",
+    "status": "past",
+    "venue": "Bhopal",
+    "registrations": null,
+    "commudleUrl": "https://www.commudle.com/communities/ml-bhopal/events",
+    "description": "Community AI conference during the early TFUG Bhopal era.",
+    "speakers": [],
+    "collaborators": [],
+    "featured": false,
+    "image": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1200&auto=format&fit=crop",
+    "bannerImage": "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "data-science-workshop-2023",
+    "title": "Data Science Workshop",
+    "slug": "data-science-workshop-2023",
+    "date": "2023-08-20",
+    "type": "workshop",
+    "status": "past",
+    "venue": "Bhopal",
+    "registrations": null,
+    "commudleUrl": "https://www.commudle.com/communities/ml-bhopal/events",
+    "description": "Hands-on data science workshop for beginners and intermediate learners.",
+    "speakers": [],
+    "collaborators": [],
+    "featured": false,
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
+    "bannerImage": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "community-meetup-oct-2023",
+    "title": "Community Meetup",
+    "slug": "community-meetup-oct-2023",
+    "date": "2023-10-05",
+    "type": "meetup",
+    "status": "past",
+    "venue": "Bhopal",
+    "registrations": null,
+    "commudleUrl": "https://www.commudle.com/communities/ml-bhopal/events",
+    "description": "Regular community meetup for ML enthusiasts to connect and share ideas.",
+    "speakers": [],
+    "collaborators": [],
+    "featured": false,
+    "image": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop",
+    "bannerImage": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "ai-hackathon-dec-2023",
+    "title": "AI Hackathon",
+    "slug": "ai-hackathon-dec-2023",
+    "date": "2023-12-10",
+    "type": "hackathon",
+    "status": "past",
+    "venue": "Bhopal",
+    "registrations": null,
+    "commudleUrl": "https://www.commudle.com/communities/ml-bhopal/events",
+    "description": "Early community hackathon exploring AI and ML applications.",
+    "speakers": [],
+    "collaborators": [],
+    "featured": false,
+    "image": "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1200&auto=format&fit=crop",
+    "bannerImage": "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "ml-workshop-jan-2024",
+    "title": "ML Workshop",
+    "slug": "ml-workshop-jan-2024",
+    "date": "2024-01-15",
+    "type": "workshop",
+    "status": "past",
+    "venue": "Bhopal",
+    "registrations": null,
+    "commudleUrl": "https://www.commudle.com/communities/ml-bhopal/events",
+    "description": "Hands-on machine learning workshop for community members.",
+    "speakers": [],
+    "collaborators": [],
+    "featured": false,
+    "image": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
+    "bannerImage": "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
+  },
+  {
+    "id": "ml-bootcamp-2023",
+    "title": "ML Bootcamp",
+    "slug": "ml-bootcamp-2023",
+    "date": "2023-04-08",
+    "type": "workshop",
+    "status": "past",
+    "venue": "Bhopal",
+    "registrations": null,
+    "commudleUrl": "https://www.commudle.com/communities/ml-bhopal/events",
+    "description": "Intensive ML bootcamp for beginners entering the machine learning space.",
+    "speakers": [],
+    "collaborators": [],
+    "featured": false,
+    "image": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1200&auto=format&fit=crop",
+    "bannerImage": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1200&auto=format&fit=crop"
+  }
+]

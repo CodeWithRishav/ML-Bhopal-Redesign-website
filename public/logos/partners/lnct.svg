@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" fill="none">
+  <!-- LNCT Shield Crest -->
+  <g transform="translate(10, 6)">
+    <path d="M22 2 L40 8 C40 28 22 42 22 44 C22 42 4 28 4 8 Z" fill="#800000"/>
+    <path d="M22 5 L37 10 C37 26 22 39 22 41 C22 39 7 26 7 10 Z" fill="#A00000"/>
+    <!-- Torch & Flames -->
+    <path d="M22 12 L22 26 M18 16 Q22 10 26 16" stroke="#FFD700" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <!-- Book Base -->
+    <path d="M14 30 Q22 27 30 30" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+  </g>
+  <!-- LNCT Group of Colleges Typography -->
+  <text x="60" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="900" fill="#800000" letter-spacing="1">LNCT</text>
+  <text x="60" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#5F6368" letter-spacing="0.3">GROUP OF COLLEGES</text>
+</svg>

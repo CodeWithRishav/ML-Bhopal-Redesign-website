@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+  <!-- Klariqo Mark -->
+  <g transform="translate(10, 8)">
+    <circle cx="22" cy="22" r="20" fill="#059669"/>
+    <path d="M14 22 L20 28 L30 16" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <!-- Klariqo Typography -->
+  <text x="60" y="36" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="800" fill="#064E3B" letter-spacing="-0.5">klariqo</text>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" fill="none">
+  <!-- GDG Cloud Brackets & Cloud -->
+  <g transform="translate(10, 8)">
+    <!-- Red left bracket segment -->
+    <path d="M14 6 L4 18 L14 30" stroke="#EA4335" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Blue right bracket segment -->
+    <path d="M38 6 L48 18 L38 30" stroke="#4285F4" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Yellow bottom / Green accent -->
+    <path d="M19 36 L33 36" stroke="#FBBC04" stroke-width="3" stroke-linecap="round"/>
+    <!-- Cloud Center -->
+    <path d="M21 24 C19.5 24 18 22.5 18 20.5 C18 18.5 19.5 17 21.5 17 C22.2 15 24.3 13.5 26.8 13.5 C30 13.5 32.5 16 32.5 19 C33.8 19.2 35 20.4 35 22 C35 23.6 33.7 25 32 25 L21 25 Z" fill="#4285F4"/>
+  </g>
+  <!-- GDG Cloud Bhopal Typography -->
+  <text x="72" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Google Sans', 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#202124">GDG Cloud</text>
+  <text x="72" y="44" font-family="-apple-system, BlinkMacSystemFont, 'Google Sans', 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" fill="#5F6368" letter-spacing="0.5">Bhopal</text>
+</svg>
