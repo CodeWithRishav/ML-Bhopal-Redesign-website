@@ -186,18 +186,18 @@ export function HomeHero() {
               </span>
             </motion.div>
 
-            {/* Monumental Headline with Full Google Multi-Color Gradient Treatment */}
+            {/* Monumental Headline with Official Google Gradient */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
             >
               <h1 className="font-display font-black tracking-[-0.035em] text-5xl sm:text-6xl md:text-7xl xl:text-[80px] leading-[0.96] uppercase mb-6">
-                <span className="bg-gradient-to-r from-[#4285F4] via-[#EA4335] via-[#FBBC05] to-[#34A853] bg-clip-text text-transparent inline-block">
+                <span className="bg-gradient-to-r from-[#4285F4] via-[#34A853] via-[#FBBC05] to-[#EA4335] bg-clip-text text-transparent inline-block">
                   Where Bhopal <br />
                   Builds Applied AI
                 </span>
-                <span className="text-[#34A853]">.</span>
+                <span className="text-[#EA4335]">.</span>
               </h1>
             </motion.div>
 
