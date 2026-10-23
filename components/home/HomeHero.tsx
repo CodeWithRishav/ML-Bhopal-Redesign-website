@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useRef, useState, useEffect } from "react";
-import Link from "next/link";
 import Image from "next/image";
 import {
   motion,
@@ -13,31 +12,29 @@ import {
 import {
   ArrowRight,
   ExternalLink,
-  Sparkles,
-  MapPin,
   Users,
   Terminal,
-  Cpu,
   Zap,
   Calendar,
   Command,
-  Activity,
-  Layers,
 } from "lucide-react";
 import { PrimaryButton } from "@/components/ui/PrimaryButton";
 import { SecondaryButton } from "@/components/ui/SecondaryButton";
 import { GoogleElement } from "@/components/ui/GoogleElement";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 
+const COMMUDLE_EVENTS_URL = "https://www.commudle.com/communities/ml-bhopal/events";
+
 const TICKER_ITEMS = [
-  { label: "3,600+ ACTIVE BUILDERS", color: "text-primary" },
-  { label: "AI DAY 2.0 ANNUAL SUMMIT", color: "text-google-red" },
-  { label: "BY GOOGLE FOR DEVELOPERS", color: "text-google-blue" },
-  { label: "45+ CAMPUSES IN MADHYA PRADESH", color: "text-google-green" },
-  { label: "AGENTIC AI & GEMINI 2.5", color: "text-google-yellow" },
-  { label: "PRODUCTION RAG ARCHITECTURES", color: "text-primary" },
-  { label: "GEMMA 2 OPEN WEIGHTS", color: "text-google-blue" },
-  { label: "100% VOLUNTEER-DRIVEN", color: "text-google-green" },
+  { label: "3,800+ MEMBERS", color: "text-primary" },
+  { label: "NEXT: FROM IDEA TO WORKING PROJECTS — NOV 1", color: "text-google-red" },
+  { label: "AI DAY BHOPAL 2.0", color: "text-google-blue" },
+  { label: "CODE SAFE WITH AI", color: "text-google-green" },
+  { label: "GENAI HACKATHON", color: "text-google-yellow" },
+  { label: "PROMPTZILLA", color: "text-primary" },
+  { label: "NETSHIELD WORKSHOP", color: "text-google-blue" },
+  { label: "FORMERLY TFUG BHOPAL", color: "text-google-green" },
+  { label: "GOOGLE FOR DEVELOPERS", color: "text-google-red" },
 ];
 
 export function HomeHero() {
@@ -130,10 +127,10 @@ export function HomeHero() {
         <div className="hidden xl:flex items-center justify-between absolute top-28 left-8 right-8 text-[10px] font-mono tracking-widest text-[#334155]/60 dark:text-[#94A3B8]/50 select-none">
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-google-green animate-ping" />
-            <span>GEO: 23.2599° N, 77.4126° E // REGION: CENTRAL INDIA</span>
+            <span>BHOPAL, MADHYA PRADESH · SINCE 2023</span>
           </div>
           <div>
-            <span>COMMUNITY NODE: BHO-CORE-01 // STATUS: ACTIVE</span>
+            <span>FORMERLY TFUG BHOPAL</span>
           </div>
         </div>
       </div>
@@ -164,27 +161,30 @@ export function HomeHero() {
           <div className="lg:col-span-7 flex flex-col items-start text-left">
 
             {/* Awwwards Live Status Capsule */}
-            <motion.div
+            <motion.a
+              href={COMMUDLE_EVENTS_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
-              className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full text-xs font-mono font-medium tracking-wide bg-white/90 dark:bg-[#1E293B]/90 backdrop-blur-md border border-[#D1D5DB] dark:border-[#334155] shadow-sm mb-6 group cursor-default transition-all duration-300 hover:border-primary/60"
+              className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full text-xs font-mono font-medium tracking-wide bg-white/90 dark:bg-[#1E293B]/90 backdrop-blur-md border border-[#D1D5DB] dark:border-[#334155] shadow-sm mb-6 group transition-all duration-300 hover:border-primary/60"
             >
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-google-green opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-google-green" />
               </span>
               <span className="text-primary font-semibold text-[11px] tracking-wider uppercase">
-                Active Community
+                Next event · Nov 1
               </span>
               <span className="text-[#D1D5DB] dark:text-[#475569]">•</span>
               <span className="text-ink-secondary dark:text-[#94A3B8] text-[11px]">
-                Central India&apos;s AI Core
+                From Idea to Working Projects
               </span>
               <span className="hidden sm:inline-flex items-center text-[10px] text-primary font-mono group-hover:translate-x-0.5 transition-transform">
                 →
               </span>
-            </motion.div>
+            </motion.a>
 
             {/* Monumental Headline with Official Google Gradient */}
             <motion.div
@@ -193,7 +193,7 @@ export function HomeHero() {
               transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
             >
               <h1 className="font-display font-black tracking-[-0.035em] text-5xl sm:text-6xl md:text-7xl xl:text-[80px] leading-[0.96] uppercase mb-6">
-                <span className="bg-gradient-to-r from-[#4285F4] via-[#34A853] via-[#FBBC05] to-[#EA4335] bg-clip-text text-transparent inline-block">
+                <span className="bg-gradient-to-r from-[#4285F4] via-[#34A853] via-[#FBBC05] to-[#EA4335] bg-clip-text text-transparent">
                   Where Bhopal <br />
                   Builds Applied AI
                 </span>
@@ -208,12 +208,13 @@ export function HomeHero() {
               transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
               className="font-sans text-base sm:text-lg text-ink-secondary dark:text-[#94A3B8] leading-relaxed max-w-xl mb-8 font-normal"
             >
-              Central India&apos;s premier developer community of{" "}
+              A community of{" "}
               <strong className="text-ink-primary dark:text-[#F8FAFC] font-semibold">
-                3,600+ engineers, researchers, and founders
-              </strong>
-              . Moving beyond surface prompts to architecting autonomous agent
-              systems, fine-tuning open weights, and deploying on Google Cloud.
+                3,800+ machine learning enthusiasts, developers, and researchers
+              </strong>{" "}
+              in Bhopal. We run hands-on workshops, hackathons, and AI Day
+              Bhopal — fostering collaboration, knowledge sharing, and
+              innovation in ML, data science, and AI.
             </motion.p>
 
             {/* Action Cluster (Magnetic CTA + Secondary + Command Palette) */}
@@ -231,7 +232,7 @@ export function HomeHero() {
                   className="px-8 shadow-md hover:shadow-lg w-full sm:w-auto relative group overflow-hidden"
                   icon={<ExternalLink className="w-4 h-4 text-white/90 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />}
                 >
-                  <span className="relative z-10">Join 3,600+ Builders</span>
+                  <span className="relative z-10">Join on Commudle</span>
                   <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
                 </PrimaryButton>
               </MagneticButton>
@@ -242,7 +243,7 @@ export function HomeHero() {
                 className="px-7 w-full sm:w-auto"
                 icon={<ArrowRight className="w-4 h-4 text-google-blue dark:text-[#60A5FA]" />}
               >
-                Explore Gatherings
+                See Events
               </SecondaryButton>
 
               {/* Quick Search Shortcut Pill */}
@@ -310,12 +311,12 @@ export function HomeHero() {
               <div className="text-xs font-sans text-ink-secondary dark:text-[#94A3B8] leading-snug">
                 <div className="flex items-center gap-1.5">
                   <span className="font-bold text-ink-primary dark:text-[#F1F3F4]">
-                    3,600+ Builders &amp; Researchers
+                    3,800+ members on Commudle
                   </span>
                   <span className="w-1.5 h-1.5 rounded-full bg-google-blue inline-block" />
                 </div>
                 <span className="text-[11px] text-ink-tertiary dark:text-[#64748B]">
-                  Across 45+ universities &amp; tech incubators in MP
+                  Students, developers &amp; researchers across Bhopal
                 </span>
               </div>
             </motion.div>
@@ -355,13 +356,10 @@ export function HomeHero() {
 
                     <div className="flex items-center gap-1.5 text-[10px] font-mono font-medium text-[#334155] dark:text-[#94A3B8]">
                       <Terminal className="w-3 h-3 text-google-blue dark:text-[#60A5FA]" />
-                      <span>RUNTIME // ML_BHO_CORE</span>
+                      <span>mlbhopal.tech</span>
                     </div>
 
-                    <div className="flex items-center gap-1 text-[10px] font-mono text-google-green">
-                      <span className="w-1.5 h-1.5 rounded-full bg-google-green animate-pulse" />
-                      <span>LIVE</span>
-                    </div>
+                    <div className="w-12" aria-hidden="true" />
                   </div>
 
                   {/* Main High-Definition Stage Image with Vignette */}
@@ -378,33 +376,18 @@ export function HomeHero() {
                     {/* Gradient Overlay for Readability */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/10" />
 
-                    {/* Live Telemetry Waveform Badge Overlay (Top Left of Image) */}
-                    <div className="absolute top-3 left-3 flex items-center gap-2 px-2.5 py-1 rounded-md bg-black/60 backdrop-blur-md border border-white/15 text-white">
-                      <Cpu className="w-3.5 h-3.5 text-google-blue" />
-                      <span className="text-[10px] font-mono font-semibold tracking-wider">
-                        gemma-2-9b • 48.6 tok/s
-                      </span>
-                      {/* Dancing Frequency Bars */}
-                      <div className="flex items-end gap-0.5 h-3 ml-1">
-                        <span className="w-0.5 h-2 bg-google-green animate-pulse" />
-                        <span className="w-0.5 h-3 bg-google-blue animate-pulse" style={{ animationDelay: "150ms" }} />
-                        <span className="w-0.5 h-1.5 bg-google-yellow animate-pulse" style={{ animationDelay: "300ms" }} />
-                        <span className="w-0.5 h-2.5 bg-google-red animate-pulse" style={{ animationDelay: "200ms" }} />
-                      </div>
-                    </div>
-
                     {/* Stage Title Overlay (Bottom of Image) */}
                     <div className="absolute bottom-3 left-3 right-3 text-white flex items-end justify-between">
                       <div>
                         <span className="text-[10px] font-mono uppercase tracking-widest text-google-yellow font-bold block mb-0.5">
-                          FLAGSHIP SUMMIT
+                          FLAGSHIP EVENT
                         </span>
                         <span className="text-base font-display font-bold leading-tight block">
-                          AI Day Summit • LNCT Campus
+                          AI Day Bhopal 2.0 • LNCT
                         </span>
                       </div>
                       <span className="text-[11px] font-mono font-medium px-2.5 py-1 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-white shrink-0">
-                        500+ Attendees
+                        350+ Builders
                       </span>
                     </div>
                   </div>
@@ -413,7 +396,7 @@ export function HomeHero() {
                   <div className="px-4 py-2.5 bg-white dark:bg-[#1E293B] border-t border-[#D1D5DB] dark:border-[#334155] flex items-center justify-between text-xs font-mono text-[#334155] dark:text-[#94A3B8]">
                     <div className="flex items-center gap-2">
                       <Zap className="w-3.5 h-3.5 text-primary" />
-                      <span className="text-[11px]">Free &amp; Open Weights</span>
+                      <span className="text-[11px]">Formerly TFUG Bhopal</span>
                     </div>
                     <div className="flex items-center gap-1 text-[11px] text-google-blue dark:text-[#60A5FA]">
                       <span>Google for Developers</span>
@@ -432,32 +415,30 @@ export function HomeHero() {
                   }}
                   className="absolute -bottom-6 -left-4 sm:-left-8 z-30 w-[84%] sm:w-[78%] rounded-xl p-3.5 bg-white/95 dark:bg-[#1E293B]/95 backdrop-blur-xl border border-[#D1D5DB] dark:border-[#334155] shadow-xl hover:shadow-2xl transition-shadow"
                 >
-                  <Link href="/events/build-with-ai-agents-2026" className="block group">
+                  <a
+                    href={COMMUDLE_EVENTS_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block group"
+                  >
                     <div className="flex items-center justify-between mb-1.5">
                       <div className="flex items-center gap-1.5 text-[10px] font-mono font-bold text-google-blue dark:text-[#60A5FA] uppercase tracking-wider">
                         <Calendar className="w-3 h-3 text-google-blue" />
-                        <span>Next Gathering • Oct 24</span>
+                        <span>Next event · Sun, Nov 1 · 10 AM</span>
                       </div>
-                      <span className="text-[10px] font-mono px-1.5 py-0.5 rounded bg-google-green-light dark:bg-[#1E4620]/60 text-google-green font-semibold">
-                        RSVP Open
-                      </span>
                     </div>
 
                     <h4 className="text-xs font-display font-bold text-ink-primary dark:text-[#F8FAFC] truncate group-hover:text-primary transition-colors mb-2">
-                      Build with AI: Agentic AI Summit
+                      From Idea to Working Projects
                     </h4>
 
-                    {/* Registration Capacity Micro Bar */}
-                    <div className="w-full">
-                      <div className="flex items-center justify-between text-[10px] font-mono text-[#334155] dark:text-[#94A3B8] mb-1">
-                        <span>450 / 500 RSVPs</span>
-                        <span className="text-primary font-semibold">90% Full</span>
-                      </div>
-                      <div className="w-full h-1.5 rounded-full bg-[#E5E7EB] dark:bg-[#334155] overflow-hidden">
-                        <div className="h-full bg-primary rounded-full w-[90%]" />
-                      </div>
+                    <div className="flex items-center justify-between text-[10px] font-mono text-[#334155] dark:text-[#94A3B8]">
+                      <span>Offline · RICR, Bhopal</span>
+                      <span className="text-primary font-semibold group-hover:translate-x-0.5 transition-transform">
+                        Register →
+                      </span>
                     </div>
-                  </Link>
+                  </a>
                 </motion.div>
 
                 {/* ------------------------------------------------------------ */}
@@ -477,10 +458,10 @@ export function HomeHero() {
                   </div>
                   <div>
                     <div className="text-xs font-display font-bold text-ink-primary dark:text-[#F8FAFC]">
-                      3,600+ Builders
+                      3,800+ Members
                     </div>
                     <div className="text-[10px] font-mono text-ink-secondary dark:text-[#94A3B8]">
-                      45+ MP Campuses
+                      Bhopal, MP
                     </div>
                   </div>
                 </motion.div>
@@ -497,11 +478,11 @@ export function HomeHero() {
                   className="hidden sm:flex absolute -top-4 left-6 z-10 items-center gap-1.5 px-3 py-1 rounded-full bg-white/95 dark:bg-[#1E293B]/95 backdrop-blur-md border border-[#D1D5DB] dark:border-[#334155] text-[10px] font-mono text-[#334155] dark:text-[#94A3B8] shadow-sm"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-google-blue" />
-                  <span>Gemini 2.5</span>
+                  <span>Workshops</span>
                   <span className="text-[#D1D5DB] dark:text-[#475569]">•</span>
-                  <span>Vertex AI</span>
+                  <span>Hackathons</span>
                   <span className="text-[#D1D5DB] dark:text-[#475569]">•</span>
-                  <span>TPU v5e</span>
+                  <span>Meetups</span>
                 </motion.div>
 
               </motion.div>
