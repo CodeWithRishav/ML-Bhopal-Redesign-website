@@ -9,55 +9,55 @@ import { Tag } from "@/components/ui/Tag";
 const PILLARS = [
   {
     num: "01",
-    title: "Architecture Masterclasses & Codelabs",
-    description: "Deep-dive weekend coding sessions focused on production RAG, vector retrieval, model quantization, and agentic tool-use.",
-    tags: ["LLMOps", "PyTorch", "RAG"],
+    title: "Hands-on Workshops",
+    description: "Build-along sessions on GenAI, LLMs and Google AI tools — like NextGen Apps, Customizing LLMs with Google AI Studio, and the GenAI Pre-Hackathon.",
+    tags: ["GenAI", "Google AI Studio", "Live coding"],
     href: "/events",
     color: "text-primary dark:text-[#FF9A3D]",
     barColor: "bg-primary",
   },
   {
     num: "02",
-    title: "Hackathons & 36-Hour Sprints",
-    description: "Fast-paced build marathons solving real-world challenge tracks with dedicated compute credits, expert mentorship, and prize pools.",
-    tags: ["Build Sprints", "Prototypes", "Prizes"],
+    title: "Hackathons",
+    description: "Team build sprints with mentors and judges — like the GenAI Hackathon Bhopal.",
+    tags: ["Teams", "Mentors", "Judging"],
     href: "/campaigns",
     color: "text-google-red dark:text-[#F28B82]",
     barColor: "bg-google-red",
   },
   {
     num: "03",
-    title: "Flagship AI Day Summits",
-    description: "Central India's benchmark annual conference uniting 500+ builders, industry keynotes, and multi-track technical workshops.",
-    tags: ["Annual Summit", "Keynotes", "Expos"],
+    title: "AI Day Bhopal",
+    description: "Our annual flagship: keynotes, workshops and an AI-Thon. AI Day Bhopal 2.0 brought 350+ builders to LNCT in May 2026.",
+    tags: ["Annual", "Keynotes", "AI-Thon"],
     href: "/ai-day",
     color: "text-[#D97706] dark:text-[#FBBC05]",
     barColor: "bg-google-yellow",
   },
   {
     num: "04",
-    title: "Campus Chapters & University MoUs",
-    description: "Partnering formally with university administrations (MANIT, LNCT, OIST, RGPV) to deliver Google-backed curricula and student chapters.",
-    tags: ["College MoUs", "Ambassadors", "Workshops"],
-    href: "/ambassador",
+    title: "Builders Meetups & Project Days",
+    description: "Show what you're building, get feedback, and turn ideas into working projects — Builders Meetup, Project to Product with AI, From Idea to Working Projects.",
+    tags: ["Demos", "Feedback", "Networking"],
+    href: "/events",
     color: "text-google-green dark:text-[#81C995]",
     barColor: "bg-google-green",
   },
   {
     num: "05",
-    title: "Open Weights Research Pods",
-    description: "Hands-on study circles and compute pods exploring open-weights foundation models like Google Gemma, JAX, and Cloud TPUs.",
-    tags: ["Gemma 2", "JAX/Flax", "TPU Pods"],
-    href: "/resources",
+    title: "AI × Security",
+    description: "Secure coding with AI, ethical hacking and CTFs, together with OWASP Bhopal — Code Safe with AI, NetShield, ML Nexus CTF.",
+    tags: ["Web Security", "CTF", "OWASP"],
+    href: "/events",
     color: "text-google-blue dark:text-[#60A5FA]",
     barColor: "bg-google-blue",
   },
   {
     num: "06",
-    title: "Open Knowledge & Production Blueprints",
-    description: "100% free open-source GitHub repositories, starter boilerplates, and step-by-step production cookbooks with zero paywalls.",
-    tags: ["Open Source", "Cookbooks", "Blueprints"],
-    href: "/resources",
+    title: "Campus Outreach",
+    description: "Sessions at partner colleges across Bhopal, with student ambassadors bringing events to their campus.",
+    tags: ["9+ Institutes", "Ambassadors", "Workshops"],
+    href: "/ambassador",
     color: "text-google-green dark:text-[#81C995]",
     barColor: "bg-google-green",
   },
@@ -76,24 +76,24 @@ export function WhatWeDo() {
           {/* ============================================================== */}
           <div className="lg:col-span-5 lg:sticky lg:top-28">
             <span className="text-xs font-mono font-semibold uppercase tracking-widest text-primary mb-4 block">
-              OPERATING MODEL
+              WHAT WE DO
             </span>
 
             <h2 className="font-display font-black tracking-tight text-ink-primary dark:text-[#F8FAFC] text-4xl sm:text-5xl lg:text-6xl leading-[0.98] uppercase mb-6">
-              How We <br />
-              <span className="text-primary dark:text-[#FF9A3D]">Advance</span> <br />
-              Applied AI<span className="text-google-red">.</span>
+              Learn. <br />
+              <span className="text-primary dark:text-[#FF9A3D]">Build.</span> <br />
+              Ship<span className="text-google-red">.</span>
             </h2>
 
             <p className="text-sm sm:text-base text-ink-secondary dark:text-[#94A3B8] font-sans leading-relaxed mb-8 max-w-md">
-              We prioritize code over slides and radical openness. We connect regional builders directly to production tooling, open foundation models, and Google Cloud infrastructure without theoretical gatekeeping.
+              Hands-on over slides. Our sessions are run by volunteers, open to beginners, and mostly free — from your first workshop to shipping a project at AI Day.
             </p>
 
             <Link
               href="/about"
               className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-google-blue dark:text-[#60A5FA] hover:text-google-blue-dark dark:hover:text-blue-300 transition-colors group"
             >
-              <span>Explore Our Story &amp; Philosophy</span>
+              <span>About ML Bhopal</span>
               <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1" />
             </Link>
           </div>
