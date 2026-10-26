@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/posters/build-with-ai-agents-banner.png",
+        url: "/posters/ml-bhopal-banner.png",
         width: 1200,
         height: 630,
         alt: "Contact ML Bhopal",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "Contact ML Bhopal — Inquiries & Partnerships",
     description:
       "Get in touch with the ML Bhopal team for sponsorship, speaking opportunities, college chapters, or community collaborations.",
-    images: ["/posters/build-with-ai-agents-banner.png"],
+    images: ["/posters/ml-bhopal-banner.png"],
   },
 };
 

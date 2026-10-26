@@ -52,7 +52,7 @@ export function CampaignCard({ campaign, featured = false }: CampaignCardProps) 
           <Image
             src={
               campaign.coverImage ||
-              "/posters/build-with-ai-agents-banner.png"
+              "/posters/ml-bhopal-banner.png"
             }
             alt={campaign.title}
             fill

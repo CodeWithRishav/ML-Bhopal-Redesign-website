@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
     };
   }
 
-  const ogImage = "/posters/build-with-ai-agents-banner.png";
+  const ogImage = "/posters/ml-bhopal-banner.png";
 
   return {
     title: `${article.title} — Technical Guide`,
@@ -109,7 +109,7 @@ export default async function ResourceArticlePage({ params }: ArticlePageProps) 
       url: "https://mlbhopal.tech",
       logo: {
         "@type": "ImageObject",
-        url: "https://mlbhopal.tech/posters/build-with-ai-agents-banner.png",
+        url: "https://mlbhopal.tech/posters/ml-bhopal-banner.png",
       },
     },
     mainEntityOfPage: {

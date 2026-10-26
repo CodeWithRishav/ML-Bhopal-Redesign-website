@@ -235,8 +235,8 @@ ml-bhopal-website/
 │
 └── public/                     # Static Public Assets
     └── posters/
-        ├── build-with-ai-agents-banner.html # HTML canvas banner asset
-        └── build-with-ai-agents-banner.png  # Open Graph and metadata preview image
+        ├── ml-bhopal-banner.html # HTML canvas banner asset
+        └── ml-bhopal-banner.png  # Open Graph and metadata preview image
 ```
 
 ---
@@ -604,7 +604,7 @@ Maintainers can add, modify, or archive content by editing JSON records in `cont
 ### 14.1 Global SEO Setup
 - **`metadataBase`**: Configured to `https://mlbhopal.tech` in `app/layout.tsx`.
 - **Title Strategy**: Root title uses template: `%s | ML Bhopal`.
-- **Open Graph & Twitter Cards**: `summary_large_image` referencing `/posters/build-with-ai-agents-banner.png` (1200x630px).
+- **Open Graph & Twitter Cards**: `summary_large_image` referencing `/posters/ml-bhopal-banner.png` (1200x630px).
 - **Robots Endpoint (`/robots.txt`)**: Allows root crawling, disallows `/api/`, specifies `sitemap: https://mlbhopal.tech/sitemap.xml`.
 - **Sitemap Endpoint (`/sitemap.xml`)**: Dynamically indexes all 42 public content pages with prioritized change frequencies.
 

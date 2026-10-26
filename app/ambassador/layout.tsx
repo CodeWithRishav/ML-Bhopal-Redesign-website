@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/posters/build-with-ai-agents-banner.png",
+        url: "/posters/ml-bhopal-banner.png",
         width: 1200,
         height: 630,
         alt: "ML Bhopal Campus Ambassador Program",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "Campus Ambassador Program — Lead AI at Your College | ML Bhopal",
     description:
       "Establish an ML Bhopal Campus Chapter at your college. Organize technical workshops, hackathons, and connect students with industry mentors.",
-    images: ["/posters/build-with-ai-agents-banner.png"],
+    images: ["/posters/ml-bhopal-banner.png"],
   },
 };
 

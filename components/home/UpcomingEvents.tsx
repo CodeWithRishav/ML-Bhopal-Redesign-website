@@ -34,7 +34,7 @@ export function UpcomingEvents({
               COMMUNITY GATHERINGS
             </span>
             <h2 className="font-display font-black tracking-tight text-ink-primary dark:text-[#F8FAFC] text-3xl sm:text-4xl lg:text-5xl uppercase">
-              Upcoming &amp; Past Summits<span className="text-google-green">.</span>
+              Upcoming &amp; Past Events<span className="text-google-green">.</span>
             </h2>
           </div>
 
@@ -42,7 +42,7 @@ export function UpcomingEvents({
             href="/events"
             className="text-xs font-semibold uppercase tracking-wider text-google-blue dark:text-[#60A5FA] hover:text-google-blue-dark dark:hover:text-blue-300 transition-colors inline-flex items-center gap-1.5"
           >
-            <span>Explore Complete Archive (22+ Gatherings)</span>
+            <span>Explore Complete Event Archive</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
@@ -87,7 +87,7 @@ export function UpcomingEvents({
               <div className="lg:col-span-7 flex flex-col items-start">
                 <div className="flex flex-wrap items-center gap-2 mb-4">
                   <span className="text-xs font-mono font-bold text-google-blue dark:text-[#60A5FA] bg-google-blue-light/60 dark:bg-[#1A3A6E]/50 px-2.5 py-0.5 rounded-full border border-blue-200 dark:border-blue-900">
-                    Flagship Summit
+                    Upcoming Event
                   </span>
                   <span className="text-xs font-mono text-ink-secondary dark:text-[#94A3B8]">
                     Registration Open
@@ -138,7 +138,7 @@ export function UpcomingEvents({
                     href={`/events/${featured.slug}`}
                     size="md"
                   >
-                    View Agenda &amp; Speakers
+                    View Event Details
                   </SecondaryButton>
 
                   {featured.registrations && (
@@ -162,10 +162,10 @@ export function UpcomingEvents({
         <div>
           <div className="flex items-center justify-between mb-6 pb-3 border-b border-[#D1D5DB] dark:border-[#334155]">
             <span className="text-xs font-mono font-bold uppercase tracking-wider text-ink-primary dark:text-[#F8FAFC]">
-              Recent Community Sprints &amp; Workshops
+              Recent Community Events
             </span>
             <span className="text-xs text-ink-tertiary font-mono">
-              Archived Sessions
+              Past Events
             </span>
           </div>
 
@@ -218,7 +218,7 @@ export function UpcomingEvents({
                   href={`/events/${event.slug}`}
                   className="inline-flex items-center gap-1.5 text-xs font-semibold text-ink-primary dark:text-[#F8FAFC] group-hover:text-google-blue dark:group-hover:text-[#60A5FA] shrink-0 sm:self-center transition-colors"
                 >
-                  <span>Recap &amp; Slides</span>
+                  <span>Event Details</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
                 </Link>
               </div>

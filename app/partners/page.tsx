@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/posters/build-with-ai-agents-banner.png",
+        url: "/posters/ml-bhopal-banner.png",
         width: 1200,
         height: 630,
         alt: "ML Bhopal Partners & Ecosystem",
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     title: "ML Bhopal Partners — Academic & Ecosystem Collaborators",
     description:
       "LNCT, Oriental, MANIT, IIIT Bhopal, RGPV, Google for Developers, OWASP, and Commudle supporting Central India AI.",
-    images: ["/posters/build-with-ai-agents-banner.png"],
+    images: ["/posters/ml-bhopal-banner.png"],
   },
 };
 

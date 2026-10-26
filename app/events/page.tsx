@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/posters/build-with-ai-agents-banner.png",
+        url: "/posters/ml-bhopal-banner.png",
         width: 1200,
         height: 630,
         alt: "ML Bhopal Events & Workshops",
@@ -35,18 +35,14 @@ export const metadata: Metadata = {
     title: "Events & Workshops — ML Bhopal",
     description:
       "Learn, build and connect through community-led experiences. Central India's premier AI/ML community gatherings.",
-    images: ["/posters/build-with-ai-agents-banner.png"],
+    images: ["/posters/ml-bhopal-banner.png"],
   },
 };
 
 export default function EventsPage() {
   const events = getEvents();
-
-  // Aggregate verified event metrics
   const totalEvents = events.length;
-  const totalRegistrations = events.reduce((acc, curr) => {
-    return acc + (typeof curr.registrations === "number" ? curr.registrations : 0);
-  }, 0);
+
 
   return (
     <div className="relative pt-24 pb-20 bg-[#FAFAFA] dark:bg-[#0F172A] transition-colors overflow-hidden">
@@ -105,8 +101,8 @@ export default function EventsPage() {
               <Users className="w-5 h-5" />
             </div>
             <div className="min-w-0">
-              <span className="text-[#334155] dark:text-[#94A3B8] block text-[11px] font-mono uppercase">Verified Builders</span>
-              <span className="text-[#0F172A] dark:text-[#F8FAFC] font-bold text-sm truncate block">{totalRegistrations.toLocaleString()}+</span>
+              <span className="text-[#334155] dark:text-[#94A3B8] block text-[11px] font-mono uppercase">First Event</span>
+              <span className="text-[#0F172A] dark:text-[#F8FAFC] font-bold text-sm truncate block">Feb 2024</span>
             </div>
           </div>
           <div className="flex items-center gap-3">
@@ -124,7 +120,7 @@ export default function EventsPage() {
             </div>
             <div className="min-w-0">
               <span className="text-[#334155] dark:text-[#94A3B8] block text-[11px] font-mono uppercase">Open Access</span>
-              <span className="text-[#0F172A] dark:text-[#F8FAFC] font-bold text-sm truncate block">100% Free & Community-Led</span>
+              <span className="text-[#0F172A] dark:text-[#F8FAFC] font-bold text-sm truncate block">Community-Led</span>
             </div>
           </div>
         </div>

@@ -33,13 +33,13 @@
     ]
   },
   "stats": [
-    { "value": "22+", "label": "Events hosted" },
+    { "value": "18", "label": "Events hosted" },
     { "value": "98%", "label": "Positive feedback" },
     { "value": "3,500+", "label": "Community members" }
   ],
   "impactStats": [
     { "value": "3,500+", "label": "Members on Commudle" },
-    { "value": "22+", "label": "Events since 2023" },
+    { "value": "18", "label": "Events since 2024" },
     { "value": "500+", "label": "AI Day 2.0 attendees" },
     { "value": "9+", "label": "Institutes reached" }
   ],

@@ -15,7 +15,7 @@ const STATS = [
   {
     value: "20+",
     label: "Events",
-    sublabel: "Workshops, hackathons, meetups & AI Day since 2023",
+    sublabel: "Workshops, hackathons, meetups & AI Day since 2024",
     color: "text-google-blue dark:text-[#60A5FA]",
     accent: "bg-google-blue",
   },
