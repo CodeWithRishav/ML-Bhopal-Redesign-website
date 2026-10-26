@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/posters/build-with-ai-agents-banner.png",
+        url: "/posters/ml-bhopal-banner.png",
         width: 1200,
         height: 630,
         alt: "ML Bhopal Campaigns & Initiatives",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: "Campaigns & Initiatives — ML Bhopal",
     description:
       "Explore community campaigns operated by ML Bhopal.",
-    images: ["/posters/build-with-ai-agents-banner.png"],
+    images: ["/posters/ml-bhopal-banner.png"],
   },
 };
 
@@ -161,7 +161,7 @@ export default function CampaignsPage() {
                 {/* Right Column: Visual Preview */}
                 <div className="lg:col-span-5 relative aspect-video lg:aspect-square w-full rounded-card overflow-hidden border border-[#D1D5DB] dark:border-[#334155] bg-[#F1F3F4] dark:bg-[#0F172A] shadow-subtle">
                   <Image
-                    src={featured.coverImage || "/posters/build-with-ai-agents-banner.png"}
+                    src={featured.coverImage || "/posters/ml-bhopal-banner.png"}
                     alt={featured.title}
                     fill
                     priority

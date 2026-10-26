@@ -31,7 +31,6 @@ const TICKER_ITEMS = [
   { label: "AI DAY BHOPAL 2.0", color: "text-google-blue" },
   { label: "CODE SAFE WITH AI", color: "text-google-green" },
   { label: "GENAI HACKATHON", color: "text-google-yellow" },
-  { label: "PROMPTZILLA", color: "text-primary" },
   { label: "NETSHIELD WORKSHOP", color: "text-google-blue" },
   { label: "FORMERLY TFUG BHOPAL", color: "text-google-green" },
   { label: "GOOGLE FOR DEVELOPERS", color: "text-google-red" },
@@ -127,7 +126,7 @@ export function HomeHero() {
         <div className="hidden xl:flex items-center justify-between absolute top-28 left-8 right-8 text-[10px] font-mono tracking-widest text-[#334155]/60 dark:text-[#94A3B8]/50 select-none">
           <div className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-google-green animate-ping" />
-            <span>BHOPAL, MADHYA PRADESH · SINCE 2023</span>
+            <span>BHOPAL, MADHYA PRADESH · SINCE 2024</span>
           </div>
           <div>
             <span>FORMERLY TFUG BHOPAL</span>

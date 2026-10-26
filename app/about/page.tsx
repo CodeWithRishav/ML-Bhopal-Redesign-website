@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/posters/build-with-ai-agents-banner.png",
+        url: "/posters/ml-bhopal-banner.png",
         width: 1200,
         height: 630,
         alt: "About ML Bhopal",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     title: "About ML Bhopal — The Story of Central India's AI Community",
     description:
       "Code Over Slides. Radical Openness. Ecosystem First. Regional Builder Density. 3,600+ AI developers and students.",
-    images: ["/posters/build-with-ai-agents-banner.png"],
+    images: ["/posters/ml-bhopal-banner.png"],
   },
 };
 

@@ -47,7 +47,7 @@ export async function generateMetadata({
   }
 
   const desc = campaign.shortDescription || campaign.description;
-  const image = campaign.coverImage || "/posters/build-with-ai-agents-banner.png";
+  const image = campaign.coverImage || "/posters/ml-bhopal-banner.png";
 
   return {
     title: `${campaign.title} — Campaign Initiative`,
@@ -201,7 +201,7 @@ export default async function CampaignDetailPage({
               <Image
                 src={
                   campaign.coverImage ||
-                  "/posters/build-with-ai-agents-banner.png"
+                  "/posters/ml-bhopal-banner.png"
                 }
                 alt={campaign.title}
                 fill

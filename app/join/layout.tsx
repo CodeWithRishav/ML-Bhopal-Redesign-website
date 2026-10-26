@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/posters/build-with-ai-agents-banner.png",
+        url: "/posters/ml-bhopal-banner.png",
         width: 1200,
         height: 630,
         alt: "Join ML Bhopal Core Team",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: "Join the Core Team — Volunteer with ML Bhopal",
     description:
       "Become a community organizer or volunteer with ML Bhopal. Help coordinate developer meetups, manage hackathons, and lead technical workshops.",
-    images: ["/posters/build-with-ai-agents-banner.png"],
+    images: ["/posters/ml-bhopal-banner.png"],
   },
 };
 

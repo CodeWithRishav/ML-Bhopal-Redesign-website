@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/posters/build-with-ai-agents-banner.png",
+        url: "/posters/ml-bhopal-banner.png",
         width: 1200,
         height: 630,
         alt: "ML Bhopal Technical Knowledge Hub",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     title: "Technical Knowledge Hub & Guides | ML Bhopal",
     description:
       "Curated learning roadmaps, engineering deep dives, hands-on tutorials, and community chronicles produced by ML Bhopal engineers.",
-    images: ["/posters/build-with-ai-agents-banner.png"],
+    images: ["/posters/ml-bhopal-banner.png"],
   },
 };
 

@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/posters/build-with-ai-agents-banner.png",
+        url: "/posters/ml-bhopal-banner.png",
         width: 1200,
         height: 630,
         alt: "ML Bhopal Team & Organizers",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     title: "ML Bhopal Team — Community Leads & Core Organizers",
     description:
       "Volunteer practitioners, software engineers, and student builders dedicated to democratizing AI education.",
-    images: ["/posters/build-with-ai-agents-banner.png"],
+    images: ["/posters/ml-bhopal-banner.png"],
   },
 };
 

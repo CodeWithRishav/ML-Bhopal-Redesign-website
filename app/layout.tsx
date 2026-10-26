@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/posters/build-with-ai-agents-banner.png",
+        url: "/posters/ml-bhopal-banner.png",
         width: 1200,
         height: 630,
         alt: "ML Bhopal — AI Community by Google for Developers",
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
       "Central India's premier community of 3,600+ AI developers, researchers, and student innovators learning, building, and connecting through applied artificial intelligence.",
     site: "@ml_bhopal",
     creator: "@ml_bhopal",
-    images: ["/posters/build-with-ai-agents-banner.png"],
+    images: ["/posters/ml-bhopal-banner.png"],
   },
   robots: {
     index: true,
@@ -99,7 +99,7 @@ const organizationSchema = {
   name: "ML Bhopal",
   alternateName: ["TFUG Bhopal", "Machine Learning Bhopal"],
   url: "https://mlbhopal.tech",
-  logo: "https://mlbhopal.tech/posters/build-with-ai-agents-banner.png",
+  logo: "https://mlbhopal.tech/posters/ml-bhopal-banner.png",
   description:
     "Central India's premier community of 3,600+ AI developers, researchers, and student innovators supported by Google for Developers.",
   foundingDate: "2023",

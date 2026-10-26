@@ -329,7 +329,7 @@ export default async function EventDetailPage({
                       size="lg"
                       icon={<ExternalLink className="w-4 h-4" />}
                     >
-                      Claim Free Ticket on Commudle
+                      Register on Commudle
                     </PrimaryButton>
 
                     <AddToCalendar
@@ -378,7 +378,7 @@ export default async function EventDetailPage({
 
                 {/* Free admission & platform endorsement */}
                 <div className="flex flex-wrap items-center gap-2 mt-4 text-xs font-sans text-ink-secondary">
-                  <span>100% Free Community Gathering</span>
+                  <span>Community Gathering</span>
                   <span>•</span>
                   <span className="inline-flex items-center gap-1.5">
                     <span>Supported by</span>
@@ -452,7 +452,7 @@ export default async function EventDetailPage({
                   Event Archive & Recap
                 </h2>
                 <p className="text-xs sm:text-sm text-ink-secondary font-sans leading-relaxed">
-                  This session has concluded. Explore the overview below, review the speaker line-up, or view discussions on our Commudle chapter.
+                  This event has concluded. See the overview below or visit our Commudle chapter.
                 </p>
               </div>
             </div>
@@ -729,7 +729,7 @@ export default async function EventDetailPage({
                   <span>{event.venue}</span>
                 </div>
                 <p className="text-xs text-ink-secondary max-w-xl leading-relaxed">
-                  Attendees are requested to reach the venue 15 minutes prior to session start. Please carry a valid college/government ID and your verified Commudle ticket QR pass.
+                  See the Commudle event page for the latest venue and entry details.
                 </p>
               </div>
 
@@ -755,10 +755,10 @@ export default async function EventDetailPage({
                   REGISTRATIONS OPEN
                 </Badge>
                 <h2 id="cta-heading" className="text-2xl sm:text-3xl font-display font-bold text-ink-primary mb-3">
-                  Reserve Your Spot at {event.title}
+                  Register for {event.title}
                 </h2>
                 <p className="text-sm text-ink-secondary max-w-xl mb-6 leading-relaxed">
-                  Join hundreds of engineers, researchers, and students in Bhopal. Secure your 100% free pass through our official Commudle chapter.
+                  Register for this event through the official ML Bhopal chapter on Commudle.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center gap-3.5">
                   <PrimaryButton
@@ -767,7 +767,7 @@ export default async function EventDetailPage({
                     size="lg"
                     icon={<ExternalLink className="w-4 h-4" />}
                   >
-                    Claim Free Ticket on Commudle
+                    Register on Commudle
                   </PrimaryButton>
                   <SecondaryButton href="/events" size="lg">
                     Browse All Events
@@ -783,7 +783,7 @@ export default async function EventDetailPage({
                   {event.title} has Concluded
                 </h2>
                 <p className="text-sm text-ink-secondary max-w-xl mb-6 leading-relaxed">
-                  Catch up on speaker materials, community discussions, and photo albums on the Commudle chapter, or discover what ML Bhopal is hosting next.
+                  Visit the ML Bhopal chapter on Commudle to see more events.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center gap-3.5">
                   <SecondaryButton
