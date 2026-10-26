@@ -24,16 +24,16 @@ import {
 } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Campaigns & Cohorts — Engineering Sprints",
+  title: "Campaigns — ML Bhopal",
   description:
-    "Explore active cohorts, developer sprints, and community initiatives including Build with AI, Kaggle Days, and TPU Learning by ML Bhopal.",
+    "Explore community campaigns by ML Bhopal, including the Build with AI 2026 event series.",
   alternates: {
     canonical: "/campaigns",
   },
   openGraph: {
     title: "Campaigns & Initiatives — ML Bhopal",
     description:
-      "Explore active engineering sprints, hackathons, and research cohorts operated under the ML Bhopal ecosystem.",
+      "Explore community campaigns operated by ML Bhopal.",
     url: "https://mlbhopal.tech/campaigns",
     type: "website",
     images: [
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Campaigns & Initiatives — ML Bhopal",
     description:
-      "Explore active engineering sprints, hackathons, and research cohorts operated under the ML Bhopal ecosystem.",
+      "Explore community campaigns operated by ML Bhopal.",
     images: ["/posters/build-with-ai-agents-banner.png"],
   },
 };
@@ -75,8 +75,8 @@ export default function CampaignsPage() {
             <SectionHeader
               as="h1"
               eyebrow="Community Initiatives"
-              title="Campaigns & Engineering Sprints"
-              description="Time-bound challenges, hackathons, and compute cohorts operated by ML Bhopal to foster high-density applied AI builders."
+              title="Campaigns"
+              description="Community campaigns and event series run by ML Bhopal."
             />
           </div>
         </ScrollReveal>
@@ -113,13 +113,13 @@ export default function CampaignsPage() {
                     <div className="flex flex-wrap items-center gap-6 py-4 mb-6 border-y border-[#D1D5DB] dark:border-[#334155] text-xs font-sans w-full">
                     {featured.deadline ? (
                       <div>
-                        <span className="text-ink-secondary block text-[11px] uppercase">SUBMISSION DEADLINE</span>
+                        <span className="text-ink-secondary block text-[11px] uppercase">DEADLINE</span>
                         <span className="text-ink-primary font-bold text-sm">{featured.deadline}</span>
                       </div>
                     ) : null}
                     {(featured.metadata?.incentives || featured.incentives) ? (
                       <div>
-                        <span className="text-ink-secondary block text-[11px] uppercase">AWARDS & GRANTS</span>
+                        <span className="text-ink-secondary block text-[11px] uppercase">INCENTIVES</span>
                         <span className="text-google-blue font-bold text-sm">
                           {featured.metadata?.incentives || featured.incentives}
                         </span>
@@ -143,7 +143,7 @@ export default function CampaignsPage() {
                       size="lg"
                       icon={<ArrowRight className="w-4 h-4" />}
                     >
-                      Explore Campaign & Tracks
+                      Explore Campaign
                     </PrimaryButton>
 
                     {featured.registrationUrl ? (
