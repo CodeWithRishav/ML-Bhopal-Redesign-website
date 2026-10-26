@@ -10,24 +10,24 @@ interface FAQItem {
 
 const FAQ_DATA: FAQItem[] = [
   {
-    question: "Is admission to AI Day completely free?",
-    answer: "Yes, 100% free of charge. Supported by Google for Developers and our academic partners, tickets, mentor sessions, and compute access are provided at zero cost to registered attendees.",
+    question: "When and where was AI Day Bhopal 2.0?",
+    answer: "Saturday, May 16, 2026, 9:00 AM to 5:00 PM IST, at LNCT Group of Colleges, Bhopal.",
   },
   {
-    question: "Who can attend AI Day Bhopal?",
-    answer: "Developers, university students, researchers, startup founders, and engineering faculty from Central India and beyond are welcome. Learning tracks span foundational AI to advanced LLMOps.",
+    question: "What was on the AI Day Bhopal 2.0 agenda?",
+    answer: "A keynote, talks on AI agents with Google ADK and Gemini, voice AI and Gemma 4 with open models, a product showcase with live demos, and a Buildathon & Prompt War. See the schedule section above for the full run of show.",
   },
   {
-    question: "What prerequisites or hardware should I bring?",
-    answer: "Please bring a laptop with its charger, a valid student or government photo ID, and pre-install Python 3.10+. If participating in the AI-Thon sprint, ensure you have git and Docker installed.",
+    question: "How did registration work?",
+    answer: "Registrations were hosted on the ML Bhopal community page on Commudle, which showed 363 registrations for AI Day Bhopal 2.0.",
   },
   {
-    question: "How do I claim my verified attendance credential?",
-    answer: "Checked-in attendees receive a verifiable digital certificate issued directly through Commudle after the event conclusion, which can be linked directly on LinkedIn.",
+    question: "When and where was the 2025 edition?",
+    answer: "AI Day Bhopal 2025 was held on March 30, 2025 at the Auditorium Hall, Oriental Institute of Science & Technology (OIST), Bhopal.",
   },
   {
-    question: "How can college chapters or clubs get involved?",
-    answer: "Campus leads can apply through our Campus Ambassador Program to host pre-events, organize bus cohorts, or formalize an institutional MoU with ML Bhopal.",
+    question: "How can I contact ML Bhopal?",
+    answer: "Email contact@mlbhopal.tech or message +91 89698 79979 on WhatsApp.",
   },
 ];
 
@@ -48,10 +48,10 @@ export function AIDayFAQ() {
           </span>
         </div>
         <h2 id="faq-heading" className="text-2xl sm:text-3xl font-display font-bold text-ink-primary dark:text-[#F8FAFC]">
-          Everything You Need to Know
+          AI Day Bhopal FAQ
         </h2>
         <p className="text-sm text-ink-secondary dark:text-gray-400 mt-1 font-sans">
-          Key guidelines on admission, hardware requirements, and team participation.
+          Quick answers about the AI Day editions.
         </p>
       </div>
 

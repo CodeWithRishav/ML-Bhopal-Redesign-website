@@ -96,7 +96,7 @@ export function AIDayEditionSwitcher({ editions }: AIDayEditionSwitcherProps) {
         </div>
 
         <span className="text-xs font-sans text-ink-secondary hidden sm:inline-block px-3">
-          3 Documented Flagship Editions
+          {sortedEditions.length} Editions
         </span>
       </div>
 
@@ -119,14 +119,14 @@ export function AIDayEditionSwitcher({ editions }: AIDayEditionSwitcherProps) {
             <div className="flex flex-wrap items-center gap-2 mb-4">
               <span className="px-2.5 py-1 rounded-full text-xs font-sans font-medium bg-google-blue-light text-google-blue border border-blue-200 inline-flex items-center gap-1.5">
                 <Sparkles className="w-3.5 h-3.5 text-google-yellow" />
-                {isLatest ? "Flagship Edition 2026" : "Historical Chronicle"}
+                {isLatest ? "Latest Edition" : "Previous Edition"}
               </span>
 
               {typeof activeEdition.registrations === "number" &&
                 activeEdition.registrations > 0 && (
                   <span className="px-2.5 py-1 rounded-full text-xs font-sans text-ink-secondary bg-[#F1F3F4] border border-[#D1D5DB] inline-flex items-center gap-1.5">
                     <Users className="w-3.5 h-3.5 text-google-blue" />
-                    <span>{activeEdition.registrations}+ Registered Builders</span>
+                    <span>{activeEdition.registrations} registrations (Commudle)</span>
                   </span>
                 )}
             </div>
@@ -164,7 +164,7 @@ export function AIDayEditionSwitcher({ editions }: AIDayEditionSwitcherProps) {
             {activeEdition.speakers && activeEdition.speakers.length > 0 && (
               <div className="mb-6 w-full">
                 <span className="text-xs font-sans font-semibold uppercase tracking-wider text-ink-secondary block mb-2">
-                  Featured Keynotes & Mentors
+                  Speakers
                 </span>
                 <div className="flex flex-wrap gap-2">
                   {activeEdition.speakers.map((spk, i) => {
@@ -187,7 +187,7 @@ export function AIDayEditionSwitcher({ editions }: AIDayEditionSwitcherProps) {
             {activeEdition.collaborators && activeEdition.collaborators.length > 0 && (
               <div className="mb-8 w-full">
                 <span className="text-xs font-sans font-semibold uppercase tracking-wider text-ink-secondary block mb-2">
-                  Partner Ecosystem
+                  Collaborators
                 </span>
                 <div className="flex flex-wrap gap-2">
                   {activeEdition.collaborators.map((collab, i) => (
@@ -230,18 +230,24 @@ export function AIDayEditionSwitcher({ editions }: AIDayEditionSwitcherProps) {
           {/* Right Visual Image */}
           <div className="lg:col-span-5 w-full">
             <div className="relative aspect-video lg:aspect-[4/3] w-full rounded-card overflow-hidden border border-[#D1D5DB] bg-[#F1F3F4] shadow-subtle">
-              <Image
-                src={displayImage}
-                alt={activeEdition.title}
-                fill
-                sizes="(max-width: 1024px) 100vw, 40vw"
-                className="object-cover"
-              />
+              {activeEdition.image || activeEdition.bannerImage ? (
+                <Image
+                  src={displayImage}
+                  alt={activeEdition.title}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover"
+                />
+              ) : (
+                <div className="absolute inset-0 flex items-center justify-center p-6 text-center font-display font-bold text-xl text-ink-primary">
+                  {activeEdition.title}
+                </div>
+              )}
             </div>
 
             <div className="mt-3 p-3.5 rounded-card bg-[#FAFAFA] border border-[#D1D5DB] text-xs text-ink-secondary font-sans flex items-center justify-between">
-              <span>Host Institute: {activeEdition.venue}</span>
-              <span className="text-ink-secondary">• Central India</span>
+              <span>Venue: {activeEdition.venue}</span>
+              <span className="text-ink-secondary">• Bhopal</span>
             </div>
           </div>
         </div>

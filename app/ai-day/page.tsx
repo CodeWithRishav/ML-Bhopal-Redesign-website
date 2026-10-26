@@ -3,217 +3,118 @@ import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
 import {
-  Calendar,
   Clock,
   ExternalLink,
-  MapPin,
   Mic,
-  Sparkles,
-  Users,
-  Building2,
-  CheckCircle2,
-  Layers,
   ArrowRight,
-  Bot,
-  Cpu,
-  Eye,
-  ShieldCheck,
-  Trophy,
-  History,
 } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { Breadcrumbs } from "@/components/layout/Breadcrumbs";
-import { Badge } from "@/components/ui/Badge";
 import { PrimaryButton } from "@/components/ui/PrimaryButton";
 import { SecondaryButton } from "@/components/ui/SecondaryButton";
 import { HeroGridBackground } from "@/components/ui/HeroGridBackground";
 import { ScrollReveal } from "@/components/motion/ScrollReveal";
-import { TiltCard } from "@/components/motion/TiltCard";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 import { AIDayEditionSwitcher } from "@/components/aiday/AIDayEditionSwitcher";
 import { AIDayNav } from "@/components/aiday/AIDayNav";
 import { AIDayFAQ } from "@/components/aiday/AIDayFAQ";
-import { getAIDayEvents, getEvents } from "@/lib/data";
+import { getAIDayEvents } from "@/lib/data";
 import { formatDate } from "@/lib/utils";
 
+const OG_IMAGE = "https://mlbhopal.tech/images/ai-day/full-house-2025.jpg";
+const PAGE_DESCRIPTION =
+  "AI Day Bhopal 2.0 — May 16, 2026 at LNCT, Bhopal. Talks, live demos, an intro to Gemma 4 and open models, and a Buildathon & Prompt War by ML Bhopal.";
+
 export const metadata: Metadata = {
-  title: "AI Day Bhopal — Flagship AI Builder Summit",
-  description:
-    "Central India's premier annual artificial intelligence summit. Multi-track keynotes, applied workshops, AI-Thon, and startup demo days by ML Bhopal and Google for Developers.",
+  title: "AI Day Bhopal 2.0 — May 16, 2026 at LNCT, Bhopal",
+  description: PAGE_DESCRIPTION,
   alternates: {
     canonical: "/ai-day",
   },
   openGraph: {
-    title: "AI Day Bhopal — Flagship AI Builder Summit | ML Bhopal",
-    description:
-      "500+ builders, Google Developer Experts, multi-track masterclasses, and applied AI innovation in Bhopal.",
+    title: "AI Day Bhopal 2.0 — May 16, 2026 at LNCT, Bhopal | ML Bhopal",
+    description: PAGE_DESCRIPTION,
     url: "https://mlbhopal.tech/ai-day",
     type: "website",
     images: [
       {
-        url: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1200",
-        width: 1200,
-        height: 630,
-        alt: "AI Day Bhopal Summit",
+        url: OG_IMAGE,
+        alt: "Full auditorium at AI Day Bhopal 2025, OIST",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AI Day Bhopal — Flagship AI Builder Summit | ML Bhopal",
-    description:
-      "500+ builders, Google Developer Experts, multi-track masterclasses, and applied AI innovation in Bhopal.",
-    images: ["https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1200"],
+    title: "AI Day Bhopal 2.0 — May 16, 2026 at LNCT, Bhopal | ML Bhopal",
+    description: PAGE_DESCRIPTION,
+    images: [OG_IMAGE],
   },
 };
 
-// Documented Tracks
-const DOCUMENTED_TRACKS = [
-  {
-    id: "agentic-ai",
-    title: "Agentic AI",
-    icon: <Bot className="w-5 h-5" />,
-    badge: "Track 01",
-    description:
-      "Autonomous systems, self-reflection loops, multi-agent swarms, tool-calling execution, and production reasoning frameworks.",
-    topics: ["Autonomous Agents", "LangGraph", "Tool Orchestration", "CrewAI"],
-  },
-  {
-    id: "llmops",
-    title: "LLMOps & Infra",
-    icon: <Cpu className="w-5 h-5" />,
-    badge: "Track 02",
-    description:
-      "Low-latency model serving, AWQ & GGUF quantization, vLLM inference clusters, and high-throughput vector retrieval architectures.",
-    topics: ["vLLM Clusters", "Quantization", "Model Serving", "Hybrid RAG"],
-  },
-  {
-    id: "multimodal-vision",
-    title: "Multimodal Vision",
-    icon: <Eye className="w-5 h-5" />,
-    badge: "Track 03",
-    description:
-      "Vision-Language Models, real-time spatial computing, audio-visual tokenization, and edge inference on mobile hardware.",
-    topics: ["Gemini Multimodal", "VLM Fine-tuning", "Edge Vision", "Spatial AI"],
-  },
-  {
-    id: "ai-security",
-    title: "AI Security & CTF",
-    icon: <ShieldCheck className="w-5 h-5" />,
-    badge: "Track 04",
-    description:
-      "Red-teaming generative models, prompt injection defense, adversarial robustness, and Capture The Flag security challenges.",
-    topics: ["Red-Teaming", "Adversarial Robustness", "CTF Challenges", "OWASP AI"],
-  },
-];
-
-// Documented Schedule Blueprint
+// AI Day Bhopal 2.0 agenda (May 16, 2026, IST)
 const SUMMIT_SCHEDULE = [
-  {
-    time: "09:30 AM",
-    title: "Keynote & Opening Address: The State of Applied AI",
-    speaker: "Community Leadership & Google Developer Experts",
-    type: "Keynote",
-  },
-  {
-    time: "11:00 AM",
-    title: "Parallel Track A: Agentic Swarms & Autonomous Reasoning",
-    speaker: "Technical Session & Architecture Walkthrough",
-    type: "Deep Dive",
-  },
-  {
-    time: "11:00 AM",
-    title: "Parallel Track B: Production LLMOps & vLLM Clusters",
-    speaker: "Inference Benchmark & Serving Workshop",
-    type: "Workshop",
-  },
-  {
-    time: "01:00 PM",
-    title: "Networking Lunch & Community Builder Expo",
-    speaker: "Project showcases, team matchmaking & mentor lounges",
-    type: "Networking",
-  },
-  {
-    time: "02:00 PM",
-    title: "AI-Thon 12-Hour Sprint & Live Code Challenge",
-    speaker: "Supervised by GDE Mentors across 5 domains",
-    type: "Hackathon",
-  },
-  {
-    time: "04:30 PM",
-    title: "Fireside Panel: Bridging Student Builders to AI Careers",
-    speaker: "Industry Leaders & Startup Founders",
-    type: "Panel",
-  },
-  {
-    time: "05:30 PM",
-    title: "AI-Thon Finalist Demos, Awards & Internship Announcements",
-    speaker: "Guaranteed internship referrals & closing ceremony",
-    type: "Awards",
-  },
+  { time: "09:00 AM", title: "Registration Opens", speaker: "Doors swing open. Grab your badge, kit, and chai.", type: "Registration" },
+  { time: "09:30 AM", title: "Pre-Event Networking, Check-ins & Activities", speaker: "Warm up the room. Find your people before the talks start.", type: "Networking" },
+  { time: "10:00 AM", title: "Official Kickoff & Opening Note", speaker: "ML Bhopal kicks things off and sets the tone for the day.", type: "Opening" },
+  { time: "10:25 AM", title: "Launch of Radius", speaker: "AI Day Bhopal's networking & community platform — unveiled live, on the spot.", type: "Launch" },
+  { time: "10:35 AM", title: "Keynote Session", speaker: "The headline talk that frames the year ahead in AI.", type: "Keynote" },
+  { time: "10:55 AM", title: "Introduction to AI Agents & Building Real-World Agentic Apps with Google ADK and Gemini", speaker: "By Dr. Anukriti Bansal — from agent-loop fundamentals to shipping production agents.", type: "Talk" },
+  { time: "11:50 AM", title: "Product Showcase & Live Demos", speaker: "Products, AI tools, and projects built by the community. By Anurag Mishra & Rishabh Gupta.", type: "Demos" },
+  { time: "12:25 PM", title: "Building Voice AI Products from Scratch: The Klariqo Journey", speaker: "By Ansh Deb — what it actually takes to ship voice AI that calls, qualifies, and converts.", type: "Talk" },
+  { time: "01:00 PM", title: "Lunch Break", speaker: "Lunch and chai on us. Use the hour — the best deals happen between courses.", type: "Break" },
+  { time: "02:00 PM", title: "Introduction to Gemma 4 & Open Models", speaker: "By Rishiraj Acharya — what's new, what's possible, what to ship with it.", type: "Talk" },
+  { time: "02:50 PM", title: "Buildathon & Prompt War Begins", speaker: "Heads down, terminals open. Build something real, ship something fast.", type: "Buildathon" },
+  { time: "03:50 PM", title: "Winners Announcement & Prize Distribution", speaker: "Top builds, loudest cheers, biggest cheques.", type: "Awards" },
+  { time: "04:05 PM", title: "Closing Remarks", speaker: "What we built, who we met, what's next. Quick and sincere.", type: "Closing" },
+  { time: "04:15 PM", title: "Swag Distribution, Pictures & Networking", speaker: "Stickers, hoodies, group photos, and that one introduction that changes everything.", type: "Networking" },
 ];
 
-// Verified Gallery Images
+// AI Day Bhopal 2.0 speakers
+const SPEAKERS = [
+  { name: "Dr. Anukriti Bansal", role: "Google Developer Expert · AI", org: "LNMIIT Jaipur" },
+  { name: "Rishiraj Acharya", role: "ML Engineer @ IntelliTek Health", org: "GDE · AI · Cloud · Kaggle" },
+  { name: "Ansh Deb", role: "CEO & Cofounder @ Klariqo", org: "Voice AI · Enterprise · BPO" },
+];
+
+// Photos from AI Day Bhopal 2025 (Auditorium Hall, OIST)
 const GALLERY_PHOTOS = [
   {
-    url: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=800",
-    caption: "AI Day Keynote Hall",
+    url: "/images/ai-day/anubhav-talk.jpg",
+    caption: "Anubhav's full session on RAG · AI Day Bhopal 2025 · OIST",
   },
   {
-    url: "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800",
-    caption: "Main Stage Technical Keynote",
+    url: "/images/ai-day/full-house-2025.jpg",
+    caption: "Full house in the auditorium · AI Day Bhopal 2025 · OIST",
   },
   {
-    url: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=800",
-    caption: "AI-Thon Collaborative Sprint",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800",
-    caption: "Hands-on Code Mentorship",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=800",
-    caption: "Community Builder Networking",
-  },
-  {
-    url: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800",
-    caption: "Awards & Project Showcase",
+    url: "/images/ai-day/vertex-ai-walkthrough.jpg",
+    caption: "Live Vertex AI walkthrough on stage · AI Day Bhopal 2025 · OIST",
   },
 ];
 
 export default function AIDayPage() {
   const aiDayEvents = getAIDayEvents();
 
-  // Aggregate stats across all documented AI Day editions
-  const totalEditions = aiDayEvents.length;
-  const totalAttendees = aiDayEvents.reduce((acc, curr) => {
-    return acc + (typeof curr.registrations === "number" ? curr.registrations : 0);
-  }, 0);
-
-  // Distinct verified speakers across all AI Day editions
-  const allSpeakers = Array.from(
-    new Set(
-      aiDayEvents.flatMap((e) =>
-        (e.speakers || []).map((s) => (typeof s === "string" ? s : s.name))
-      )
-    )
+  const sortedEditions = [...aiDayEvents].sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
-
-  const latestEdition = aiDayEvents[0];
+  const totalEditions = sortedEditions.length;
+  const latestEdition = sortedEditions[0];
+  const latestRegistrations =
+    typeof latestEdition?.registrations === "number" ? latestEdition.registrations : null;
   const aiDaySchema = latestEdition
     ? {
         "@context": "https://schema.org",
         "@type": "EducationEvent",
-        name: "AI Day Bhopal — Flagship AI Builder Summit",
-        description:
-          "Central India's premier annual artificial intelligence summit. Multi-track keynotes, applied workshops, AI-Thon, and startup demo days by ML Bhopal and Google for Developers.",
-        startDate: latestEdition.date ? `${latestEdition.date}T09:30:00+05:30` : undefined,
-        endDate: latestEdition.date ? `${latestEdition.date}T18:30:00+05:30` : undefined,
+        name: "AI Day Bhopal 2.0",
+        description: PAGE_DESCRIPTION,
+        startDate: latestEdition.date ? `${latestEdition.date}T09:00:00+05:30` : undefined,
+        endDate: latestEdition.date ? `${latestEdition.date}T17:00:00+05:30` : undefined,
         eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
         eventStatus: "https://schema.org/EventScheduled",
         location: {
           "@type": "Place",
-          name: latestEdition.venue || "LNCT Group of Colleges",
+          name: "LNCT Group of Colleges",
           address: {
             "@type": "PostalAddress",
             addressLocality: "Bhopal",
@@ -222,23 +123,16 @@ export default function AIDayPage() {
           },
         },
         image: [
-          "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1200",
+          OG_IMAGE,
         ],
         organizer: {
           "@type": "Organization",
           name: "ML Bhopal",
           url: "https://mlbhopal.tech",
         },
-        offers: {
-          "@type": "Offer",
-          price: "0",
-          priceCurrency: "INR",
-          availability: "https://schema.org/InStock",
-          url: latestEdition.registrationUrl || "https://www.commudle.com/communities/ml-bhopal/events",
-        },
-        performer: allSpeakers.map((speaker) => ({
+        performer: SPEAKERS.map((speaker) => ({
           "@type": "Person",
-          name: speaker,
+          name: speaker.name,
         })),
       }
     : null;
@@ -284,7 +178,7 @@ export default function AIDayPage() {
               <div className="flex flex-wrap items-center justify-center gap-2 mb-6">
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-[#F1F3F4] text-ink-secondary border border-[#D1D5DB]">
                   <span className="w-2 h-2 rounded-full bg-google-blue inline-block" />
-                  FLAGSHIP ANNUAL SUMMIT • CENTRAL INDIA
+                  ML BHOPAL • BHOPAL, MADHYA PRADESH
                 </span>
                 <span className="px-3 py-1 rounded-full text-xs font-semibold text-google-blue bg-blue-50 border border-blue-200">
                   AI DAY 2.0
@@ -299,38 +193,38 @@ export default function AIDayPage() {
               </h1>
 
               <p className="font-sans text-base sm:text-lg md:text-xl text-ink-secondary leading-relaxed max-w-2xl mb-8 sm:mb-10 text-balance">
-                Central India’s benchmark artificial intelligence gathering. Uniting 500+ builders, researchers, and tech leaders for multi-track keynotes, hands-on workshops, and competitive AI-Thons.
+                AI Day Bhopal 2.0 on Saturday, May 16, 2026 at LNCT Group of Colleges, Bhopal. Talks, live demos, an introduction to Gemma 4 and open models, and a Buildathon & Prompt War, organised by ML Bhopal.
               </p>
 
               {/* Core Statistics Bar with Google 4-color top borders */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 w-full max-w-3xl mb-8 sm:mb-10 text-left">
                 <div className="p-4 rounded-card bg-[#FAFAFA] border border-[#D1D5DB] border-t-2 border-t-google-blue">
-                  <span className="text-ink-secondary block text-[11px] font-medium uppercase tracking-wider">TOTAL EDITIONS</span>
+                  <span className="text-ink-secondary block text-[11px] font-medium uppercase tracking-wider">EDITIONS</span>
                   <span className="text-2xl font-bold font-display text-ink-primary block mt-0.5">
-                    {totalEditions} Summits
+                    {totalEditions}
                   </span>
-                  <span className="text-ink-secondary text-xs">Across all editions</span>
+                  <span className="text-ink-secondary text-xs">2025 and 2.0</span>
                 </div>
                 <div className="p-4 rounded-card bg-[#FAFAFA] border border-[#D1D5DB] border-t-2 border-t-google-green">
-                  <span className="text-ink-secondary block text-[11px] font-medium uppercase tracking-wider">VERIFIED ATTENDEES</span>
+                  <span className="text-ink-secondary block text-[11px] font-medium uppercase tracking-wider">REGISTRATIONS</span>
                   <span className="text-2xl font-bold font-display text-google-green block mt-0.5">
-                    {totalAttendees.toLocaleString()}+
+                    {latestRegistrations !== null ? latestRegistrations.toLocaleString() : "—"}
                   </span>
-                  <span className="text-ink-secondary text-xs">Total registrations</span>
+                  <span className="text-ink-secondary text-xs">AI Day 2.0, per Commudle</span>
                 </div>
                 <div className="p-4 rounded-card bg-[#FAFAFA] border border-[#D1D5DB] border-t-2 border-t-google-yellow">
-                  <span className="text-ink-secondary block text-[11px] font-medium uppercase tracking-wider">TECHNICAL TRACKS</span>
+                  <span className="text-ink-secondary block text-[11px] font-medium uppercase tracking-wider">DATE</span>
                   <span className="text-2xl font-bold font-display text-ink-primary block mt-0.5">
-                    4 Tracks
+                    May 16, 2026
                   </span>
-                  <span className="text-ink-secondary text-xs">Agents, Ops, Vision, Sec</span>
+                  <span className="text-ink-secondary text-xs">9:00 AM – 5:00 PM IST</span>
                 </div>
                 <div className="p-4 rounded-card bg-[#FAFAFA] border border-[#D1D5DB] border-t-2 border-t-google-red">
-                  <span className="text-ink-secondary block text-[11px] font-medium uppercase tracking-wider">ACCESS STATUS</span>
+                  <span className="text-ink-secondary block text-[11px] font-medium uppercase tracking-wider">VENUE</span>
                   <span className="text-2xl font-bold font-display text-ink-primary block mt-0.5">
-                    Open & Free
+                    LNCT
                   </span>
-                  <span className="text-ink-secondary text-xs">Google Supported</span>
+                  <span className="text-ink-secondary text-xs">LNCT Group of Colleges, Bhopal</span>
                 </div>
               </div>
 
@@ -366,14 +260,14 @@ export default function AIDayPage() {
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
             <div>
               <span className="text-xs font-semibold uppercase tracking-wider text-google-blue block mb-1">
-                Summit Archives & Editions
+                Editions
               </span>
               <h2 id="editions-heading" className="text-2xl sm:text-3xl font-display font-bold text-ink-primary dark:text-[#F8FAFC] tracking-tight">
-                Current Edition & Historical Timeline
+                AI Day Bhopal 2.0 and 2025
               </h2>
             </div>
             <p className="text-sm text-ink-secondary dark:text-gray-400 max-w-md font-sans">
-              Switch between documented editions to examine keynote recordings, participant counts, and speaker rosters.
+              Switch between the 2.0 and 2025 editions to see the date and venue of each.
             </p>
           </div>
 
@@ -386,7 +280,7 @@ export default function AIDayPage() {
             <div className="flex items-center gap-2 mb-2">
               <span className="w-2.5 h-2.5 rounded-full bg-google-blue" />
               <span className="text-xs font-semibold uppercase tracking-wider text-google-blue">
-                Foundational Mission
+                About
               </span>
             </div>
             <h2 id="about-aiday-heading" className="text-2xl sm:text-3xl font-display font-bold text-ink-primary dark:text-[#F8FAFC] mb-6">
@@ -394,145 +288,62 @@ export default function AIDayPage() {
             </h2>
             <div className="max-w-none text-base text-ink-secondary font-sans leading-relaxed space-y-4">
               <p>
-                Launched under the former TFUG Bhopal banner, AI Day was created to solve a critical regional challenge: providing developers, researchers, and students in Central India with access to tier-one artificial intelligence training, Google Developer Experts, and production engineering practices without needing to relocate to metropolitan hubs.
+                AI Day Bhopal is a one-day community event by ML Bhopal. The 2025 edition was held on March 30, 2025 at the Auditorium Hall, Oriental Institute of Science & Technology (OIST), Bhopal.
               </p>
               <p>
-                What began as a single-day gathering of 300 enthusiasts at Bhopal has since scaled into the region’s signature AI summit. Each edition unites academic institutions including LNCT Group of Colleges, Oriental Institute of Science & Technology, and SATI with global ecosystems like Google for Developers and OWASP.
+                AI Day Bhopal 2.0 followed on Saturday, May 16, 2026 at LNCT Group of Colleges, Bhopal, from 9:00 AM to 5:00 PM IST, with 363 registrations on Commudle.
               </p>
             </div>
 
             {/* Impact Highlights Grid */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 pt-8 border-t border-[#D1D5DB]">
               <div className="p-5 rounded-card bg-[#FAFAFA] border border-[#D1D5DB] border-t-2 border-t-google-blue">
-                <span className="text-xs font-semibold text-google-blue uppercase tracking-wider block mb-1">Pillar 01</span>
-                <h3 className="text-base font-display font-semibold text-ink-primary mb-2">Production AI Labs</h3>
+                <span className="text-xs font-semibold text-google-blue uppercase tracking-wider block mb-1">On the agenda</span>
+                <h3 className="text-base font-display font-semibold text-ink-primary mb-2">Talks & Live Demos</h3>
                 <p className="text-xs text-ink-secondary leading-relaxed font-sans">
-                  Real-time model training, open-source weight fine-tuning, and vLLM cluster deployments rather than superficial slide presentations.
+                  AI agents with Google ADK and Gemini, building voice AI products, and a product showcase with live demos.
                 </p>
               </div>
 
               <div className="p-5 rounded-card bg-[#FAFAFA] border border-[#D1D5DB] border-t-2 border-t-google-green">
-                <span className="text-xs font-semibold text-google-green uppercase tracking-wider block mb-1">Pillar 02</span>
-                <h3 className="text-base font-display font-semibold text-ink-primary mb-2">Competitive AI-Thon</h3>
+                <span className="text-xs font-semibold text-google-green uppercase tracking-wider block mb-1">On the agenda</span>
+                <h3 className="text-base font-display font-semibold text-ink-primary mb-2">Gemma 4 & Open Models</h3>
                 <p className="text-xs text-ink-secondary leading-relaxed font-sans">
-                  12-hour builder sprints solving actual challenges across HealthTech, FinTech, CyberSecurity, and EduTech with direct mentor feedback.
+                  An introduction to Gemma 4 and open models by Rishiraj Acharya.
                 </p>
               </div>
 
               <div className="p-5 rounded-card bg-[#FAFAFA] border border-[#D1D5DB] border-t-2 border-t-google-yellow">
-                <span className="text-xs font-semibold text-amber-600 uppercase tracking-wider block mb-1">Pillar 03</span>
-                <h3 className="text-base font-display font-semibold text-ink-primary mb-2">Career & Founder Pipeline</h3>
+                <span className="text-xs font-semibold text-amber-600 uppercase tracking-wider block mb-1">On the agenda</span>
+                <h3 className="text-base font-display font-semibold text-ink-primary mb-2">Buildathon & Prompt War</h3>
                 <p className="text-xs text-ink-secondary leading-relaxed font-sans">
-                  Guaranteed interview screenings, startup partner sponsorships, and direct networking with hiring engineering teams.
+                  A hands-on Buildathon and Prompt War, followed by the winners announcement and prize distribution.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* 4. Documented Tracks Section with 4 Google Accent Colors */}
-        <section id="tracks" aria-labelledby="tracks-heading" className="mb-20 scroll-mt-28">
-          <div className="mb-8">
-            <span className="text-xs font-semibold uppercase tracking-wider text-google-blue block mb-1">
-              Curriculum Architecture
-            </span>
-            <h2 id="tracks-heading" className="text-2xl sm:text-3xl font-display font-bold text-ink-primary dark:text-[#F8FAFC] tracking-tight">
-              Documented Technical Tracks
-            </h2>
-            <p className="text-sm text-ink-secondary mt-1 max-w-xl">
-              Engineered across four core disciplines to deliver deep, hands-on architectural competence.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {DOCUMENTED_TRACKS.map((track, idx) => {
-              const borderColors = [
-                "border-t-google-blue",
-                "border-t-google-red",
-                "border-t-google-yellow",
-                "border-t-google-green",
-              ];
-              const badgeColors = [
-                "bg-blue-50 text-google-blue border-blue-200",
-                "bg-red-50 text-google-red border-red-200",
-                "bg-amber-50 text-amber-700 border-amber-200",
-                "bg-green-50 text-google-green border-green-200",
-              ];
-              const iconColors = [
-                "bg-blue-50 text-google-blue",
-                "bg-red-50 text-google-red",
-                "bg-amber-50 text-amber-600",
-                "bg-green-50 text-google-green",
-              ];
-
-              return (
-                <TiltCard key={track.id} maxTilt={4} perspective={1000} glareEffect className="h-full rounded-card">
-                  <div
-                    className={`p-6 sm:p-8 rounded-card bg-white dark:bg-[#1E293B] border border-[#D1D5DB] dark:border-[#334155] border-t-4 ${borderColors[idx % 4]} hover:shadow-elevation-2 transition-all flex flex-col justify-between h-full`}
-                    style={{ transformStyle: "preserve-3d" }}
-                  >
-                    <div>
-                      <div className="flex items-center justify-between mb-4">
-                        <span className={`text-xs font-medium px-2.5 py-0.5 rounded-full border ${badgeColors[idx % 4]}`}>
-                          {track.badge}
-                        </span>
-                        <div className={`w-9 h-9 rounded-lg flex items-center justify-center ${iconColors[idx % 4]}`}>
-                          {track.icon}
-                        </div>
-                      </div>
-
-                      <h3
-                        className="text-xl font-display font-bold text-ink-primary dark:text-[#F8FAFC] mb-2"
-                        style={{ transform: "translateZ(8px)" }}
-                      >
-                        {track.title}
-                      </h3>
-
-                      <p className="text-sm text-ink-secondary dark:text-[#94A3B8] font-sans leading-relaxed mb-6">
-                        {track.description}
-                      </p>
-                    </div>
-
-                    <div
-                      className="pt-4 border-t border-[#D1D5DB] dark:border-[#334155] flex flex-wrap gap-1.5"
-                      style={{ transform: "translateZ(6px)" }}
-                    >
-                      {track.topics.map((topic, i) => (
-                        <span
-                          key={i}
-                          className="px-2.5 py-1 rounded-full text-xs bg-[#F1F3F4] dark:bg-[#1E293B] text-ink-secondary dark:text-[#94A3B8] border border-[#D1D5DB] dark:border-[#5F6368]"
-                        >
-                          {topic}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </TiltCard>
-              );
-            })}
-          </div>
-        </section>
-
         {/* 5. Featured Speakers Section */}
-        {allSpeakers.length > 0 && (
+        {SPEAKERS.length > 0 && (
           <section id="speakers" aria-labelledby="speakers-heading" className="mb-20 scroll-mt-28">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
               <div>
                 <span className="text-xs font-semibold uppercase tracking-wider text-google-blue block mb-1">
-                  Distinguished Voices
+                  AI Day Bhopal 2.0
                 </span>
                 <h2 id="speakers-heading" className="text-2xl sm:text-3xl font-display font-bold text-ink-primary tracking-tight">
-                  Verified Keynote Speakers & Mentors
+                  Speakers
                 </h2>
               </div>
               <span className="text-xs font-medium text-ink-secondary">
-                GDEs & Industry Practitioners
+                May 16, 2026
               </span>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-              {allSpeakers.map((speaker, idx) => {
-                const initials = (typeof speaker === "string" ? speaker : String(speaker))
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+              {SPEAKERS.map((speaker, idx) => {
+                const initials = speaker.name
                   .split(" ")
                   .map((n: string) => n[0])
                   .join("")
@@ -556,10 +367,13 @@ export default function AIDayPage() {
                     </div>
                     <div className="min-w-0">
                       <h3 className="text-sm font-display font-semibold text-ink-primary truncate">
-                        {speaker}
+                        {speaker.name}
                       </h3>
                       <p className="text-xs text-ink-secondary truncate">
-                        AI Day Speaker / GDE
+                        {speaker.role}
+                      </p>
+                      <p className="text-xs text-ink-secondary truncate">
+                        {speaker.org}
                       </p>
                     </div>
                   </div>
@@ -569,17 +383,17 @@ export default function AIDayPage() {
           </section>
         )}
 
-        {/* 6. Summit Schedule Blueprint */}
+        {/* 6. AI Day Bhopal 2.0 Schedule */}
         <section id="schedule" aria-labelledby="schedule-heading" className="mb-20 scroll-mt-28">
           <div className="mb-8">
             <span className="text-xs font-semibold uppercase tracking-wider text-google-blue block mb-1">
-              Conference Flow
+              Run of show
             </span>
             <h2 id="schedule-heading" className="text-2xl sm:text-3xl font-display font-bold text-ink-primary dark:text-[#F8FAFC] tracking-tight">
               Summit Schedule Blueprint
             </h2>
             <p className="text-sm text-ink-secondary mt-1 max-w-xl">
-              Typical itinerary across AI Day editions including parallel tracks and AI-Thon milestones.
+              The agenda for May 16, 2026. All times IST.
             </p>
           </div>
 
@@ -618,15 +432,15 @@ export default function AIDayPage() {
             <div className="absolute top-0 inset-x-0 h-1 bg-google-blue" />
 
             <span className="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-google-green border border-emerald-200 mb-4">
-              CENTRAL INDIA CHAPTER
+              ML BHOPAL ON COMMUDLE
             </span>
 
             <h2 id="registration-heading" className="text-3xl sm:text-4xl lg:text-5xl font-display font-extrabold text-ink-primary tracking-tight mb-4">
-              Access the Next AI Day Edition
+              AI Day Bhopal 2.0 on Commudle
             </h2>
 
             <p className="text-base text-ink-secondary max-w-xl mb-8 leading-relaxed font-sans">
-              All AI Day registrations are hosted through our verified Commudle chapter. Tickets include entry to all four technical tracks, hands-on lab access, and the competitive AI-Thon.
+              AI Day registrations are hosted on the ML Bhopal community page on Commudle, where 363 people registered for AI Day Bhopal 2.0.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-4 mb-6">
@@ -637,7 +451,7 @@ export default function AIDayPage() {
                   size="lg"
                   icon={<ExternalLink className="w-4 h-4" />}
                 >
-                  Claim Pass on Commudle
+                  ML Bhopal on Commudle
                 </PrimaryButton>
               </MagneticButton>
 
@@ -650,32 +464,7 @@ export default function AIDayPage() {
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-6 text-xs text-ink-secondary pt-4 border-t border-[#D1D5DB]">
-              <span className="flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-google-green" />
-                100% Free & Open Access
-              </span>
-              <span>•</span>
-              <span className="inline-flex items-center gap-1.5">
-                <span>Supported by</span>
-                <div className="relative h-3 w-24">
-                  <Image
-                    src="/logos/google-developers-light.png"
-                    alt="Google for Developers"
-                    fill
-                    sizes="96px"
-                    className="object-contain dark:hidden"
-                  />
-                  <Image
-                    src="/logos/google-developers-dark.png"
-                    alt="Google for Developers"
-                    fill
-                    sizes="96px"
-                    className="object-contain hidden dark:block"
-                  />
-                </div>
-              </span>
-              <span>•</span>
-              <span>Bhopal, Madhya Pradesh</span>
+              <span>LNCT Group of Colleges, Bhopal, Madhya Pradesh</span>
             </div>
           </div>
         </section>
@@ -690,7 +479,7 @@ export default function AIDayPage() {
               AI Day Visual Chronicle
             </h2>
             <p className="text-sm text-ink-secondary dark:text-gray-400 mt-1">
-              Moments from lecture halls, collaborative sprints, and keynote stages across editions.
+              Photos from AI Day Bhopal 2025, held at the Auditorium Hall, OIST, Bhopal.
             </p>
           </div>
 
@@ -727,10 +516,10 @@ export default function AIDayPage() {
           <div className="mb-8 flex items-center justify-between">
             <div>
               <span className="text-xs font-semibold uppercase tracking-wider text-google-blue block mb-1">
-                Chronicle & Evolution
+                Archive
               </span>
               <h2 id="archive-heading" className="text-2xl sm:text-3xl font-display font-bold text-ink-primary tracking-tight">
-                Historical Editions Matrix
+                Editions
               </h2>
             </div>
             <Link
@@ -749,12 +538,12 @@ export default function AIDayPage() {
                   <th className="py-3.5 px-4 font-semibold">EDITION</th>
                   <th className="py-3.5 px-4 font-semibold">DATE</th>
                   <th className="py-3.5 px-4 font-semibold">VENUE</th>
-                  <th className="py-3.5 px-4 font-semibold">VERIFIED ATTENDEES</th>
+                  <th className="py-3.5 px-4 font-semibold">REGISTRATIONS</th>
                   <th className="py-3.5 px-4 font-semibold text-right">ACTION</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#D1D5DB] text-ink-primary">
-                {aiDayEvents.map((edition) => (
+                {sortedEditions.map((edition) => (
                   <tr key={edition.slug} className="hover:bg-[#FAFAFA] transition-colors">
                     <td className="py-4 px-4 font-display font-semibold text-ink-primary">
                       {edition.title}
@@ -763,9 +552,9 @@ export default function AIDayPage() {
                     <td className="py-4 px-4 text-ink-secondary">{edition.venue}</td>
                     <td className="py-4 px-4">
                       {edition.registrations ? (
-                        <span className="text-google-green font-semibold">{edition.registrations}+ Registered</span>
+                        <span className="text-google-green font-semibold">{edition.registrations} (Commudle)</span>
                       ) : (
-                        <span className="text-ink-secondary">Documented Milestone</span>
+                        <span className="text-ink-secondary">—</span>
                       )}
                     </td>
                     <td className="py-4 px-4 text-right">
