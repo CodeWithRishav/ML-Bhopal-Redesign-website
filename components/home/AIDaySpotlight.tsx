@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Sparkles, MapPin, Calendar, Users, Award } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { PrimaryButton } from "@/components/ui/PrimaryButton";
 
@@ -25,7 +25,7 @@ export function AIDaySpotlight() {
           <div className="lg:col-span-6 flex flex-col items-start">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-mono font-semibold tracking-wider text-google-yellow bg-yellow-950/40 border border-yellow-800/60 mb-6">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>ANNUAL FLAGSHIP SUMMIT • 2026 EDITION</span>
+              <span>ANNUAL FLAGSHIP • MAY 16, 2026</span>
             </div>
 
             {/* Monumental Typography: AI DAY 2.0 */}
@@ -35,22 +35,22 @@ export function AIDaySpotlight() {
             </h2>
 
             <p className="font-sans text-base sm:text-lg text-gray-300 leading-relaxed mb-8 max-w-lg">
-              Central India&apos;s benchmark artificial intelligence gathering. Bringing together 500+ developers, researchers, and technology leaders across autonomous agent architectures, model fine-tuning, and applied multimodal vision.
+              Our annual flagship, held at LNCT Group of Colleges, Bhopal. A full day of talks, live demos, an introduction to Gemma 4 and open models, and a Buildathon &amp; Prompt War — backed by Google for Developers.
             </p>
 
             {/* Typographic Key Metrics Strip — No individual boxes */}
             <div className="grid grid-cols-3 gap-6 py-6 border-t border-b border-white/15 w-full max-w-md mb-8">
               <div>
-                <span className="text-3xl sm:text-4xl font-display font-black text-google-blue block">4+</span>
-                <span className="text-xs font-mono text-gray-400 uppercase">Tracks</span>
+                <span className="text-3xl sm:text-4xl font-display font-black text-google-blue block">2</span>
+                <span className="text-xs font-mono text-gray-400 uppercase">Editions</span>
               </div>
               <div>
-                <span className="text-3xl sm:text-4xl font-display font-black text-google-green block">500+</span>
-                <span className="text-xs font-mono text-gray-400 uppercase">Builders</span>
+                <span className="text-3xl sm:text-4xl font-display font-black text-google-green block">363</span>
+                <span className="text-xs font-mono text-gray-400 uppercase">Registered</span>
               </div>
               <div>
-                <span className="text-3xl sm:text-4xl font-display font-black text-google-red block">12+</span>
-                <span className="text-xs font-mono text-gray-400 uppercase">Keynotes</span>
+                <span className="text-3xl sm:text-4xl font-display font-black text-google-red block">9–5</span>
+                <span className="text-xs font-mono text-gray-400 uppercase">IST · one day</span>
               </div>
             </div>
 
@@ -62,7 +62,7 @@ export function AIDaySpotlight() {
                 className="px-7 shadow-elevation-1"
                 icon={<ArrowRight className="w-4 h-4" />}
               >
-                Explore AI Day 2.0 Portal
+                Explore AI Day 2.0
               </PrimaryButton>
             </div>
           </div>
@@ -73,8 +73,8 @@ export function AIDaySpotlight() {
           <div className="lg:col-span-6 relative">
             <div className="relative aspect-[16/10] sm:aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-elevation-3 group">
               <Image
-                src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1200&auto=format&fit=crop"
-                alt="AI Day Flagship Keynote Stage"
+                src="/images/ai-day/full-house-2025.jpg"
+                alt="Full auditorium at AI Day Bhopal 2025"
                 fill
                 sizes="(max-width: 1024px) 100vw, 560px"
                 className="object-cover transition-transform duration-700 group-hover:scale-105"
@@ -86,14 +86,14 @@ export function AIDaySpotlight() {
               <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between">
                 <div>
                   <span className="text-xs font-mono text-google-yellow font-semibold block mb-0.5">
-                    LNCT Campus Auditorium • Bhopal
+                    LNCT Group of Colleges • Bhopal
                   </span>
                   <span className="text-sm font-semibold text-white">
-                    Multi-Track Technical Sprints &amp; Demo Day
+                    Photo: AI Day Bhopal 2025
                   </span>
                 </div>
                 <span className="text-xs font-mono px-3 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/20 text-white shrink-0">
-                  Guaranteed Internships
+                  May 16, 2026
                 </span>
               </div>
             </div>
