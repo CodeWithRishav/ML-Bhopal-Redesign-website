@@ -26,7 +26,7 @@ export function CampaignsSpotlight({ campaigns }: { campaigns: Campaign[] }) {
         <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-12 sm:mb-16">
           <div>
             <span className="text-xs font-mono font-semibold uppercase tracking-widest text-primary dark:text-[#FF9A3D] mb-2 block">
-              INITIATIVES &amp; SPRINT TRACKS
+              INITIATIVES
             </span>
             <h2 className="font-display font-black tracking-tight text-ink-primary dark:text-[#F8FAFC] text-3xl sm:text-4xl lg:text-5xl uppercase">
               Current Campaigns<span className="text-google-blue">.</span>
@@ -37,7 +37,7 @@ export function CampaignsSpotlight({ campaigns }: { campaigns: Campaign[] }) {
             href="/campaigns"
             className="text-xs font-semibold uppercase tracking-wider text-google-blue dark:text-[#60A5FA] hover:text-google-blue-dark dark:hover:text-blue-300 transition-colors inline-flex items-center gap-1.5"
           >
-            <span>View All {campaigns.length}+ Campaigns</span>
+            <span>View All Campaigns</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
@@ -54,12 +54,12 @@ export function CampaignsSpotlight({ campaigns }: { campaigns: Campaign[] }) {
               <div className="flex flex-wrap items-center gap-2.5 mb-5">
                 <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-google-green-light dark:bg-[#1E3B27] text-google-green dark:text-[#81C995] text-xs font-mono font-bold border border-green-200 dark:border-green-900">
                   <span className="w-1.5 h-1.5 rounded-full bg-google-green animate-pulse" />
-                  ACTIVE SPRINT
+                  ACTIVE
                 </span>
                 {currentCamp.deadline && (
                   <span className="inline-flex items-center gap-1 text-xs font-mono text-ink-secondary dark:text-[#94A3B8]">
                     <Clock className="w-3 h-3 text-google-blue dark:text-[#60A5FA]" />
-                    <span>Submission Deadline: {currentCamp.deadline}</span>
+                    <span>Deadline: {currentCamp.deadline}</span>
                   </span>
                 )}
               </div>
@@ -76,25 +76,18 @@ export function CampaignsSpotlight({ campaigns }: { campaigns: Campaign[] }) {
 
               {/* Metadata Tags */}
               <div className="flex flex-wrap gap-1.5 mb-6">
-                {(currentCamp.metadata?.tracks || currentCamp.tracks || [
-                  "Google Gemma 2",
-                  "Agentic Workflows",
-                  "Vertex AI",
-                  "Production RAG",
-                ]).map((t: string) => (
+                {(currentCamp.metadata?.tracks || currentCamp.tracks || []).map((t: string) => (
                   <Tag key={t} variant="domain">{t}</Tag>
                 ))}
               </div>
 
               {/* Incentives Strip */}
-              {(currentCamp.metadata?.incentives || currentCamp.incentives || currentCamp.benefits) && (
+              {(currentCamp.metadata?.incentives || currentCamp.incentives) && (
                 <div className="flex items-center gap-2.5 p-3 rounded-xl bg-[#FAFAFA] dark:bg-[#0F172A] border border-[#D1D5DB] dark:border-[#334155] text-xs text-ink-secondary dark:text-[#94A3B8] mb-8 w-full max-w-lg">
                   <Trophy className="w-4 h-4 text-amber-500 shrink-0" />
                   <span>
                     <strong className="text-ink-primary dark:text-[#F8FAFC] font-semibold">Perks:</strong>{" "}
-                    {typeof currentCamp.incentives === "string"
-                      ? currentCamp.incentives
-                      : "Google Cloud compute credits, verified certificate, and demo day stage"}
+                    {currentCamp.metadata?.incentives || currentCamp.incentives}
                   </span>
                 </div>
               )}
@@ -134,7 +127,7 @@ export function CampaignsSpotlight({ campaigns }: { campaigns: Campaign[] }) {
                 {/* Overlay Metadata */}
                 <div className="absolute bottom-3 left-3 right-3 text-white">
                   <span className="text-[10px] font-mono uppercase tracking-wider text-google-yellow font-semibold block">
-                    {currentCamp.category || "Sprint & Challenge"}
+                    {currentCamp.category || "Campaign"}
                   </span>
                   <span className="text-sm font-semibold truncate block">
                     {currentCamp.shortDescription || currentCamp.title}

@@ -242,7 +242,7 @@ export default async function CampaignDetailPage({
               ) : null}
               {campaign.metadata.incentives ? (
                 <div>
-                  <span className="text-ink-secondary block mb-1 uppercase font-medium">INCENTIVES & GRANTS</span>
+                  <span className="text-ink-secondary block mb-1 uppercase font-medium">INCENTIVES</span>
                   <span className="text-google-blue font-semibold text-sm">{campaign.metadata.incentives}</span>
                 </div>
               ) : null}
@@ -440,7 +440,7 @@ export default async function CampaignDetailPage({
             Participate in {campaign.title}
           </h2>
           <p className="text-sm text-ink-secondary max-w-xl mb-6">
-            Join the community on Commudle to submit project links, track deadlines, and collaborate with mentors.
+            See the events in this series and register on Commudle.
           </p>
           {campaign.registrationUrl ? (
             <PrimaryButton

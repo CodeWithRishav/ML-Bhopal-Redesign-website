@@ -21,7 +21,7 @@ const PILLARS = [
     title: "Hackathons",
     description: "Team build sprints with mentors and judges — like the GenAI Hackathon Bhopal.",
     tags: ["Teams", "Mentors", "Judging"],
-    href: "/campaigns",
+    href: "/events",
     color: "text-google-red dark:text-[#F28B82]",
     barColor: "bg-google-red",
   },
