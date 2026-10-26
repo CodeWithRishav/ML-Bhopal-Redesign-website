@@ -29,7 +29,7 @@ import { CommunityNetwork3D } from "@/components/3d/CommunityNetwork3D";
 export const metadata: Metadata = {
   title: "Our Story & Philosophy — Central India's AI Journey",
   description:
-    "The journey of ML Bhopal: from TFUG Bhopal in 2023 to Central India's largest community of 3,600+ AI developers, researchers, and student builders. Code Over Slides, Radical Openness.",
+    "The journey of ML Bhopal: from TFUG Bhopal in 2024 to Central India's largest community of 3,600+ AI developers, researchers, and student builders. Code Over Slides, Radical Openness.",
   alternates: {
     canonical: "/about",
   },
@@ -94,10 +94,10 @@ const CORE_PRINCIPLES = [
 
 const HISTORICAL_MILESTONES = [
   {
-    year: "April 2023",
-    title: "The Genesis: TFUG Bhopal & Inaugural AI Day",
+    year: "February 2024",
+    title: "The Genesis: TFUG Bhopal & OWASP Bhopal Launch",
     description:
-      "Founded by volunteers under the TensorFlow User Group banner, 300+ students, researchers, and engineers gathered in Bhopal for the first AI Day. What began as a one-day workshop laid the cornerstone for the region's builder movement.",
+      "Founded by volunteers, ML Bhopal began on Feb 21, 2024 with the intro of TFUG Bhopal and OWASP Bhopal, plus a TensorFlow workshop at RGPV. That first event laid the cornerstone for the region's builder movement.",
   },
   {
     year: "2024",
@@ -195,7 +195,7 @@ export default function AboutPage() {
                   <Heart className="w-3.5 h-3.5 text-google-red" />
                   OUR PURPOSE & ORIGIN
                 </span>
-                <span className="text-xs font-medium text-ink-secondary">EST. APRIL 2023</span>
+                <span className="text-xs font-medium text-ink-secondary">EST. FEB 2024</span>
               </div>
 
               <h1

@@ -24,7 +24,7 @@ const VERIFIED_CAMPUSES: CampusItem[] = [
     logo: "/logos/partners/lnct.svg",
     status: "Host Campus",
     highlights: ["Venue partner for AI Day 2.0 & AI Day 1.0", "500+ active student builders", "Dedicated compute labs"],
-    established: "2023",
+    established: "2024",
   },
   {
     id: "oriental",
@@ -34,7 +34,7 @@ const VERIFIED_CAMPUSES: CampusItem[] = [
     logo: "/logos/partners/oriental.svg",
     status: "Active Chapter",
     highlights: ["Hands-on TensorFlow & RAG codelabs", "Active student ambassador board", "Regular study circles"],
-    established: "2023",
+    established: "2024",
   },
   {
     id: "manit",
@@ -64,7 +64,7 @@ const VERIFIED_CAMPUSES: CampusItem[] = [
     logo: "/logos/partners/rgpv.svg",
     status: "Active Chapter",
     highlights: ["State technological university hub", "Central India developer outreach", "Cloud compute sessions"],
-    established: "2023",
+    established: "2024",
   },
   {
     id: "tit",

@@ -102,7 +102,7 @@ const organizationSchema = {
   logo: "https://mlbhopal.tech/posters/ml-bhopal-banner.png",
   description:
     "Central India's premier community of 3,600+ AI developers, researchers, and student innovators supported by Google for Developers.",
-  foundingDate: "2023",
+  foundingDate: "2024",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Bhopal",

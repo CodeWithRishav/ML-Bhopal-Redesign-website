@@ -31,7 +31,7 @@ interface SearchItem {
 
 const STATIC_PAGES: SearchItem[] = [
   { id: "page-home", title: "Home", subtitle: "ML Bhopal community homepage", category: "Pages", url: "/", icon: Home },
-  { id: "page-events", title: "Events Explorer", subtitle: "Browse 22+ workshops, hackathons & meetups", category: "Pages", url: "/events", icon: Calendar },
+  { id: "page-events", title: "Events Explorer", subtitle: "Browse 17+ workshops, hackathons & meetups", category: "Pages", url: "/events", icon: Calendar },
   { id: "page-aiday", title: "AI Day Bhopal 2.0", subtitle: "Central India's premier annual AI conference", category: "Pages", url: "/ai-day", icon: Sparkles },
   { id: "page-campaigns", title: "Campaigns & Cohorts", subtitle: "Intensive build programs and hackathons", category: "Pages", url: "/campaigns", icon: Flame },
   { id: "page-resources", title: "Knowledge Hub & Resources", subtitle: "Production guides, cookbooks and curricula", category: "Pages", url: "/resources", icon: BookOpen },

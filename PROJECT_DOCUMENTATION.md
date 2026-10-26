@@ -8,7 +8,7 @@
 ## 1. Project Overview
 
 ### 1.1 What is ML Bhopal?
-**ML Bhopal** (Machine Learning Bhopal) is Central India's premier community of artificial intelligence and machine learning engineers, researchers, students, and founders. Founded in April 2023 under the initial banner of **TensorFlow User Group (TFUG) Bhopal**, the organization has grown to over 3,600+ registered developers across Bhopal, Indore, Jabalpur, Gwalior, and surrounding regions. It is supported by **Google for Developers** and actively collaborates with major regional academic institutions including MANIT Bhopal, LNCT Group of Colleges, Oriental Institute of Science & Technology (OIST), IIIT Bhopal, and UIT-RGPV.
+**ML Bhopal** (Machine Learning Bhopal) is Central India's premier community of artificial intelligence and machine learning engineers, researchers, students, and founders. Founded in February 2024 under the initial banner of **TensorFlow User Group (TFUG) Bhopal**, the organization has grown to over 3,600+ registered developers across Bhopal, Indore, Jabalpur, Gwalior, and surrounding regions. It is supported by **Google for Developers** and actively collaborates with major regional academic institutions including MANIT Bhopal, LNCT Group of Colleges, Oriental Institute of Science & Technology (OIST), IIIT Bhopal, and UIT-RGPV.
 
 ### 1.2 Purpose of the Website
 The platform (`https://mlbhopal.tech`) serves as the official digital headquarters, event directory, resource publication engine, and leadership gateway for the community. It provides:
@@ -617,7 +617,7 @@ Maintainers can add, modify, or archive content by editing JSON records in `cont
      "name": "ML Bhopal",
      "alternateName": ["TFUG Bhopal", "Machine Learning Bhopal"],
      "url": "https://mlbhopal.tech",
-     "foundingDate": "2023",
+     "foundingDate": "2024",
      "sameAs": [
        "https://www.commudle.com/communities/ml-bhopal",
        "https://www.linkedin.com/company/ml-bhopal",

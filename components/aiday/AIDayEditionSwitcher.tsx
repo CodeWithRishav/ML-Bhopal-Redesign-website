@@ -24,7 +24,7 @@ interface AIDayEditionSwitcherProps {
 
 export function AIDayEditionSwitcher({ editions }: AIDayEditionSwitcherProps) {
   const shouldReduceMotion = useReducedMotion();
-  // Sort editions chronologically descending (2026, 2025, 2023)
+  // Sort editions chronologically descending (2026, 2025)
   const sortedEditions = [...editions].sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );

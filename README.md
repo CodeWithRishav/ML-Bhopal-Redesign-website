@@ -12,7 +12,7 @@
 
 ## About ML Bhopal
 
-Founded in April 2023 under the initial banner of **TensorFlow User Group (TFUG) Bhopal**, ML Bhopal has grown into Central India's benchmark technical community. Supported by **Google for Developers** and regional academic partners (MANIT, LNCT, Oriental, IIIT Bhopal, UIT-RGPV), the platform powers technical masterclasses, hackathons, flagship summits, and open-weights AI research circles.
+Founded in February 2024 under the initial banner of **TensorFlow User Group (TFUG) Bhopal**, ML Bhopal has grown into Central India's benchmark technical community. Supported by **Google for Developers** and regional academic partners (MANIT, LNCT, Oriental, IIIT Bhopal, UIT-RGPV), the platform powers technical masterclasses, hackathons, flagship summits, and open-weights AI research circles.
 
 The web platform ([mlbhopal.tech](https://mlbhopal.tech)) provides:
 - **Event Chronicles & RSVPs**: Discovery and schedule guides for 22+ verified community gatherings.

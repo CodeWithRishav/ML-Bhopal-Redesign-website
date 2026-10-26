@@ -47,9 +47,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [1.0.0] - 2023-04-15
+## [1.0.0] - 2024-02-21
 
 ### Added
 - Initial community launch as TensorFlow User Group (TFUG) Bhopal.
-- Foundation of community meetups and inaugural AI Day Bhopal 2023.
+- Foundation of community meetups and the TFUG Bhopal and OWASP Bhopal launch.
 - Community registration pipelines via Commudle.
