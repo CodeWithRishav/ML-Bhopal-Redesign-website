@@ -40,7 +40,7 @@ const STATIC_PAGES: SearchItem[] = [
   { id: "page-partners", title: "Academic & Ecosystem Partners", subtitle: "Partner universities, sponsors and platforms", category: "Pages", url: "/partners", icon: HeartHandshake },
   { id: "page-about", title: "About ML Bhopal", subtitle: "Mission, origin story, and community pillars", category: "Pages", url: "/about", icon: BookOpen },
   { id: "page-contact", title: "Contact Leadership", subtitle: "Get in touch with organizers for partnerships", category: "Pages", url: "/contact", icon: Mail },
-  { id: "action-commudle", title: "Official Commudle Chapter", subtitle: "Join community chapter & claim event tickets", category: "Quick Actions", url: "https://commudle.com/communities/ml-bhopal", isExternal: true, icon: ExternalLink },
+  { id: "action-commudle", title: "Official Commudle Chapter", subtitle: "Join the community & claim event tickets", category: "Quick Actions", url: "https://commudle.com/communities/ml-bhopal", isExternal: true, icon: ExternalLink },
 ];
 
 export function CommandPalette({

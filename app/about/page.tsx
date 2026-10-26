@@ -115,7 +115,7 @@ const HISTORICAL_MILESTONES = [
     year: "2026",
     title: "AI Day 2.0 & Scaling Across 9+ Institutes",
     description:
-      "Hosted AI Day 2.0 at LNCT Group of Colleges with 500+ builders and guaranteed internship pipelines. Expanded the Campus Ambassador network across 9+ colleges in Central India, crossing 3,600+ active community members.",
+      "Hosted AI Day 2.0 at LNCT Group of Colleges with 500+ builders and guaranteed internship pipelines. The community crossed 3,600+ members.",
   },
 ];
 
@@ -335,7 +335,7 @@ export default function AboutPage() {
                 Interactive Community Node Network
               </h2>
               <p className="text-sm text-ink-secondary dark:text-[#94A3B8] mt-2 leading-relaxed">
-                Move your cursor to explore how ML Bhopal connects student chapters, open weights, AI Day summits, and global technology partners.
+                Move your cursor to explore how ML Bhopal connects student communities, open weights, AI Day summits, and global technology partners.
               </p>
             </div>
           </ScrollReveal>
