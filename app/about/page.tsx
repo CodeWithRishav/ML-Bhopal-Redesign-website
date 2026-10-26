@@ -247,7 +247,7 @@ export default function AboutPage() {
             <div className="p-5 rounded-card bg-white border border-[#D1D5DB] border-t-2 border-t-google-yellow shadow-subtle">
               <span className="text-ink-secondary block text-[11px] font-medium uppercase tracking-wider">COLLEGES REACHED</span>
               <span className="text-2xl sm:text-3xl font-bold font-display text-ink-primary block mt-0.5">9+</span>
-              <span className="text-ink-secondary text-xs">Active campus chapters</span>
+              <span className="text-ink-secondary text-xs">Campuses where ML Bhopal events take place</span>
             </div>
             <div className="p-5 rounded-card bg-white border border-[#D1D5DB] border-t-2 border-t-google-red shadow-subtle">
               <span className="text-ink-secondary block text-[11px] font-medium uppercase tracking-wider">ADMISSION MODEL</span>

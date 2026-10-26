@@ -10,7 +10,7 @@ interface CampusItem {
   shortName: string;
   location: string;
   logo: string;
-  status: "Active Chapter" | "Host Campus" | "MoU Partner";
+  status?: "Host Campus" | "MoU Partner";
   highlights: string[];
   established: string;
 }
@@ -32,7 +32,6 @@ const VERIFIED_CAMPUSES: CampusItem[] = [
     shortName: "OIST Bhopal",
     location: "Oriental Campus, Raisen Rd, Bhopal",
     logo: "/logos/partners/oriental.svg",
-    status: "Active Chapter",
     highlights: ["Hands-on TensorFlow & RAG codelabs", "Active student ambassador board", "Regular study circles"],
     established: "2024",
   },
@@ -62,7 +61,7 @@ const VERIFIED_CAMPUSES: CampusItem[] = [
     shortName: "UIT-RGPV",
     location: "Airport Road, Gandhi Nagar, Bhopal",
     logo: "/logos/partners/rgpv.svg",
-    status: "Active Chapter",
+    status: "Host Campus",
     highlights: ["State technological university hub", "Central India developer outreach", "Cloud compute sessions"],
     established: "2024",
   },
@@ -72,7 +71,6 @@ const VERIFIED_CAMPUSES: CampusItem[] = [
     shortName: "TIT Group",
     location: "Anand Nagar, Bhopal",
     logo: "/logos/partners/tit.svg",
-    status: "Active Chapter",
     highlights: ["Applied AI workshops & hack sprints", "Active student core committee", "Inter-college cohorts"],
     established: "2024",
   },
@@ -94,7 +92,7 @@ export function CampusDirectory({
         c.location.toLowerCase().includes(searchTerm.toLowerCase());
 
       const matchesStatus =
-        statusFilter === "all" || c.status.toLowerCase() === statusFilter.toLowerCase();
+        statusFilter === "all" || c.status?.toLowerCase() === statusFilter.toLowerCase();
 
       return matchesSearch && matchesStatus;
     });
@@ -110,12 +108,10 @@ export function CampusDirectory({
     }
   };
 
-  const getStatusBadge = (status: CampusItem["status"]) => {
+  const getStatusBadge = (status: NonNullable<CampusItem["status"]>) => {
     switch (status) {
       case "Host Campus":
         return "bg-google-blue-light text-google-blue dark:bg-blue-950/40 dark:text-[#60A5FA] border-blue-200 dark:border-blue-800";
-      case "Active Chapter":
-        return "bg-google-green-light text-google-green dark:bg-green-950/40 dark:text-[#81C995] border-green-200 dark:border-green-800";
       case "MoU Partner":
         return "bg-google-yellow-light text-amber-700 dark:bg-amber-950/40 dark:text-[#FDD663] border-amber-200 dark:border-amber-800";
     }
@@ -129,10 +125,10 @@ export function CampusDirectory({
             Collegiate Network
           </span>
           <h2 id="campuses-heading" className="text-2xl sm:text-3xl font-display font-bold text-ink-primary dark:text-[#F8FAFC] tracking-tight">
-            Participating Campuses & Chapters
+            Participating Campuses
           </h2>
           <p className="text-sm text-ink-secondary dark:text-gray-400 mt-1 max-w-xl font-sans">
-            Formal chapters and partner institutions across Bhopal where ML Bhopal codelabs, study circles, and summits take place.
+            Campuses across Bhopal where ML Bhopal events and codelabs take place.
           </p>
         </div>
 
@@ -150,7 +146,7 @@ export function CampusDirectory({
           </div>
 
           <div className="flex items-center gap-1 overflow-x-auto no-scrollbar py-0.5">
-            {["all", "Active Chapter", "Host Campus", "MoU Partner"].map((status) => (
+            {["all", "Host Campus", "MoU Partner"].map((status) => (
               <button
                 key={status}
                 type="button"
@@ -202,13 +198,15 @@ export function CampusDirectory({
                     className="object-contain"
                   />
                 </div>
-                <span
-                  className={`px-2.5 py-0.5 rounded-full text-[11px] font-semibold uppercase tracking-wider border ${getStatusBadge(
-                    campus.status
-                  )}`}
-                >
-                  {campus.status}
-                </span>
+                {campus.status && (
+                  <span
+                    className={`px-2.5 py-0.5 rounded-full text-[11px] font-semibold uppercase tracking-wider border ${getStatusBadge(
+                      campus.status
+                    )}`}
+                  >
+                    {campus.status}
+                  </span>
+                )}
               </div>
 
               <h3 className="text-base font-display font-semibold text-ink-primary dark:text-[#F8FAFC] group-hover:text-google-blue dark:group-hover:text-[#60A5FA] transition-colors mb-1 line-clamp-1">
