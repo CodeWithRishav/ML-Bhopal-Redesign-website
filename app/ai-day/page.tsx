@@ -309,7 +309,7 @@ export default function AIDayPage() {
                   <span className="text-2xl font-bold font-display text-ink-primary block mt-0.5">
                     {totalEditions} Summits
                   </span>
-                  <span className="text-ink-secondary text-xs">Since April 2023</span>
+                  <span className="text-ink-secondary text-xs">Across all editions</span>
                 </div>
                 <div className="p-4 rounded-card bg-[#FAFAFA] border border-[#D1D5DB] border-t-2 border-t-google-green">
                   <span className="text-ink-secondary block text-[11px] font-medium uppercase tracking-wider">VERIFIED ATTENDEES</span>
@@ -394,7 +394,7 @@ export default function AIDayPage() {
             </h2>
             <div className="max-w-none text-base text-ink-secondary font-sans leading-relaxed space-y-4">
               <p>
-                Launched on April 15, 2023 under the former TFUG Bhopal banner, AI Day was created to solve a critical regional challenge: providing developers, researchers, and students in Central India with access to tier-one artificial intelligence training, Google Developer Experts, and production engineering practices without needing to relocate to metropolitan hubs.
+                Launched under the former TFUG Bhopal banner, AI Day was created to solve a critical regional challenge: providing developers, researchers, and students in Central India with access to tier-one artificial intelligence training, Google Developer Experts, and production engineering practices without needing to relocate to metropolitan hubs.
               </p>
               <p>
                 What began as a single-day gathering of 300 enthusiasts at Bhopal has since scaled into the region’s signature AI summit. Each edition unites academic institutions including LNCT Group of Colleges, Oriental Institute of Science & Technology, and SATI with global ecosystems like Google for Developers and OWASP.

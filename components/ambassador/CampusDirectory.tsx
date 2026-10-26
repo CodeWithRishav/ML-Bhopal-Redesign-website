@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo } from "react";
 import Image from "next/image";
-import { Search, GraduationCap, MapPin, CheckCircle2, Building2, ArrowRight } from "lucide-react";
+import { Search, GraduationCap, MapPin, CheckCircle2 } from "lucide-react";
 
 interface CampusItem {
   id: string;
@@ -10,9 +10,8 @@ interface CampusItem {
   shortName: string;
   location: string;
   logo: string;
-  status: "Active Chapter" | "Host Campus" | "MoU Partner";
+  status?: "Host Campus" | "MoU Partner";
   highlights: string[];
-  established: string;
 }
 
 const VERIFIED_CAMPUSES: CampusItem[] = [
@@ -23,8 +22,7 @@ const VERIFIED_CAMPUSES: CampusItem[] = [
     location: "Kalchuri Nagar, Bhopal",
     logo: "/logos/partners/lnct.svg",
     status: "Host Campus",
-    highlights: ["Venue partner for AI Day 2.0 & AI Day 1.0", "500+ active student builders", "Dedicated compute labs"],
-    established: "2023",
+    highlights: ["Venue partner for AI Day 2.0 & AI Day 1.0"],
   },
   {
     id: "oriental",
@@ -32,9 +30,7 @@ const VERIFIED_CAMPUSES: CampusItem[] = [
     shortName: "OIST Bhopal",
     location: "Oriental Campus, Raisen Rd, Bhopal",
     logo: "/logos/partners/oriental.svg",
-    status: "Active Chapter",
-    highlights: ["Hands-on TensorFlow & RAG codelabs", "Active student ambassador board", "Regular study circles"],
-    established: "2023",
+    highlights: ["Hands-on TensorFlow & RAG codelabs"],
   },
   {
     id: "manit",
@@ -43,8 +39,7 @@ const VERIFIED_CAMPUSES: CampusItem[] = [
     location: "Link Road Number 3, Bhopal",
     logo: "/logos/partners/manit.svg",
     status: "MoU Partner",
-    highlights: ["Premier NIT research collaboration", "Advanced algorithm & LLM study cohorts", "Technical mentorship"],
-    established: "2024",
+    highlights: [],
   },
   {
     id: "iiit-bhopal",
@@ -53,8 +48,7 @@ const VERIFIED_CAMPUSES: CampusItem[] = [
     location: "MANIT Campus, Bhopal",
     logo: "/logos/partners/iiit-bhopal.svg",
     status: "MoU Partner",
-    highlights: ["Open weights research collaboration", "JAX/Flax foundation model pods", "Hackathon finalists"],
-    established: "2024",
+    highlights: [],
   },
   {
     id: "rgpv",
@@ -62,9 +56,8 @@ const VERIFIED_CAMPUSES: CampusItem[] = [
     shortName: "UIT-RGPV",
     location: "Airport Road, Gandhi Nagar, Bhopal",
     logo: "/logos/partners/rgpv.svg",
-    status: "Active Chapter",
-    highlights: ["State technological university hub", "Central India developer outreach", "Cloud compute sessions"],
-    established: "2023",
+    status: "Host Campus",
+    highlights: [],
   },
   {
     id: "tit",
@@ -72,9 +65,7 @@ const VERIFIED_CAMPUSES: CampusItem[] = [
     shortName: "TIT Group",
     location: "Anand Nagar, Bhopal",
     logo: "/logos/partners/tit.svg",
-    status: "Active Chapter",
-    highlights: ["Applied AI workshops & hack sprints", "Active student core committee", "Inter-college cohorts"],
-    established: "2024",
+    highlights: ["Applied AI workshops & hack sprints"],
   },
 ];
 
@@ -94,7 +85,7 @@ export function CampusDirectory({
         c.location.toLowerCase().includes(searchTerm.toLowerCase());
 
       const matchesStatus =
-        statusFilter === "all" || c.status.toLowerCase() === statusFilter.toLowerCase();
+        statusFilter === "all" || c.status?.toLowerCase() === statusFilter.toLowerCase();
 
       return matchesSearch && matchesStatus;
     });
@@ -110,12 +101,10 @@ export function CampusDirectory({
     }
   };
 
-  const getStatusBadge = (status: CampusItem["status"]) => {
+  const getStatusBadge = (status: NonNullable<CampusItem["status"]>) => {
     switch (status) {
       case "Host Campus":
         return "bg-google-blue-light text-google-blue dark:bg-blue-950/40 dark:text-[#60A5FA] border-blue-200 dark:border-blue-800";
-      case "Active Chapter":
-        return "bg-google-green-light text-google-green dark:bg-green-950/40 dark:text-[#81C995] border-green-200 dark:border-green-800";
       case "MoU Partner":
         return "bg-google-yellow-light text-amber-700 dark:bg-amber-950/40 dark:text-[#FDD663] border-amber-200 dark:border-amber-800";
     }
@@ -126,13 +115,13 @@ export function CampusDirectory({
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
         <div>
           <span className="text-xs font-semibold uppercase tracking-wider text-google-blue dark:text-[#60A5FA] block mb-1">
-            Collegiate Network
+            Campuses
           </span>
           <h2 id="campuses-heading" className="text-2xl sm:text-3xl font-display font-bold text-ink-primary dark:text-[#F8FAFC] tracking-tight">
-            Participating Campuses & Chapters
+            Participating Campuses
           </h2>
           <p className="text-sm text-ink-secondary dark:text-gray-400 mt-1 max-w-xl font-sans">
-            Formal chapters and partner institutions across Bhopal where ML Bhopal codelabs, study circles, and summits take place.
+            Campuses across Bhopal where ML Bhopal events and codelabs take place.
           </p>
         </div>
 
@@ -150,7 +139,7 @@ export function CampusDirectory({
           </div>
 
           <div className="flex items-center gap-1 overflow-x-auto no-scrollbar py-0.5">
-            {["all", "Active Chapter", "Host Campus", "MoU Partner"].map((status) => (
+            {["all", "Host Campus", "MoU Partner"].map((status) => (
               <button
                 key={status}
                 type="button"
@@ -202,13 +191,15 @@ export function CampusDirectory({
                     className="object-contain"
                   />
                 </div>
-                <span
-                  className={`px-2.5 py-0.5 rounded-full text-[11px] font-semibold uppercase tracking-wider border ${getStatusBadge(
-                    campus.status
-                  )}`}
-                >
-                  {campus.status}
-                </span>
+                {campus.status && (
+                  <span
+                    className={`px-2.5 py-0.5 rounded-full text-[11px] font-semibold uppercase tracking-wider border ${getStatusBadge(
+                      campus.status
+                    )}`}
+                  >
+                    {campus.status}
+                  </span>
+                )}
               </div>
 
               <h3 className="text-base font-display font-semibold text-ink-primary dark:text-[#F8FAFC] group-hover:text-google-blue dark:group-hover:text-[#60A5FA] transition-colors mb-1 line-clamp-1">
@@ -219,28 +210,16 @@ export function CampusDirectory({
                 <span className="truncate">{campus.location}</span>
               </div>
 
-              <div className="space-y-1.5 flex-1 mb-5">
-                {campus.highlights.map((h, i) => (
-                  <div key={i} className="flex items-start gap-2 text-xs text-ink-secondary dark:text-gray-300 font-sans">
-                    <CheckCircle2 className="w-3.5 h-3.5 text-google-green shrink-0 mt-0.5" />
-                    <span>{h}</span>
-                  </div>
-                ))}
-              </div>
-
-              <div className="pt-4 border-t border-[#D1D5DB] dark:border-[#334155] flex items-center justify-between mt-auto">
-                <span className="text-[11px] text-ink-secondary dark:text-gray-400">
-                  Chapter Since {campus.established}
-                </span>
-                <button
-                  type="button"
-                  onClick={() => handleNominate(campus.name)}
-                  className="inline-flex items-center gap-1 text-xs font-semibold text-google-blue dark:text-[#60A5FA] hover:underline"
-                >
-                  <span>Apply as Lead</span>
-                  <ArrowRight className="w-3 h-3" />
-                </button>
-              </div>
+              {campus.highlights.length > 0 && (
+                <div className="space-y-1.5 flex-1 mb-1">
+                  {campus.highlights.map((h, i) => (
+                    <div key={i} className="flex items-start gap-2 text-xs text-ink-secondary dark:text-gray-300 font-sans">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-google-green shrink-0 mt-0.5" />
+                      <span>{h}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>

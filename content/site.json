@@ -33,20 +33,20 @@
     ]
   },
   "stats": [
-    { "value": "18", "label": "Events hosted" },
+    { "value": "17+", "label": "Events hosted" },
     { "value": "98%", "label": "Positive feedback" },
     { "value": "3,500+", "label": "Community members" }
   ],
   "impactStats": [
     { "value": "3,500+", "label": "Members on Commudle" },
-    { "value": "18", "label": "Events since 2024" },
-    { "value": "500+", "label": "AI Day 2.0 attendees" },
+    { "value": "17+", "label": "Events since 2024" },
+    { "value": "350+", "label": "AI Day 2.0 attendees" },
     { "value": "9+", "label": "Institutes reached" }
   ],
   "milestones": [
     {
       "title": "AI Day Bhopal 2.0",
-      "detail": "500+ builders at LNCT — flagship edition",
+      "detail": "350+ builders at LNCT — flagship edition",
       "year": "2026"
     },
     {
@@ -55,9 +55,9 @@
       "year": "2025"
     },
     {
-      "title": "AI Day Bhopal 2023",
-      "detail": "300+ attendees — community founded",
-      "year": "2023"
+      "title": "Community founded",
+      "detail": "TFUG Bhopal & OWASP Bhopal launch, Feb 2024",
+      "year": "2024"
     },
     {
       "title": "Radius platform",
@@ -129,7 +129,7 @@
         "label": "AI Day",
         "title": "AI Day Bhopal — Flagship Event",
         "description": "Central India's biggest AI builder conference: expert keynotes, parallel workshops, AI-Thon competition, expo partners, and guaranteed internship opportunities for top performers.",
-        "tags": ["500+ attendees", "Keynotes", "AI-Thon", "LNCT venue"]
+        "tags": ["350+ attendees", "Keynotes", "AI-Thon", "LNCT venue"]
       },
       {
         "id": "meetups",
@@ -151,7 +151,7 @@
     ],
     "row2": [
       { "label": "3,500+ Members" },
-      { "label": "22+ Events" },
+      { "label": "17+ Events" },
       { "label": "Google for Developers" },
       { "label": "GDE Speakers" },
       { "label": "9+ Institutes" }
@@ -174,8 +174,8 @@
       }
     ],
     "timeline": [
-      { "role": "ML Bhopal (formerly TFUG Bhopal)", "period": "2023–Present" },
-      { "role": "AI Day Bhopal — annual flagship", "period": "Since 2023" },
+      { "role": "ML Bhopal (formerly TFUG Bhopal)", "period": "2024–Present" },
+      { "role": "AI Day Bhopal — annual flagship", "period": "Since 2024" },
       { "role": "Backed by Google for Developers", "period": "Ongoing" },
       { "role": "3,500+ members on Commudle", "period": "2026" }
     ]
@@ -211,7 +211,7 @@
   },
   "cta": {
     "title": "Join Central India's AI builder community",
-    "subtitle": "3,500+ members, 22+ events, and the biggest AI conference in the region. Register on Commudle or volunteer with us.",
+    "subtitle": "3,500+ members, 17+ events, and the biggest AI conference in the region. Register on Commudle or volunteer with us.",
     "primaryLabel": "Join on Commudle",
     "secondaryLabel": "Volunteer with us"
   },

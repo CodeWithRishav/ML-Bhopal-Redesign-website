@@ -13,7 +13,7 @@ const STATS = [
     accent: "bg-primary",
   },
   {
-    value: "20+",
+    value: "17+",
     label: "Events",
     sublabel: "Workshops, hackathons, meetups & AI Day since 2024",
     color: "text-google-blue dark:text-[#60A5FA]",

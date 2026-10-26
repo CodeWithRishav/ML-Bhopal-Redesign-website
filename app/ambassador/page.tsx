@@ -281,7 +281,7 @@ export default function AmbassadorPage() {
         <Container>
           <SectionHeader
             eyebrow="Chapter Roadmap"
-            title="From Application to Active Campus Chapter"
+            title="From Application to Campus Chapter"
             description="Our structured 4-step induction process helps you secure official college permissions, build your internal executive team, and run high-impact developer events."
           />
 

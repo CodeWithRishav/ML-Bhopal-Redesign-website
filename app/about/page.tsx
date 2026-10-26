@@ -29,7 +29,7 @@ import { CommunityNetwork3D } from "@/components/3d/CommunityNetwork3D";
 export const metadata: Metadata = {
   title: "Our Story & Philosophy — Central India's AI Journey",
   description:
-    "The journey of ML Bhopal: from TFUG Bhopal in 2023 to Central India's largest community of 3,600+ AI developers, researchers, and student builders. Code Over Slides, Radical Openness.",
+    "The journey of ML Bhopal: from TFUG Bhopal in 2024 to Central India's largest community of 3,600+ AI developers, researchers, and student builders. Code Over Slides, Radical Openness.",
   alternates: {
     canonical: "/about",
   },
@@ -94,10 +94,10 @@ const CORE_PRINCIPLES = [
 
 const HISTORICAL_MILESTONES = [
   {
-    year: "April 2023",
-    title: "The Genesis: TFUG Bhopal & Inaugural AI Day",
+    year: "February 2024",
+    title: "The Genesis: TFUG Bhopal & OWASP Bhopal Launch",
     description:
-      "Founded by volunteers under the TensorFlow User Group banner, 300+ students, researchers, and engineers gathered in Bhopal for the first AI Day. What began as a one-day workshop laid the cornerstone for the region's builder movement.",
+      "Founded by volunteers, ML Bhopal began on Feb 21, 2024 with the intro of TFUG Bhopal and OWASP Bhopal, plus a TensorFlow workshop at RGPV. That first event laid the cornerstone for the region's builder movement.",
   },
   {
     year: "2024",
@@ -115,7 +115,7 @@ const HISTORICAL_MILESTONES = [
     year: "2026",
     title: "AI Day 2.0 & Scaling Across 9+ Institutes",
     description:
-      "Hosted AI Day 2.0 at LNCT Group of Colleges with 500+ builders and guaranteed internship pipelines. Expanded the Campus Ambassador network across 9+ colleges in Central India, crossing 3,600+ active community members.",
+      "Hosted AI Day 2.0 at LNCT Group of Colleges with 500+ builders and guaranteed internship pipelines. The community crossed 3,600+ members.",
   },
 ];
 
@@ -195,7 +195,7 @@ export default function AboutPage() {
                   <Heart className="w-3.5 h-3.5 text-google-red" />
                   OUR PURPOSE & ORIGIN
                 </span>
-                <span className="text-xs font-medium text-ink-secondary">EST. APRIL 2023</span>
+                <span className="text-xs font-medium text-ink-secondary">EST. FEB 2024</span>
               </div>
 
               <h1
@@ -247,7 +247,7 @@ export default function AboutPage() {
             <div className="p-5 rounded-card bg-white border border-[#D1D5DB] border-t-2 border-t-google-yellow shadow-subtle">
               <span className="text-ink-secondary block text-[11px] font-medium uppercase tracking-wider">COLLEGES REACHED</span>
               <span className="text-2xl sm:text-3xl font-bold font-display text-ink-primary block mt-0.5">9+</span>
-              <span className="text-ink-secondary text-xs">Active campus chapters</span>
+              <span className="text-ink-secondary text-xs">Campuses where ML Bhopal events take place</span>
             </div>
             <div className="p-5 rounded-card bg-white border border-[#D1D5DB] border-t-2 border-t-google-red shadow-subtle">
               <span className="text-ink-secondary block text-[11px] font-medium uppercase tracking-wider">ADMISSION MODEL</span>
@@ -335,7 +335,7 @@ export default function AboutPage() {
                 Interactive Community Node Network
               </h2>
               <p className="text-sm text-ink-secondary dark:text-[#94A3B8] mt-2 leading-relaxed">
-                Move your cursor to explore how ML Bhopal connects student chapters, open weights, AI Day summits, and global technology partners.
+                Move your cursor to explore how ML Bhopal connects student communities, open weights, AI Day summits, and global technology partners.
               </p>
             </div>
           </ScrollReveal>
