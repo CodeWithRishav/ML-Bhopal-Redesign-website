@@ -7,8 +7,7 @@
       "bio": "Organizer @MLBhopal @OWASP Bhopal. Building the ML community in Central India.",
       "linkedin": "https://linkedin.com/in/rishabhgupta",
       "twitter": "https://twitter.com/rishabh_ai",
-      "github": "https://github.com/rishabh-ai",
-      "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=600&auto=format&fit=crop"
+      "github": "https://github.com/rishabh-ai"
     },
     {
       "name": "Anurag Mishra",
@@ -17,8 +16,7 @@
       "bio": "Co-founder of ML Bhopal. Passionate about democratizing AI education.",
       "linkedin": "https://linkedin.com/in/anuragayumishra",
       "twitter": "https://twitter.com/anurag_mishra",
-      "github": "https://github.com/anuragmishra",
-      "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop"
+      "github": "https://github.com/anuragmishra"
     },
     {
       "name": "Rishav Kumar",
@@ -37,8 +35,7 @@
       "bio": "Flutter Developer and open source enthusiast. Organizer and community builder.",
       "linkedin": "https://linkedin.com/in/ankurg132",
       "twitter": "https://twitter.com/ankurg132",
-      "github": "https://github.com/ankurg132",
-      "avatar": "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=600&auto=format&fit=crop"
+      "github": "https://github.com/ankurg132"
     }
   ],
   "core": [
@@ -49,8 +46,7 @@
       "bio": "Full stack developer contributing to community infrastructure.",
       "linkedin": "https://linkedin.com/in/abhishekmalviya",
       "twitter": null,
-      "github": "https://github.com/abhishekmalviya",
-      "avatar": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop"
+      "github": "https://github.com/abhishekmalviya"
     },
     {
       "name": "Bhawesh Choudhary",
@@ -59,8 +55,7 @@
       "bio": "Growth, Dev & Product enthusiast helping scale ML Bhopal.",
       "linkedin": "https://linkedin.com/in/bhaweshchoudhary",
       "twitter": null,
-      "github": "https://github.com/bhaweshchoudhary",
-      "avatar": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=600&auto=format&fit=crop"
+      "github": "https://github.com/bhaweshchoudhary"
     },
     {
       "name": "Trapti Soni",
@@ -69,8 +64,7 @@
       "bio": "Student volunteer driving community events and outreach.",
       "linkedin": "https://linkedin.com/in/traptisoni",
       "twitter": "https://twitter.com/traptisoni",
-      "github": null,
-      "avatar": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop"
+      "github": null
     },
     {
       "name": "Ayush Kumar",
@@ -79,8 +73,7 @@
       "bio": "Student organizer at LNCT helping build the next generation of ML practitioners.",
       "linkedin": "https://linkedin.com/in/ayushkumar",
       "twitter": null,
-      "github": "https://github.com/ayushkumar",
-      "avatar": "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?q=80&w=600&auto=format&fit=crop"
+      "github": "https://github.com/ayushkumar"
     },
     {
       "name": "Akshat Sharma",
@@ -89,8 +82,7 @@
       "bio": "Student volunteer and community builder at ML Bhopal.",
       "linkedin": "https://linkedin.com/in/akshatsharma",
       "twitter": null,
-      "github": "https://github.com/akshatsharma",
-      "avatar": "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=600&auto=format&fit=crop"
+      "github": "https://github.com/akshatsharma"
     }
   ]
 }

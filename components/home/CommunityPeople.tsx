@@ -26,19 +26,19 @@ export function CommunityPeople({ team }: { team: TeamMember[] }) {
             </span>
 
             <h2 className="font-display font-black tracking-tight text-ink-primary dark:text-[#F8FAFC] text-4xl sm:text-5xl lg:text-6xl leading-[0.96] uppercase mb-6">
-              Built by Engineers, <br />
-              <span className="text-google-blue dark:text-[#60A5FA]">For Engineers</span><span className="text-google-red">.</span>
+              Built by Volunteers, <br />
+              <span className="text-google-blue dark:text-[#60A5FA]">For Builders</span><span className="text-google-red">.</span>
             </h2>
 
             <p className="text-sm sm:text-base text-ink-secondary dark:text-[#94A3B8] font-sans leading-relaxed mb-6">
-              ML Bhopal is stewarded by practitioners, student innovators, and researchers who spend their weekends reviewing code, deploying open-weights foundation models, and mentoring the next generation of builders.
+              ML Bhopal is run by volunteers: working engineers and students who organise workshops, hackathons and AI Day in their spare time.
             </p>
 
             <Link
               href="/team"
               className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-google-blue dark:text-[#60A5FA] hover:text-google-blue-dark dark:hover:text-blue-300 transition-colors group"
             >
-              <span>Meet the Entire Organizing Team</span>
+              <span>Meet the Organizing Team</span>
               <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1" />
             </Link>
           </div>
@@ -50,8 +50,8 @@ export function CommunityPeople({ team }: { team: TeamMember[] }) {
               {/* Primary Photo: Organizers & Stage */}
               <div className="relative w-[85%] h-[90%] rounded-2xl overflow-hidden border border-[#D1D5DB] dark:border-[#334155] shadow-elevation-2 bg-slate-900 group">
                 <Image
-                  src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1000&auto=format&fit=crop"
-                  alt="ML Bhopal organizers and student builders collaborating"
+                  src="/images/ai-day/anubhav-talk.jpg"
+                  alt="A speaker presenting at AI Day Bhopal 2025"
                   fill
                   sizes="(max-width: 1024px) 100vw, 440px"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -63,7 +63,7 @@ export function CommunityPeople({ team }: { team: TeamMember[] }) {
                     Volunteer-Led
                   </span>
                   <span className="text-xs font-semibold">
-                    Core Organizers &amp; Student Chapter Leads
+                    Volunteer organizers · AI Day 2025
                   </span>
                 </div>
               </div>
@@ -71,8 +71,8 @@ export function CommunityPeople({ team }: { team: TeamMember[] }) {
               {/* Smaller Overlapping Photo: Mentor & Hands-on Discussion */}
               <div className="absolute -bottom-3 -right-2 sm:-right-4 w-[48%] aspect-[4/3] rounded-xl overflow-hidden border-2 border-white dark:border-[#1E293B] shadow-elevation-3 bg-slate-900 z-10 group">
                 <Image
-                  src="https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=600&auto=format&fit=crop"
-                  alt="Mentorship session during AI hackathon"
+                  src="/images/ai-day/vertex-ai-walkthrough.jpg"
+                  alt="Vertex AI walkthrough session at AI Day Bhopal 2025"
                   fill
                   sizes="(max-width: 640px) 160px, 220px"
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -81,7 +81,7 @@ export function CommunityPeople({ team }: { team: TeamMember[] }) {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent" />
                 <div className="absolute bottom-2 left-2 text-white">
                   <span className="text-[10px] font-semibold block truncate">
-                    Hands-on Mentorship
+                    Hands-on sessions
                   </span>
                 </div>
               </div>
