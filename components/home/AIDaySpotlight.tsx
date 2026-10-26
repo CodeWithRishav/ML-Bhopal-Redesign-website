@@ -86,10 +86,10 @@ export function AIDaySpotlight() {
               <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between">
                 <div>
                   <span className="text-xs font-mono text-google-yellow font-semibold block mb-0.5">
-                    LNCT Group of Colleges • Bhopal
+                    AI Day 2025 • OIST, Bhopal
                   </span>
                   <span className="text-sm font-semibold text-white">
-                    Photo: AI Day Bhopal 2025
+                    Photo from the previous edition
                   </span>
                 </div>
                 <span className="text-xs font-mono px-3 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/20 text-white shrink-0">
