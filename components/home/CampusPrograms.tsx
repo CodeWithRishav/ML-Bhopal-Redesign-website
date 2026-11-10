@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowRight, GraduationCap, Building2, CheckCircle2 } from "lucide-react";
+import { ArrowRight, GraduationCap } from "lucide-react";
 import { Container } from "@/components/layout/Container";
 import { PrimaryButton } from "@/components/ui/PrimaryButton";
 import { SecondaryButton } from "@/components/ui/SecondaryButton";
@@ -11,32 +11,32 @@ const ROADMAP_STEPS = [
   {
     num: "01",
     label: "DISCOVER",
-    title: "Apply & Screening",
-    description: "Submit your chapter vision and attend a 1-on-1 strategy alignment call with ML Bhopal Core Leads.",
+    title: "Apply",
+    description: "Fill in the ambassador form with your college, branch and why you want to bring ML Bhopal to your campus.",
     color: "text-google-blue dark:text-[#60A5FA]",
     dotColor: "bg-google-blue",
   },
   {
     num: "02",
     label: "CONNECT",
-    title: "University MoU",
-    description: "Official institutional Letters of Support and chapter charters provided for College Deans and HoDs.",
+    title: "Get in Touch",
+    description: "The core team reaches out to understand what your campus needs.",
     color: "text-google-green dark:text-[#81C995]",
     dotColor: "bg-google-green",
   },
   {
     num: "03",
     label: "BUILD",
-    title: "Assemble Core Board",
-    description: "Recruit an internal 5–8 member student executive board across tech, operations, design, and media.",
+    title: "Plan Together",
+    description: "Pick a format with us (workshop, meetup or hackathon) and fix a date.",
     color: "text-amber-600 dark:text-[#FDD663]",
     dotColor: "bg-google-yellow",
   },
   {
     num: "04",
     label: "LEAD",
-    title: "Activate & Host Sprints",
-    description: "Run on-campus workshops, code sprints, and study circles powered by Google for Developers kits.",
+    title: "Host the Session",
+    description: "The core team and volunteers help you run it on your campus.",
     color: "text-google-red dark:text-[#F28B82]",
     dotColor: "bg-google-red",
   },
@@ -51,10 +51,10 @@ export function CampusPrograms() {
         <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-14 sm:mb-20">
           <div>
             <span className="text-xs font-mono font-semibold uppercase tracking-widest text-primary dark:text-[#FF9A3D] mb-2 block">
-              COLLEGIATE ECOSYSTEM
+              CAMPUS PROGRAM
             </span>
             <h2 className="font-display font-black tracking-tight text-ink-primary dark:text-[#F8FAFC] text-3xl sm:text-4xl lg:text-5xl uppercase">
-              Campus Chapter Roadmap<span className="text-google-green">.</span>
+              Bring ML Bhopal to Your Campus<span className="text-google-green">.</span>
             </h2>
           </div>
 
@@ -62,7 +62,7 @@ export function CampusPrograms() {
             href="/ambassador"
             className="text-xs font-semibold uppercase tracking-wider text-google-blue dark:text-[#60A5FA] hover:text-google-blue-dark dark:hover:text-blue-300 transition-colors inline-flex items-center gap-1.5"
           >
-            <span>Explore Campus Program Details</span>
+            <span>Campus Ambassador Program</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </Link>
         </div>
@@ -112,10 +112,10 @@ export function CampusPrograms() {
             </div>
             <div>
               <h4 className="text-base sm:text-lg font-display font-bold text-ink-primary dark:text-[#F8FAFC]">
-                Start an Authorized ML Bhopal Chapter on Your Campus
+                Want ML Bhopal at your college?
               </h4>
               <p className="text-xs sm:text-sm text-ink-secondary dark:text-[#94A3B8] mt-0.5 max-w-xl">
-                Gain official leadership credentials, organize workshops with Google for Developers kits, and represent Central India&apos;s builder network.
+                Apply as a campus ambassador and help bring workshops, meetups and hackathons to your campus.
               </p>
             </div>
           </div>
@@ -126,14 +126,14 @@ export function CampusPrograms() {
               size="md"
               className="w-full sm:w-auto justify-center"
             >
-              Apply as Campus Lead
+              Become a Campus Ambassador
             </PrimaryButton>
             <SecondaryButton
               href="/ambassador#campuses"
               size="md"
               className="w-full sm:w-auto justify-center"
             >
-              View 45+ Campuses
+              See 9+ Campuses
             </SecondaryButton>
           </div>
         </div>
