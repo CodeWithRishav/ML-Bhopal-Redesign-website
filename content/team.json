@@ -40,33 +40,6 @@
   ],
   "core": [
     {
-      "name": "Abhishek Malviya",
-      "role": "Core Team",
-      "company": "Full Stack @ Funcbind",
-      "bio": "Full stack developer contributing to community infrastructure.",
-      "linkedin": "https://linkedin.com/in/abhishekmalviya",
-      "twitter": null,
-      "github": "https://github.com/abhishekmalviya"
-    },
-    {
-      "name": "Bhawesh Choudhary",
-      "role": "Core Team",
-      "company": "Ex @educosys",
-      "bio": "Growth, Dev & Product enthusiast helping scale ML Bhopal.",
-      "linkedin": "https://linkedin.com/in/bhaweshchoudhary",
-      "twitter": null,
-      "github": "https://github.com/bhaweshchoudhary"
-    },
-    {
-      "name": "Trapti Soni",
-      "role": "Core Team",
-      "company": "Student @ UIT RGPV",
-      "bio": "Student volunteer driving community events and outreach.",
-      "linkedin": "https://linkedin.com/in/traptisoni",
-      "twitter": "https://twitter.com/traptisoni",
-      "github": null
-    },
-    {
       "name": "Ayush Kumar",
       "role": "Core Team",
       "company": "Student @ LNCT",
@@ -76,13 +49,44 @@
       "github": "https://github.com/ayushkumar"
     },
     {
-      "name": "Akshat Sharma",
+      "name": "Poorvi Sahaha",
       "role": "Core Team",
-      "company": "Student @ LNCT",
-      "bio": "Student volunteer and community builder at ML Bhopal.",
-      "linkedin": "https://linkedin.com/in/akshatsharma",
+      "company": null,
+      "bio": "",
+      "avatar": null,
+      "linkedin": null,
       "twitter": null,
-      "github": "https://github.com/akshatsharma"
+      "github": null
+    },
+    {
+      "name": "Sejal Choudhary",
+      "role": "Core Team",
+      "company": null,
+      "bio": "",
+      "avatar": null,
+      "linkedin": null,
+      "twitter": null,
+      "github": null
+    },
+    {
+      "name": "Ritesh Verma",
+      "role": "Core Team",
+      "company": null,
+      "bio": "",
+      "avatar": null,
+      "linkedin": null,
+      "twitter": null,
+      "github": null
+    },
+    {
+      "name": "Komal",
+      "role": "Core Team",
+      "company": null,
+      "bio": "",
+      "avatar": null,
+      "linkedin": null,
+      "twitter": null,
+      "github": null
     }
   ]
 }

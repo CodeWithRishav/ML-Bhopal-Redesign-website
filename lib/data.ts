@@ -3,6 +3,7 @@ import teamData from "@/content/team.json";
 import partnersData from "@/content/partners.json";
 import campaignsData from "@/content/campaigns.json";
 import resourcesArticlesData from "@/content/resources.json";
+import { isUpcoming } from "./utils";
 import { Event, Campaign, TeamMember, Partner, ResourceItem, ResourceArticle } from "./types";
 
 export function getEvents(): Event[] {
@@ -14,14 +15,15 @@ export function getFeaturedEvents(): Event[] {
 }
 
 export function getUpcomingEvents(): Event[] {
-  const upcoming = getEvents().filter((e) => e.status.toLowerCase() === "upcoming");
-  if (upcoming.length > 0) return upcoming;
-  // If all are marked past, show the top 3 events as featured spotlight
-  return getEvents().slice(0, 3);
+  return getEvents()
+    .filter((e) => isUpcoming(e))
+    .sort((a, b) => a.date.localeCompare(b.date));
 }
 
 export function getPastEvents(): Event[] {
-  return getEvents().filter((e) => e.status.toLowerCase() === "past");
+  return getEvents()
+    .filter((e) => !isUpcoming(e))
+    .sort((a, b) => b.date.localeCompare(a.date));
 }
 
 export function getEventBySlug(slug: string): Event | undefined {

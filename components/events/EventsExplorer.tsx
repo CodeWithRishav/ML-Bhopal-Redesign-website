@@ -17,7 +17,7 @@ import {
   Clock,
   Mic,
 } from "lucide-react";
-import { formatDate, getEventImage } from "@/lib/utils";
+import { formatDate, getEventImage, isUpcoming as isEventUpcoming } from "@/lib/utils";
 
 interface EventsExplorerProps {
   initialEvents: Event[];
@@ -44,7 +44,7 @@ export function EventsExplorer({ initialEvents }: EventsExplorerProps) {
     return initialEvents.filter((event) => {
       // 1. Status Filter
       if (filters.status !== "all") {
-        const eventStatus = (event.status || "past").toLowerCase();
+        const eventStatus = isEventUpcoming(event) ? "upcoming" : "past";
         if (eventStatus !== filters.status) {
           return false;
         }
@@ -90,7 +90,7 @@ export function EventsExplorer({ initialEvents }: EventsExplorerProps) {
   const featuredSpotlight = useMemo(() => {
     if (!isDefaultView) return null;
     return (
-      initialEvents.find((e) => e.status?.toLowerCase() === "upcoming") ||
+      initialEvents.find((e) => isEventUpcoming(e)) ||
       initialEvents.find((e) => e.featured) ||
       initialEvents[0]
     );
@@ -123,7 +123,7 @@ export function EventsExplorer({ initialEvents }: EventsExplorerProps) {
             <div className="lg:col-span-7 flex flex-col items-start space-y-4">
               {/* Badges Bar */}
               <div className="flex flex-wrap items-center gap-2">
-                {featuredSpotlight.status?.toLowerCase() === "upcoming" ? (
+                {isEventUpcoming(featuredSpotlight) ? (
                   <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E6F4EA] dark:bg-[#1E3B27] text-[#137333] dark:text-[#81C995] text-xs font-sans font-bold border border-[#A8DAB5] dark:border-green-800 shadow-subtle">
                     <span className="w-2 h-2 rounded-full bg-[#34A853] animate-ping" />
                     UPCOMING FLAGSHIP
@@ -230,7 +230,7 @@ export function EventsExplorer({ initialEvents }: EventsExplorerProps) {
                   href={`/events/${featuredSpotlight.slug}`}
                   className="px-6 py-3 rounded-xl bg-[#FF7A00] hover:bg-[#FF9A3D] active:bg-[#E66E00] text-white font-sans font-semibold text-sm inline-flex items-center gap-2 shadow-subtle hover:shadow-card-hover transition-all duration-150"
                 >
-                  <span>{featuredSpotlight.status === "upcoming" ? "Register Now" : "View Details"}</span>
+                  <span>{isEventUpcoming(featuredSpotlight) ? "Register Now" : "View Details"}</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
 

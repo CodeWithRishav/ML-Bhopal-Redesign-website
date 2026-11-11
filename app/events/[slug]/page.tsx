@@ -34,7 +34,7 @@ import { AddToCalendar } from "@/components/events/AddToCalendar";
 import { EventShare } from "@/components/events/EventShare";
 import { EventPhotoGallery } from "@/components/events/EventPhotoGallery";
 import { getEventBySlug, getEvents, getRelatedEvents } from "@/lib/data";
-import { formatDate, getEventImage } from "@/lib/utils";
+import { formatDate, getEventImage, isUpcoming as isEventUpcoming } from "@/lib/utils";
 
 interface EventDetailPageProps {
   params: Promise<{ slug: string }>;
@@ -140,7 +140,7 @@ export default async function EventDetailPage({
     notFound();
   }
 
-  const isUpcoming = event.status?.toLowerCase() === "upcoming";
+  const isUpcoming = isEventUpcoming(event);
   const displayImage = getEventImage(event.type, event.image, event.bannerImage);
   const formatMeta = getFormatMetadata(event.type);
   const relatedEvents = getRelatedEvents(event.slug, event.type, 3);

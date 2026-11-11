@@ -26,6 +26,7 @@ const PAGE_DESCRIPTION =
   "AI Day Bhopal 2.0 — May 16, 2026 at LNCT, Bhopal. Talks, live demos, an intro to Gemma 4 and open models, and a Buildathon & Prompt War by ML Bhopal.";
 
 export const metadata: Metadata = {
+  robots: { index: false },
   title: "AI Day Bhopal 2.0 — May 16, 2026 at LNCT, Bhopal",
   description: PAGE_DESCRIPTION,
   alternates: {

@@ -30,7 +30,7 @@ const PILLARS = [
     title: "AI Day Bhopal",
     description: "Our annual flagship: keynotes, workshops and an AI-Thon. AI Day Bhopal 2.0 brought 350+ builders to LNCT in May 2026.",
     tags: ["Annual", "Keynotes", "AI-Thon"],
-    href: "/ai-day",
+    href: "/events",
     color: "text-[#D97706] dark:text-[#FBBC05]",
     barColor: "bg-google-yellow",
   },
