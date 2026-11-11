@@ -42,3 +42,18 @@ export function getEventImage(type?: string, image?: string, bannerImage?: strin
       return "https://images.unsplash.com/photo-1528605248644-14dd04022da1?q=80&w=1200";
   }
 }
+
+/** Today's date in IST (Asia/Kolkata) as YYYY-MM-DD. */
+export function getTodayIST(): string {
+  return new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Kolkata",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(new Date());
+}
+
+/** An event is upcoming when its date (YYYY-MM-DD) is today or later in IST. */
+export function isUpcoming(event: { date: string }): boolean {
+  return event.date.slice(0, 10) >= getTodayIST();
+}

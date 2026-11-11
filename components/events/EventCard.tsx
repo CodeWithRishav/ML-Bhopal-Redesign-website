@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowRight, Calendar, MapPin, Users, Mic, Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { Event } from "@/lib/types";
-import { formatDate, getEventImage } from "@/lib/utils";
+import { formatDate, getEventImage, isUpcoming as isEventUpcoming } from "@/lib/utils";
 
 interface EventCardProps {
   event: Event;
@@ -12,7 +12,7 @@ interface EventCardProps {
 }
 
 export function EventCard({ event, priority = false }: EventCardProps) {
-  const isUpcoming = event.status?.toLowerCase() === "upcoming";
+  const isUpcoming = isEventUpcoming(event);
   const displayImage = getEventImage(event.type, event.image, event.bannerImage);
 
   // Category styling based on event type

@@ -21,13 +21,26 @@ import {
 import { PrimaryButton } from "@/components/ui/PrimaryButton";
 import { SecondaryButton } from "@/components/ui/SecondaryButton";
 import { GoogleElement } from "@/components/ui/GoogleElement";
+import type { Event } from "@/lib/types";
 import { MagneticButton } from "@/components/motion/MagneticButton";
 
 const COMMUDLE_EVENTS_URL = "https://www.commudle.com/communities/ml-bhopal/events";
 
-const TICKER_ITEMS = [
+function fmtDate(date: string, withWeekday: boolean): string {
+  return new Intl.DateTimeFormat("en-US", {
+    timeZone: "UTC",
+    ...(withWeekday ? { weekday: "short" as const } : {}),
+    month: "short",
+    day: "numeric",
+  }).format(new Date(`${date.slice(0, 10)}T00:00:00Z`));
+}
+
+function shortVenue(venue?: string): string {
+  return (venue || "Bhopal").replace(/\s*\([^)]*\)/g, "").trim();
+}
+
+const BASE_TICKER_ITEMS = [
   { label: "3,800+ MEMBERS", color: "text-primary" },
-  { label: "NEXT: FROM IDEA TO WORKING PROJECTS — NOV 1", color: "text-google-red" },
   { label: "AI DAY BHOPAL 2.0", color: "text-google-blue" },
   { label: "CODE SAFE WITH AI", color: "text-google-green" },
   { label: "GENAI HACKATHON", color: "text-google-yellow" },
@@ -36,7 +49,21 @@ const TICKER_ITEMS = [
   { label: "GOOGLE FOR DEVELOPERS", color: "text-google-red" },
 ];
 
-export function HomeHero() {
+interface HomeHeroProps {
+  nextEvent?: Event | null;
+  lastEvent?: Event | null;
+}
+
+export function HomeHero({ nextEvent = null, lastEvent = null }: HomeHeroProps) {
+  const ev = nextEvent || lastEvent;
+  const isNext = !!nextEvent;
+  const tickerItems = [
+    BASE_TICKER_ITEMS[0],
+    nextEvent
+      ? { label: `NEXT: ${nextEvent.title.toUpperCase()} — ${fmtDate(nextEvent.date, false).toUpperCase()}`, color: "text-google-red" }
+      : { label: "FOLLOW COMMUDLE FOR THE NEXT EVENT", color: "text-google-red" },
+    ...BASE_TICKER_ITEMS.slice(1),
+  ];
   const shouldReduceMotion = useReducedMotion();
   const heroRef = useRef<HTMLElement>(null);
   const [isHovered, setIsHovered] = useState(false);
@@ -161,9 +188,8 @@ export function HomeHero() {
 
             {/* Awwwards Live Status Capsule */}
             <motion.a
-              href={COMMUDLE_EVENTS_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={nextEvent ? COMMUDLE_EVENTS_URL : "/events"}
+              {...(nextEvent ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut" }}
@@ -174,11 +200,11 @@ export function HomeHero() {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-google-green" />
               </span>
               <span className="text-primary font-semibold text-[11px] tracking-wider uppercase">
-                Next event · Nov 1
+                {nextEvent ? `Next event · ${fmtDate(nextEvent.date, false)}` : "17+ events since 2024"}
               </span>
               <span className="text-[#D1D5DB] dark:text-[#475569]">•</span>
               <span className="text-ink-secondary dark:text-[#94A3B8] text-[11px]">
-                From Idea to Working Projects
+                {nextEvent ? nextEvent.title : "See past events"}
               </span>
               <span className="hidden sm:inline-flex items-center text-[10px] text-primary font-mono group-hover:translate-x-0.5 transition-transform">
                 →
@@ -364,8 +390,8 @@ export function HomeHero() {
                   {/* Main High-Definition Stage Image with Vignette */}
                   <div className="relative aspect-[16/10] w-full bg-slate-950 overflow-hidden group">
                     <Image
-                      src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1200&auto=format&fit=crop"
-                      alt="ML Bhopal Annual Flagship AI Summit Auditorium"
+                      src="/images/ai-day/full-house-2025.jpg"
+                      alt="ML Bhopal community gathering"
                       fill
                       priority
                       sizes="(max-width: 1024px) 100vw, 500px"
@@ -379,14 +405,14 @@ export function HomeHero() {
                     <div className="absolute bottom-3 left-3 right-3 text-white flex items-end justify-between">
                       <div>
                         <span className="text-[10px] font-mono uppercase tracking-widest text-google-yellow font-bold block mb-0.5">
-                          FLAGSHIP EVENT
+                          ML BHOPAL COMMUNITY
                         </span>
                         <span className="text-base font-display font-bold leading-tight block">
-                          AI Day Bhopal 2.0 • LNCT
+                          17+ events since 2024
                         </span>
                       </div>
                       <span className="text-[11px] font-mono font-medium px-2.5 py-1 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-white shrink-0">
-                        350+ Builders
+                        3,800+ members
                       </span>
                     </div>
                   </div>
@@ -420,23 +446,27 @@ export function HomeHero() {
                     rel="noopener noreferrer"
                     className="block group"
                   >
+                    {ev && (
+                      <>
                     <div className="flex items-center justify-between mb-1.5">
                       <div className="flex items-center gap-1.5 text-[10px] font-mono font-bold text-google-blue dark:text-[#60A5FA] uppercase tracking-wider">
                         <Calendar className="w-3 h-3 text-google-blue" />
-                        <span>Next event · Sun, Nov 1 · 10 AM</span>
+                        <span>{isNext ? "Next event" : "Last event"} · {fmtDate(ev.date, true)}</span>
                       </div>
                     </div>
 
                     <h4 className="text-xs font-display font-bold text-ink-primary dark:text-[#F8FAFC] truncate group-hover:text-primary transition-colors mb-2">
-                      From Idea to Working Projects
+                      {ev.title}
                     </h4>
 
                     <div className="flex items-center justify-between text-[10px] font-mono text-[#334155] dark:text-[#94A3B8]">
-                      <span>Offline · RICR, Bhopal</span>
+                      <span>{isNext ? "Offline · " : ""}{shortVenue(ev.venue)}</span>
                       <span className="text-primary font-semibold group-hover:translate-x-0.5 transition-transform">
-                        Register →
+                        {isNext ? "Register →" : "Next one on Commudle →"}
                       </span>
                     </div>
+                      </>
+                    )}
                   </a>
                 </motion.div>
 
@@ -506,7 +536,7 @@ export function HomeHero() {
 
         {/* Continuous Horizontal Ticker (Double array for seamless loop) */}
         <div className="animate-marquee">
-          {[...TICKER_ITEMS, ...TICKER_ITEMS].map((item, index) => (
+          {[...tickerItems, ...tickerItems].map((item, index) => (
             <div
               key={index}
               className="flex items-center gap-3 mx-4 sm:mx-6 text-[11px] sm:text-xs font-mono font-medium tracking-wider text-ink-secondary dark:text-[#94A3B8]"

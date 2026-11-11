@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { getEvents, getCampaigns, getResourceArticles } from "@/lib/data";
+import { getEvents, getResourceArticles } from "@/lib/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://mlbhopal.tech";
@@ -13,22 +13,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: `${baseUrl}/ai-day`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.95,
-    },
-    {
       url: `${baseUrl}/events`,
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/campaigns`,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.85,
     },
     {
       url: `${baseUrl}/resources`,
@@ -93,15 +81,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
-  // Dynamic verified campaign pages
-  const campaigns = getCampaigns();
-  const campaignRoutes: MetadataRoute.Sitemap = campaigns.map((campaign) => ({
-    url: `${baseUrl}/campaigns/${campaign.slug}`,
-    lastModified: new Date(),
-    changeFrequency: campaign.status === "active" ? "weekly" : "monthly",
-    priority: campaign.status === "active" ? 0.8 : 0.6,
-  }));
-
   // Dynamic technical resource guides
   const articles = getResourceArticles();
   const articleRoutes: MetadataRoute.Sitemap = articles.map((article) => {
@@ -120,5 +99,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     };
   });
 
-  return [...staticRoutes, ...eventRoutes, ...campaignRoutes, ...articleRoutes];
+  return [...staticRoutes, ...eventRoutes, ...articleRoutes];
 }

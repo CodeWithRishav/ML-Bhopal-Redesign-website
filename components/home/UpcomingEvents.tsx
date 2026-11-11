@@ -7,7 +7,7 @@ import { PrimaryButton } from "@/components/ui/PrimaryButton";
 import { SecondaryButton } from "@/components/ui/SecondaryButton";
 import { Tag } from "@/components/ui/Tag";
 import { Event } from "@/lib/types";
-import { formatDate } from "@/lib/utils";
+import { formatDate, isUpcoming } from "@/lib/utils";
 
 interface UpcomingEventsProps {
   upcomingEvents?: Event[];
@@ -20,9 +20,9 @@ export function UpcomingEvents({
   recentEvents,
   events,
 }: UpcomingEventsProps) {
-  const upcoming = upcomingEvents || (events ? events.filter((e) => e.status?.toLowerCase() === "upcoming") : []);
+  const upcoming = upcomingEvents || (events ? events.filter((e) => isUpcoming(e)) : []);
   const featured = upcoming[0];
-  const displayRecent = recentEvents || (events ? events.filter((e) => e.status?.toLowerCase() !== "upcoming").slice(0, 3) : []);
+  const displayRecent = recentEvents || (events ? events.filter((e) => !isUpcoming(e)).slice(0, 3) : []);
 
   return (
     <section className="relative py-20 sm:py-28 bg-white dark:bg-[#0F172A] border-b border-[#D1D5DB] dark:border-[#334155] transition-colors">
@@ -34,7 +34,7 @@ export function UpcomingEvents({
               COMMUNITY GATHERINGS
             </span>
             <h2 className="font-display font-black tracking-tight text-ink-primary dark:text-[#F8FAFC] text-3xl sm:text-4xl lg:text-5xl uppercase">
-              Upcoming &amp; Past Events<span className="text-google-green">.</span>
+              Recent Events<span className="text-google-green">.</span>
             </h2>
           </div>
 

@@ -50,6 +50,7 @@ export async function generateMetadata({
   const image = campaign.coverImage || "/posters/ml-bhopal-banner.png";
 
   return {
+    robots: { index: false },
     title: `${campaign.title} — Campaign Initiative`,
     description: desc,
     alternates: {

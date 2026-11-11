@@ -167,16 +167,14 @@ export function Header() {
 
   // Route active helpers
   const isEventsActive = pathname.startsWith("/events");
-  const isCampaignsActive = pathname.startsWith("/campaigns");
   const isProgramsActive = pathname === "/ambassador" || pathname === "/join";
-  const isAiDayActive = pathname === "/ai-day";
   const isResourcesActive = pathname.startsWith("/resources");
   const isCommunityActive =
     pathname === "/about" ||
     pathname === "/team" ||
     pathname === "/partners" ||
     pathname === "/contact";
-  const isMoreActive = isAiDayActive || isResourcesActive || isCommunityActive;
+  const isMoreActive = isResourcesActive || isCommunityActive;
 
   return (
     <header
@@ -237,25 +235,6 @@ export function Header() {
           >
             <span>Events</span>
             {isEventsActive && (
-              <span
-                className="absolute bottom-0 left-2.5 right-2.5 h-0.5 bg-primary rounded-full pointer-events-none"
-                aria-hidden="true"
-              />
-            )}
-          </Link>
-
-          {/* 2. Campaigns */}
-          <Link
-            href="/campaigns"
-            className={cn(
-              "relative text-sm font-medium transition-colors px-2.5 py-1.5 rounded-control inline-flex items-center whitespace-nowrap",
-              isCampaignsActive
-                ? "text-primary font-semibold"
-                : "text-ink-secondary dark:text-[#94A3B8] hover:text-ink-primary dark:hover:text-[#F8FAFC] hover:bg-[#F1F3F4]/80 dark:hover:bg-[#1E293B]"
-            )}
-          >
-            <span>Campaigns</span>
-            {isCampaignsActive && (
               <span
                 className="absolute bottom-0 left-2.5 right-2.5 h-0.5 bg-primary rounded-full pointer-events-none"
                 aria-hidden="true"
@@ -340,25 +319,6 @@ export function Header() {
               </div>
             )}
           </div>
-
-          {/* 4. AI Day (Evergreen, normal navigation item — NEVER "AI Day 2.0") */}
-          <Link
-            href="/ai-day"
-            className={cn(
-              "relative text-sm font-medium transition-colors px-2.5 py-1.5 rounded-control inline-flex items-center whitespace-nowrap",
-              isAiDayActive
-                ? "text-primary font-semibold"
-                : "text-ink-secondary dark:text-[#94A3B8] hover:text-ink-primary dark:hover:text-[#F8FAFC] hover:bg-[#F1F3F4]/80 dark:hover:bg-[#1E293B]"
-            )}
-          >
-            <span>AI Day</span>
-            {isAiDayActive && (
-              <span
-                className="absolute bottom-0 left-2.5 right-2.5 h-0.5 bg-primary rounded-full pointer-events-none"
-                aria-hidden="true"
-              />
-            )}
-          </Link>
 
           {/* 5. Resources (Always visible on xl; in compact screens tucked into More) */}
           <Link
@@ -618,18 +578,6 @@ export function Header() {
                 Events
               </Link>
 
-              <Link
-                href="/campaigns"
-                className={cn(
-                  "px-3 py-2 rounded-control text-sm font-medium transition-colors",
-                  isCampaignsActive
-                    ? "bg-google-blue-light/60 dark:bg-[#1A3A6E]/60 text-primary font-semibold"
-                    : "text-ink-primary dark:text-[#F8FAFC] hover:bg-[#FAFAFA] dark:hover:bg-[#1E293B]"
-                )}
-              >
-                Campaigns
-              </Link>
-
               {/* Programs Subsection */}
               <div className="pt-2 pb-1">
                 <span className="text-[11px] font-semibold uppercase tracking-wider text-ink-tertiary dark:text-[#64748B] px-3">
@@ -660,19 +608,6 @@ export function Header() {
                   </Link>
                 </div>
               </div>
-
-              {/* AI Day (Clean, equal visual weight to other links) */}
-              <Link
-                href="/ai-day"
-                className={cn(
-                  "px-3 py-2 rounded-control text-sm font-medium transition-colors",
-                  isAiDayActive
-                    ? "bg-google-blue-light/60 dark:bg-[#1A3A6E]/60 text-primary font-semibold"
-                    : "text-ink-primary dark:text-[#F8FAFC] hover:bg-[#FAFAFA] dark:hover:bg-[#1E293B]"
-                )}
-              >
-                AI Day
-              </Link>
 
               <Link
                 href="/resources"

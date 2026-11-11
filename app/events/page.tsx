@@ -39,6 +39,8 @@ export const metadata: Metadata = {
   },
 };
 
+export const dynamic = "force-dynamic";
+
 export default function EventsPage() {
   const events = getEvents();
   const totalEvents = events.length;

@@ -100,19 +100,7 @@ export function Footer() {
               <li><Link href="/events" className="text-ink-secondary dark:text-[#94A3B8] hover:text-primary dark:hover:text-[#FF9A3D] transition-colors">Upcoming Meetups</Link></li>
               <li><Link href="/events" className="text-ink-secondary dark:text-[#94A3B8] hover:text-primary dark:hover:text-[#FF9A3D] transition-colors">Workshops & Labs</Link></li>
               <li><Link href="/events" className="text-ink-secondary dark:text-[#94A3B8] hover:text-primary dark:hover:text-[#FF9A3D] transition-colors">Hackathon CTFs</Link></li>
-              <li><Link href="/ai-day" className="text-ink-secondary dark:text-[#94A3B8] hover:text-primary dark:hover:text-[#FF9A3D] transition-colors">AI Day 2.0 (2026)</Link></li>
               <li><Link href="/events" className="text-ink-secondary dark:text-[#94A3B8] hover:text-primary dark:hover:text-[#FF9A3D] transition-colors">All 21+ Events</Link></li>
-            </ul>
-          </div>
-
-          {/* Directory Column 2: Campaigns */}
-          <div className="lg:col-span-2 flex flex-col gap-3">
-            <span className="text-xs font-semibold text-ink-primary dark:text-[#F8FAFC] uppercase tracking-wider">Campaigns</span>
-            <ul className="flex flex-col gap-2.5 text-sm">
-              <li><Link href="/campaigns" className="text-ink-secondary dark:text-[#94A3B8] hover:text-primary dark:hover:text-[#FF9A3D] transition-colors">Build with AI</Link></li>
-              <li><Link href="/campaigns" className="text-ink-secondary dark:text-[#94A3B8] hover:text-primary dark:hover:text-[#FF9A3D] transition-colors">Gen AI Hackathon</Link></li>
-              <li><Link href="/campaigns" className="text-ink-secondary dark:text-[#94A3B8] hover:text-primary dark:hover:text-[#FF9A3D] transition-colors">TPU Learning Cohort</Link></li>
-              <li><Link href="/campaigns" className="text-ink-secondary dark:text-[#94A3B8] hover:text-primary dark:hover:text-[#FF9A3D] transition-colors">Kaggle Days Bhopal</Link></li>
             </ul>
           </div>
 

@@ -5,19 +5,17 @@ import { useRouter } from "next/navigation";
 import {
   Search,
   Calendar,
-  Sparkles,
   BookOpen,
   Users,
   Award,
   ArrowRight,
   ExternalLink,
-  Flame,
   Home,
   HeartHandshake,
   Mail,
   X,
 } from "lucide-react";
-import { getEvents, getCampaigns, getResourceArticles } from "@/lib/data";
+import { getEvents, getResourceArticles } from "@/lib/data";
 
 interface SearchItem {
   id: string;
@@ -32,8 +30,6 @@ interface SearchItem {
 const STATIC_PAGES: SearchItem[] = [
   { id: "page-home", title: "Home", subtitle: "ML Bhopal community homepage", category: "Pages", url: "/", icon: Home },
   { id: "page-events", title: "Events Explorer", subtitle: "Browse 17+ workshops, hackathons & meetups", category: "Pages", url: "/events", icon: Calendar },
-  { id: "page-aiday", title: "AI Day Bhopal 2.0", subtitle: "Central India's premier annual AI conference", category: "Pages", url: "/ai-day", icon: Sparkles },
-  { id: "page-campaigns", title: "Campaigns & Cohorts", subtitle: "Intensive build programs and hackathons", category: "Pages", url: "/campaigns", icon: Flame },
   { id: "page-resources", title: "Knowledge Hub & Resources", subtitle: "Production guides, cookbooks and curricula", category: "Pages", url: "/resources", icon: BookOpen },
   { id: "page-ambassador", title: "Campus Ambassador Program", subtitle: "Lead AI initiatives at your university", category: "Pages", url: "/ambassador", icon: Award },
   { id: "page-team", title: "Core Team & Mentors", subtitle: "Meet the organizers, leads and volunteers", category: "Pages", url: "/team", icon: Users },
@@ -86,21 +82,6 @@ export function CommandPalette({
           category: "Events",
           url: `/events/${e.slug}`,
           icon: Calendar,
-        });
-      });
-    } catch {}
-
-    // Campaigns
-    try {
-      const campaigns = getCampaigns();
-      campaigns.forEach((c) => {
-        items.push({
-          id: `campaign-${c.slug}`,
-          title: c.title,
-          subtitle: `${c.category} • ${c.shortDescription || c.description}`,
-          category: "Cohorts & Hackathons",
-          url: `/campaigns#${c.slug}`,
-          icon: Flame,
         });
       });
     } catch {}

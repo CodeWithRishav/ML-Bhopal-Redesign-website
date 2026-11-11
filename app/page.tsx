@@ -2,16 +2,13 @@ import React from "react";
 import { HomeHero } from "@/components/home/HomeHero";
 import { CommunityMetrics } from "@/components/home/CommunityMetrics";
 import { WhatWeDo } from "@/components/home/WhatWeDo";
-import { CampaignsSpotlight } from "@/components/home/CampaignsSpotlight";
 import { UpcomingEvents } from "@/components/home/UpcomingEvents";
-import { AIDaySpotlight } from "@/components/home/AIDaySpotlight";
 import { CommunityPeople } from "@/components/home/CommunityPeople";
 import { CampusPrograms } from "@/components/home/CampusPrograms";
 import { ResourcesPreview } from "@/components/home/ResourcesPreview";
 import { EcosystemPartners } from "@/components/home/EcosystemPartners";
 import { FinalCTA } from "@/components/home/FinalCTA";
 import {
-  getActiveCampaigns,
   getUpcomingEvents,
   getPastEvents,
   getTeamMembers,
@@ -53,10 +50,12 @@ export const metadata: Metadata = {
   },
 };
 
+export const dynamic = "force-dynamic";
+
 export default function HomePage() {
-  const campaigns = getActiveCampaigns();
   const upcomingEvents = getUpcomingEvents();
-  const recentEvents = getPastEvents().slice(0, 3);
+  const pastEvents = getPastEvents();
+  const recentEvents = pastEvents.slice(0, 3);
   const team = getTeamMembers();
   const partners = getPartners();
   const resources = getResources();
@@ -64,7 +63,7 @@ export default function HomePage() {
   return (
     <>
       {/* 1. Hero */}
-      <HomeHero />
+      <HomeHero nextEvent={upcomingEvents[0] ?? null} lastEvent={pastEvents[0] ?? null} />
 
       {/* 2. Community Metrics */}
       <CommunityMetrics />
@@ -72,14 +71,8 @@ export default function HomePage() {
       {/* 3. What We Do */}
       <WhatWeDo />
 
-      {/* 4. Current Campaigns (Data-driven) */}
-      <CampaignsSpotlight campaigns={campaigns} />
-
       {/* 5. Upcoming & Recent Events (Data-driven) */}
       <UpcomingEvents upcomingEvents={upcomingEvents} recentEvents={recentEvents} />
-
-      {/* 6. AI Day 2.0 Summit Spotlight */}
-      <AIDaySpotlight />
 
       {/* 7. Community & Leadership */}
       <CommunityPeople team={team} />

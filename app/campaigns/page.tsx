@@ -24,6 +24,7 @@ import {
 } from "@/lib/data";
 
 export const metadata: Metadata = {
+  robots: { index: false },
   title: "Campaigns — ML Bhopal",
   description:
     "Explore community campaigns by ML Bhopal, including the Build with AI 2026 event series.",
