@@ -11,7 +11,6 @@ import { FinalCTA } from "@/components/home/FinalCTA";
 import {
   getUpcomingEvents,
   getPastEvents,
-  getTeamMembers,
   getPartners,
   getResources,
 } from "@/lib/data";
@@ -56,7 +55,6 @@ export default function HomePage() {
   const upcomingEvents = getUpcomingEvents();
   const pastEvents = getPastEvents();
   const recentEvents = pastEvents.slice(0, 3);
-  const team = getTeamMembers();
   const partners = getPartners();
   const resources = getResources();
 
@@ -75,7 +73,7 @@ export default function HomePage() {
       <UpcomingEvents upcomingEvents={upcomingEvents} recentEvents={recentEvents} />
 
       {/* 7. Community & Leadership */}
-      <CommunityPeople team={team} />
+      <CommunityPeople />
 
       {/* 8. Campus Programs & Ambassadors */}
       <CampusPrograms />
