@@ -40,7 +40,7 @@ function shortVenue(venue?: string): string {
 }
 
 const BASE_TICKER_ITEMS = [
-  { label: "3,800+ MEMBERS", color: "text-primary" },
+  { label: "8000+ MEMBERS", color: "text-primary" },
   { label: "AI DAY BHOPAL 2.0", color: "text-google-blue" },
   { label: "CODE SAFE WITH AI", color: "text-google-green" },
   { label: "GENAI HACKATHON", color: "text-google-yellow" },
@@ -200,7 +200,7 @@ export function HomeHero({ nextEvent = null, lastEvent = null }: HomeHeroProps) 
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-google-green" />
               </span>
               <span className="text-primary font-semibold text-[11px] tracking-wider uppercase">
-                {nextEvent ? `Next event · ${fmtDate(nextEvent.date, false)}` : "17+ events since 2024"}
+                {nextEvent ? `Next event · ${fmtDate(nextEvent.date, false)}` : "18 events since 2024"}
               </span>
               <span className="text-[#D1D5DB] dark:text-[#475569]">•</span>
               <span className="text-ink-secondary dark:text-[#94A3B8] text-[11px]">
@@ -233,13 +233,13 @@ export function HomeHero({ nextEvent = null, lastEvent = null }: HomeHeroProps) 
               transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
               className="font-sans text-base sm:text-lg text-ink-secondary dark:text-[#94A3B8] leading-relaxed max-w-xl mb-8 font-normal"
             >
-              A community of{" "}
+              Join{" "}
               <strong className="text-ink-primary dark:text-[#F8FAFC] font-semibold">
-                3,800+ machine learning enthusiasts, developers, and researchers
+                8000+ community members and followers
               </strong>{" "}
-              in Bhopal. We run hands-on workshops, hackathons, and AI Day
-              Bhopal — fostering collaboration, knowledge sharing, and
-              innovation in ML, data science, and AI.
+              across platforms. ML Bhopal brings together students, developers,
+              researchers and AI enthusiasts to learn, collaborate and build
+              real-world projects.
             </motion.p>
 
             {/* Action Cluster (Magnetic CTA + Secondary + Command Palette) */}
@@ -336,7 +336,7 @@ export function HomeHero({ nextEvent = null, lastEvent = null }: HomeHeroProps) 
               <div className="text-xs font-sans text-ink-secondary dark:text-[#94A3B8] leading-snug">
                 <div className="flex items-center gap-1.5">
                   <span className="font-bold text-ink-primary dark:text-[#F1F3F4]">
-                    3,800+ members on Commudle
+                    8000+ members across platforms
                   </span>
                   <span className="w-1.5 h-1.5 rounded-full bg-google-blue inline-block" />
                 </div>
@@ -408,11 +408,11 @@ export function HomeHero({ nextEvent = null, lastEvent = null }: HomeHeroProps) 
                           ML BHOPAL COMMUNITY
                         </span>
                         <span className="text-base font-display font-bold leading-tight block">
-                          17+ events since 2024
+                          18 events since 2024
                         </span>
                       </div>
                       <span className="text-[11px] font-mono font-medium px-2.5 py-1 rounded-full bg-white/15 backdrop-blur-md border border-white/20 text-white shrink-0">
-                        3,800+ members
+                        8000+ members
                       </span>
                     </div>
                   </div>
@@ -487,7 +487,7 @@ export function HomeHero({ nextEvent = null, lastEvent = null }: HomeHeroProps) 
                   </div>
                   <div>
                     <div className="text-xs font-display font-bold text-ink-primary dark:text-[#F8FAFC]">
-                      3,800+ Members
+                      8000+ Members
                     </div>
                     <div className="text-[10px] font-mono text-ink-secondary dark:text-[#94A3B8]">
                       Bhopal, MP
