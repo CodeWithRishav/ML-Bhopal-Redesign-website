@@ -28,19 +28,19 @@ export function UpcomingEvents({
     <section className="relative py-20 sm:py-28 bg-white dark:bg-[#0F172A] border-b border-[#D1D5DB] dark:border-[#334155] transition-colors">
       <Container>
         {/* Section Header */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-12 sm:mb-16">
+        <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 mb-14 sm:mb-20">
           <div>
-            <span className="text-xs font-mono font-semibold uppercase tracking-widest text-primary dark:text-[#FF9A3D] mb-2 block">
+            <span className="text-xs sm:text-sm font-mono font-semibold uppercase tracking-widest text-primary dark:text-[#FF9A3D] mb-3 block">
               COMMUNITY GATHERINGS
             </span>
-            <h2 className="font-display font-black tracking-tight text-ink-primary dark:text-[#F8FAFC] text-3xl sm:text-4xl lg:text-5xl uppercase">
+            <h2 className="font-display font-black tracking-tight text-ink-primary dark:text-[#F8FAFC] text-4xl sm:text-5xl lg:text-6xl leading-[0.98] uppercase">
               Recent Events<span className="text-google-green">.</span>
             </h2>
           </div>
 
           <Link
             href="/events"
-            className="text-xs font-semibold uppercase tracking-wider text-google-blue dark:text-[#60A5FA] hover:text-google-blue-dark dark:hover:text-blue-300 transition-colors inline-flex items-center gap-1.5"
+            className="text-xs sm:text-sm font-semibold uppercase tracking-wider text-google-blue dark:text-[#60A5FA] hover:text-google-blue-dark dark:hover:text-blue-300 transition-colors inline-flex items-center gap-1.5 group"
           >
             <span>Explore Complete Event Archive</span>
             <ArrowRight className="w-3.5 h-3.5" />
@@ -160,68 +160,66 @@ export function UpcomingEvents({
         {/* Not repeated cards — IMAGE | EVENT INFORMATION rows            */}
         {/* ============================================================== */}
         <div>
-          <div className="flex items-center justify-between mb-6 pb-3 border-b border-[#D1D5DB] dark:border-[#334155]">
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-ink-primary dark:text-[#F8FAFC]">
-              Recent Community Events
-            </span>
-            <span className="text-xs text-ink-tertiary font-mono">
-              Past Events
-            </span>
-          </div>
-
-          <div className="flex flex-col divide-y divide-[#D1D5DB] dark:divide-[#334155]">
+          <div className="flex flex-col divide-y divide-[#D1D5DB] dark:divide-[#334155] border-y border-[#D1D5DB] dark:border-[#334155]">
             {displayRecent.map((event) => (
-              <div
+              <Link
                 key={event.id}
-                className="py-6 flex flex-col sm:flex-row items-start sm:items-center gap-6 group hover:bg-[#FAFAFA] dark:hover:bg-[#1E293B]/50 px-2 sm:px-4 rounded-xl transition-colors duration-200"
+                href={`/events/${event.slug}`}
+                className="group flex flex-col md:flex-row md:items-center gap-4 md:gap-6 lg:gap-10 py-6 md:py-8 px-2 sm:px-4 transition-colors duration-200 hover:bg-[#FAFAFA] dark:hover:bg-[#1E293B]/50"
               >
-                {/* Event Photo Thumbnail */}
-                <div className="relative w-full sm:w-44 aspect-[16/10] rounded-lg overflow-hidden border border-[#D1D5DB] dark:border-[#334155] bg-slate-900 shrink-0">
-                  <Image
-                    src={event.image || "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800&auto=format&fit=crop"}
-                    alt={event.title}
-                    fill
-                    sizes="(max-width: 640px) 100vw, 176px"
-                    className="object-cover grayscale contrast-110 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-300"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-black/20" />
+                {/* Thumbnail */}
+                <div className="relative w-full md:w-48 lg:w-72 aspect-[16/10] rounded-lg overflow-hidden border border-[#D1D5DB] dark:border-[#334155] bg-slate-100 dark:bg-[#1E293B] shrink-0">
+                  {event.image ? (
+                    <Image
+                      src={event.image}
+                      alt={event.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 192px, 288px"
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div
+                      aria-hidden="true"
+                      className="absolute inset-0 flex items-center justify-center text-xs font-mono uppercase tracking-widest text-ink-tertiary dark:text-[#64748B]"
+                    >
+                      ML Bhopal
+                    </div>
+                  )}
                 </div>
 
-                {/* Event Narrative & Info */}
+                {/* Info */}
                 <div className="flex-1 min-w-0">
-                  <div className="flex flex-wrap items-center gap-3 text-xs font-mono text-ink-secondary dark:text-[#94A3B8] mb-1.5">
-                    <span className="font-semibold text-google-blue dark:text-[#60A5FA]">
-                      {formatDate(event.date)}
-                    </span>
-                    <span>•</span>
-                    <span className="truncate">{event.venue}</span>
-                    {event.registrations && (
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs font-mono text-ink-secondary dark:text-[#94A3B8] mb-2">
+                    {event.type && (
+                      <span className="font-semibold uppercase tracking-widest text-primary dark:text-[#FF9A3D]">
+                        {event.type}
+                      </span>
+                    )}
+                    <span>{formatDate(event.date)}</span>
+                    {event.venue && (
                       <>
-                        <span>•</span>
-                        <span className="text-ink-tertiary">{event.registrations} Attendees</span>
+                        <span aria-hidden="true">•</span>
+                        <span className="truncate max-w-full">{event.venue}</span>
                       </>
                     )}
                   </div>
 
-                  <h4 className="text-base sm:text-lg font-display font-bold text-ink-primary dark:text-[#F8FAFC] group-hover:text-google-blue dark:group-hover:text-[#60A5FA] transition-colors mb-1 line-clamp-1">
+                  <h3 className="text-xl lg:text-2xl font-display font-bold tracking-tight text-ink-primary dark:text-[#F8FAFC] group-hover:text-google-blue dark:group-hover:text-[#60A5FA] transition-colors duration-200 mb-2">
                     {event.title}
-                  </h4>
+                  </h3>
 
-                  <p className="text-xs sm:text-sm text-ink-secondary dark:text-[#94A3B8] font-sans line-clamp-2 leading-relaxed">
+                  <p className="text-sm text-ink-secondary dark:text-[#94A3B8] font-sans leading-relaxed line-clamp-2 max-w-2xl">
                     {event.description || event.tagline}
                   </p>
                 </div>
 
-                {/* View Details Link */}
-                <Link
-                  href={`/events/${event.slug}`}
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-ink-primary dark:text-[#F8FAFC] group-hover:text-google-blue dark:group-hover:text-[#60A5FA] shrink-0 sm:self-center transition-colors"
-                >
+                {/* Details link */}
+                <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-ink-primary dark:text-[#F8FAFC] group-hover:text-google-blue dark:group-hover:text-[#60A5FA] shrink-0 py-2 transition-colors duration-200">
                   <span>Event Details</span>
-                  <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </div>
+                  <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1" />
+                </span>
+              </Link>
             ))}
           </div>
         </div>
