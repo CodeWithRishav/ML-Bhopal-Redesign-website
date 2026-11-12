@@ -6,14 +6,14 @@ import { AnimatedCounter } from "@/components/motion/AnimatedCounter";
 
 const STATS = [
   {
-    value: "3,800+",
+    value: "8000+",
     label: "Members",
-    sublabel: "Students, developers & researchers on Commudle",
+    sublabel: "Across all platforms",
     color: "text-primary dark:text-[#FF9A3D]",
     accent: "bg-primary",
   },
   {
-    value: "17+",
+    value: "18",
     label: "Events",
     sublabel: "Workshops, hackathons, meetups & AI Day since 2024",
     color: "text-google-blue dark:text-[#60A5FA]",

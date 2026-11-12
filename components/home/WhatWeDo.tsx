@@ -10,8 +10,8 @@ const PILLARS = [
   {
     num: "01",
     title: "Hands-on Workshops",
-    description: "Build-along sessions on GenAI, LLMs and Google AI tools — like NextGen Apps, Customizing LLMs with Google AI Studio, and the GenAI Pre-Hackathon.",
-    tags: ["GenAI", "Google AI Studio", "Live coding"],
+    description: "Practical sessions on GenAI, LLMs, machine learning and developer technologies, with guided demos and live building.",
+    tags: ["GenAI", "Google AI", "Live Coding"],
     href: "/events",
     color: "text-primary dark:text-[#FF9A3D]",
     barColor: "bg-primary",
@@ -19,8 +19,8 @@ const PILLARS = [
   {
     num: "02",
     title: "Hackathons",
-    description: "Team build sprints with mentors and judges — like the GenAI Hackathon Bhopal.",
-    tags: ["Teams", "Mentors", "Judging"],
+    description: "Collaborative building sprints where teams turn ideas into working prototypes through challenges, mentorship and collaboration.",
+    tags: ["Teams", "Mentors", "Innovation"],
     href: "/events",
     color: "text-google-red dark:text-[#F28B82]",
     barColor: "bg-google-red",
@@ -28,7 +28,7 @@ const PILLARS = [
   {
     num: "03",
     title: "AI Day Bhopal",
-    description: "Our annual flagship: keynotes, workshops and an AI-Thon. AI Day Bhopal 2.0 brought 350+ builders to LNCT in May 2026.",
+    description: "Our flagship AI gathering featuring inspiring talks, hands-on workshops, project showcases and AI-thons.",
     tags: ["Annual", "Keynotes", "AI-Thon"],
     href: "/events",
     color: "text-[#D97706] dark:text-[#FBBC05]",
@@ -37,7 +37,7 @@ const PILLARS = [
   {
     num: "04",
     title: "Builders Meetups & Project Days",
-    description: "Show what you're building, get feedback, and turn ideas into working projects — Builders Meetup, Project to Product with AI, From Idea to Working Projects.",
+    description: "Bring your projects, share what you're building, get feedback and connect with fellow developers.",
     tags: ["Demos", "Feedback", "Networking"],
     href: "/events",
     color: "text-google-green dark:text-[#81C995]",
@@ -46,8 +46,8 @@ const PILLARS = [
   {
     num: "05",
     title: "AI × Security",
-    description: "Secure coding with AI, ethical hacking and CTFs, together with OWASP Bhopal — Code Safe with AI, NetShield, ML Nexus CTF.",
-    tags: ["Web Security", "CTF", "OWASP"],
+    description: "Explore responsible AI development, application security and ethical hacking through practical sessions and CTFs.",
+    tags: ["AI Security", "OWASP", "CTF"],
     href: "/events",
     color: "text-google-blue dark:text-[#60A5FA]",
     barColor: "bg-google-blue",
@@ -55,8 +55,8 @@ const PILLARS = [
   {
     num: "06",
     title: "Campus Outreach",
-    description: "Sessions at partner colleges across Bhopal, with student ambassadors bringing events to their campus.",
-    tags: ["9+ Institutes", "Ambassadors", "Workshops"],
+    description: "Bring the ML Bhopal experience to colleges through campus ambassadors, partnerships and student-led activities.",
+    tags: ["Institutes", "Ambassadors", "Workshops"],
     href: "/ambassador",
     color: "text-google-green dark:text-[#81C995]",
     barColor: "bg-google-green",
@@ -86,7 +86,7 @@ export function WhatWeDo() {
             </h2>
 
             <p className="text-sm sm:text-base text-ink-secondary dark:text-[#94A3B8] font-sans leading-relaxed mb-8 max-w-md">
-              Hands-on over slides. Our sessions are run by volunteers, open to beginners, and mostly free — from your first workshop to shipping a project at AI Day.
+              From your first hands-on workshop to building with a team and presenting a working project, ML Bhopal creates opportunities to learn by doing, experiment with new technologies, and turn ideas into reality.
             </p>
 
             <Link

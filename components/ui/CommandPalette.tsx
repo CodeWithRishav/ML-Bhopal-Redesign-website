@@ -29,7 +29,7 @@ interface SearchItem {
 
 const STATIC_PAGES: SearchItem[] = [
   { id: "page-home", title: "Home", subtitle: "ML Bhopal community homepage", category: "Pages", url: "/", icon: Home },
-  { id: "page-events", title: "Events Explorer", subtitle: "Browse 17+ workshops, hackathons & meetups", category: "Pages", url: "/events", icon: Calendar },
+  { id: "page-events", title: "Events Explorer", subtitle: "Browse 18 workshops, hackathons & meetups", category: "Pages", url: "/events", icon: Calendar },
   { id: "page-resources", title: "Knowledge Hub & Resources", subtitle: "Production guides, cookbooks and curricula", category: "Pages", url: "/resources", icon: BookOpen },
   { id: "page-ambassador", title: "Campus Ambassador Program", subtitle: "Lead AI initiatives at your university", category: "Pages", url: "/ambassador", icon: Award },
   { id: "page-team", title: "Core Team & Mentors", subtitle: "Meet the organizers, leads and volunteers", category: "Pages", url: "/team", icon: Users },
